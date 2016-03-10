@@ -30,11 +30,11 @@ try {
     // response of type "special object"
     Attributes attributes = characterSheet.getAttributes();
     Long intelligence = attributes.getIntelligence();
-        } catch (EveApiException e) {
+} catch (EveApiException e) {
     // thrown if the API returned an error
     Long errorCode = e.getCode(); // e.g. 124
     String errorMessage = e.getMessage(); // e.g. Character not enlisted in Factional Warfare.
-        } catch (IOException e) {
+} catch (IOException e) {
     // thrown if a connection error occured.
 }
 ```
