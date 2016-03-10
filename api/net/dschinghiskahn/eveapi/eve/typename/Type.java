@@ -1,0 +1,34 @@
+package net.dschinghiskahn.eveapi.eve.typename;
+
+import java.lang.Long;
+import java.lang.String;
+
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Root;
+
+@Root(name = "row")
+public class Type {
+
+    @Attribute(name = "typeID", required = false)
+    private Long typeId;
+
+    @Attribute(required = false)
+    private String typeName;
+
+    public Long getTypeId(){
+        return typeId;
+    }
+
+    public String getTypeName(){
+        return typeName;
+    }
+
+    @Override
+    public String toString(){
+        return "Type [" +
+            "typeId = " + typeId + ", " +
+            "typeName = " + typeName + ", " +
+            "]";
+    }
+
+}
