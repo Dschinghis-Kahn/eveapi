@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import net.dschinghiskahn.eveapi.character.charactersheet.Attributes;
 import net.dschinghiskahn.eveapi.util.AbstractApiResponse;
 
 import org.simpleframework.xml.Attribute;

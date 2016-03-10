@@ -1,6 +1,5 @@
 package net.dschinghiskahn.eveapi.account.apikeyinfo;
 
-import net.dschinghiskahn.eveapi.account.apikeyinfo.Key;
 import net.dschinghiskahn.eveapi.util.AbstractApiResponse;
 
 import org.simpleframework.xml.Element;

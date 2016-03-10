@@ -1,6 +1,5 @@
 package net.dschinghiskahn.eveapi.character.standings;
 
-import net.dschinghiskahn.eveapi.character.standings.characterNPCStandings;
 import net.dschinghiskahn.eveapi.util.AbstractApiResponse;
 
 import org.simpleframework.xml.Element;
