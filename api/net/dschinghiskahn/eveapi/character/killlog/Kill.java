@@ -1,12 +1,12 @@
 package net.dschinghiskahn.eveapi.character.killlog;
 
 import java.lang.Long;
-import java.lang.Object;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Path;
 import org.simpleframework.xml.Root;
@@ -58,8 +58,8 @@ public class Kill {
     @Attribute(name = "solarSystemID", required = false)
     private Long solarSystemId;
 
-    @Attribute(required = false)
-    private Object victim;
+    @Element(required = false)
+    private Victim victim;
 
     public List<Attacker> getAttackers(){
         return attackers;
@@ -85,7 +85,7 @@ public class Kill {
         return solarSystemId;
     }
 
-    public Object getVictim(){
+    public Victim getVictim(){
         return victim;
     }
 
