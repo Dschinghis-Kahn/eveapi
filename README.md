@@ -14,8 +14,8 @@ try {
     CharacterSheet characterSheet = Api.getCharacterSheet(keyId, verificationCode, characterId);
     
     // default fields returned with every response. 
-    characterSheet.getCurrentTime();
-    characterSheet.getCachedUntil();
+    Date currentTime = characterSheet.getCurrentTime();
+    Date cachedUntil = characterSheet.getCachedUntil();
 
     // response of type string
     String name = characterSheet.getName();
