@@ -3,7 +3,8 @@ An android library project to query the eve online REST API.
 
 ##Features
 - Easy to use
-- Response are deserialized as java beans
+- Responses are deserialized as java beans
+- Errors are presented as java exceptions
 
 ##Example
 
