@@ -8,7 +8,6 @@ import java.net.URL;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import java.util.zip.GZIPInputStream;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
@@ -72,48 +71,27 @@ public final class Api {
         Object result = null;
         String url = String.format(Locale.getDefault(), BASE_URL + urlPattern, (Object[]) parameters);
         try {
-            if (Class.forName("android.util.Log") != null) {
+            if (Class.forName("android.util.Log") != null) { // used for eveapigenerator test cases
                 Log.d(Api.class.getSimpleName(), "Querying: " + url);
             }
-        } catch (ClassNotFoundException e) {}
+        } catch (ClassNotFoundException e) {
+            // Intentionally left empty
+        }
+
         HttpURLConnection connection = null;
         InputStream input = null;
         try {
-            try {
-                connection = (HttpURLConnection) new URL(url).openConnection();
-                connection.setRequestProperty("User-Agent", "EveApi, Author: Genghis Khane");
-                connection.setRequestProperty("Accept-Encoding", "gzip");
-                if (connection.getResponseCode() == 200) {
-                    input = new GZIPInputStream(new BufferedInputStream(connection.getInputStream()));
-                    if (input.available() == 0) {
-                        input = new GZIPInputStream(new BufferedInputStream(connection.getErrorStream()));
-                    }
-                } else if (connection.getResponseCode() > 0) {
-                    input = new GZIPInputStream(new BufferedInputStream(connection.getErrorStream()));
-                } else {
-                    input = new GZIPInputStream(new BufferedInputStream(connection.getInputStream()));
-                }
-            } catch (Exception z) {
-                try {
-                    if (Class.forName("android.util.Log") != null) {
-                        Log.w(Api.class.getSimpleName(), "Querying API without compression.");
-                    }
-                } catch (ClassNotFoundException e) {}
-                connection = (HttpURLConnection) new URL(url).openConnection();
-                connection.setRequestProperty("User-Agent", "EveApi, Author: Genghis Khane");
+            connection = (HttpURLConnection) new URL(url).openConnection();
+            connection.setRequestProperty("User-Agent", "EveApi, Author: Genghis Khane");
+            connection.setConnectTimeout(5000);
+            connection.setReadTimeout(5000);
 
-                if (connection.getResponseCode() == 200) {
-                    input = new BufferedInputStream(connection.getInputStream());
-                    if (input.available() == 0) {
-                        input = new BufferedInputStream(connection.getErrorStream());
-                    }
-                } else if (connection.getResponseCode() > 0) {
-                    input = new BufferedInputStream(connection.getErrorStream());
-                } else {
-                    input = new BufferedInputStream(connection.getInputStream());
-                }
-
+            if (connection.getResponseCode() == 200 || connection.getResponseCode() <= 0) {
+                input = new BufferedInputStream(connection.getInputStream());
+            } else {
+                input = new BufferedInputStream(connection.getErrorStream());
             }
+
             RegistryMatcher matcher = new RegistryMatcher();
             matcher.bind(Long.class, new LongValueTransformer());
             matcher.bind(Double.class, new DoubleValueTransformer());
