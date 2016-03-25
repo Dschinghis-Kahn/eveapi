@@ -71,7 +71,9 @@ public final class Api {
         Object result = null;
         String url = String.format(Locale.getDefault(), BASE_URL + urlPattern, (Object[]) parameters);
         try {
-            if (Class.forName("android.util.Log") != null) { // used for eveapigenerator test cases
+            if (Class.forName("android.util.Log") != null) { // used for
+                                                             // eveapigenerator
+                                                             // test cases
                 Log.d(Api.class.getSimpleName(), "Querying: " + url);
             }
         } catch (ClassNotFoundException e) {
@@ -125,27 +127,106 @@ public final class Api {
         return result;
     }
 
+    /**
+     * EVE player account status.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static AccountStatus getAccountStatus(long keyId, String verificationCode) throws IOException, EveApiException {
         return (AccountStatus) Api.query(AccountStatus.class, "/account/AccountStatus.xml.aspx?keyID=%s&vCode=%s", "" + keyId, verificationCode);
     }
 
+    /**
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static ApiKeyInfo getApiKeyInfo(long keyId, String verificationCode) throws IOException, EveApiException {
         return (ApiKeyInfo) Api.query(ApiKeyInfo.class, "/account/APIKeyInfo.xml.aspx?keyID=%s&vCode=%s", "" + keyId, verificationCode);
     }
 
+    /**
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static Characters getCharacters(long keyId, String verificationCode) throws IOException, EveApiException {
         return (Characters) Api.query(Characters.class, "/account/Characters.xml.aspx?keyID=%s&vCode=%s", "" + keyId, verificationCode);
     }
 
+    /**
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static CallList getCallList(long keyId, String verificationCode) throws IOException, EveApiException {
         return (CallList) Api.query(CallList.class, "/api/CallList.xml.aspx?keyID=%s&vCode=%s", "" + keyId, verificationCode);
     }
 
+    /**
+     * Current balance of characters wallet.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static AccountBalance getAccountBalance(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (AccountBalance) Api.query(AccountBalance.class, "/char/AccountBalance.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
     }
 
+    /**
+     * Entire asset list of character.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static AssetList getAssetList(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return getAssetList(keyId, verificationCode, characterId, false);
     }
@@ -155,11 +236,40 @@ public final class Api {
                 "" + characterId, flat ? "1" : "0");
     }
 
+    /**
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static Blueprints getBlueprints(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (Blueprints) Api.query(Blueprints.class, "/char/Blueprints.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
     }
 
+    /**
+     * List of all personal bookmarks.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static Bookmarks getBookmarks(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (Bookmarks) Api.query(Bookmarks.class, "/char/Bookmarks.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
@@ -172,28 +282,103 @@ public final class Api {
                 "" + eventId);
     }
 
+    /**
+     * Character Sheet information. Contains basic 'Show Info' information along
+     * with clones, account balance, implants, attributes, skills, certificates
+     * and corporation roles.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static CharacterSheet getCharacterSheet(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (CharacterSheet) Api.query(CharacterSheet.class, "/char/CharacterSheet.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
     }
 
+    /**
+     * List of all chat channels the character owns or is an operator of.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static ChatChannels getChatChannels(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (ChatChannels) Api.query(ChatChannels.class, "/char/ChatChannels.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
     }
 
+    /**
+     * List of character contacts and relationship levels.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static ContactList getContactList(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (ContactList) Api.query(ContactList.class, "/char/ContactList.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
     }
 
+    /**
+     * Most recent contact notifications for the character.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static ContactNotifications getContactNotifications(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (ContactNotifications) Api.query(ContactNotifications.class, "/char/ContactNotifications.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId,
                 verificationCode, "" + characterId);
     }
 
+    /**
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static ContractBids getContactBids(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
-
         return (ContractBids) Api.query(ContractBids.class, "/char/ContractBids.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
 
@@ -204,6 +389,21 @@ public final class Api {
                 verificationCode, "" + characterId, "" + contractId);
     }
 
+    /**
+     * List of all Contracts the character is involved in.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static Contracts getContracts(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (Contracts) Api.query(Contracts.class, "/char/Contracts.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
@@ -214,30 +414,114 @@ public final class Api {
                 "" + characterId, "" + contractId);
     }
 
+    /**
+     * Characters Factional Warfare Statistics.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static FacWarStats getFacWarStats(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (FacWarStats) Api.query(FacWarStats.class, "/char/FacWarStats.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
     }
 
+    /**
+     * Character jobs, completed and active.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static IndustryJobs getIndustryJobs(long keyId, String verificationCode) throws IOException, EveApiException {
         return (IndustryJobs) Api.query(IndustryJobs.class, "/char/IndustryJobs.xml.aspx?keyID=%s&vCode=%s&", "" + keyId, verificationCode);
     }
 
+    /**
+     * Character jobs, completed and active.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static IndustryJobs getIndustryJobs(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (IndustryJobs) Api.query(IndustryJobs.class, "/char/IndustryJobs.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
     }
 
+    /**
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static IndustryJobsHistory getIndustryJobsHistory(long keyId, String verificationCode) throws IOException, EveApiException {
         return (IndustryJobsHistory) Api.query(IndustryJobsHistory.class, "/char/IndustryJobsHistory.xml.aspx?keyID=%s&vCode=%s&", "" + keyId,
                 verificationCode);
     }
 
+    /**
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static IndustryJobsHistory getIndustryJobsHistory(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (IndustryJobsHistory) Api.query(IndustryJobsHistory.class, "/char/IndustryJobsHistory.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId,
                 verificationCode, "" + characterId);
     }
 
+    /**
+     * Characters kill log.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static KillLog getKillLog(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (KillLog) Api.query(KillLog.class, "/char/KillLog.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode, "" + characterId);
     }
@@ -270,20 +554,78 @@ public final class Api {
                 "" + characterId, ids.substring(0, ids.length() - 1));
     }
 
+    /**
+     * List of all Mailing Lists the character subscribes to.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static MailingLists getMailingLists(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (MailingLists) Api.query(MailingLists.class, "/char/MailingLists.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
     }
 
+    /**
+     * List of all messages in the characters EVE Mail Inbox.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static MailMessages getMailMessages(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (MailMessages) Api.query(MailMessages.class, "/char/MailMessages.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
     }
 
+    /**
+     * List of all Market Orders the character has made.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static MarketOrders getMarketOrders(long keyId, String verificationCode) throws IOException, EveApiException {
         return (MarketOrders) Api.query(MarketOrders.class, "/char/MarketOrders.xml.aspx?keyID=%s&vCode=%s", "" + keyId, verificationCode);
     }
 
+    /**
+     * List of all Market Orders the character has made.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static MarketOrders getMarketOrders(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (MarketOrders) Api.query(MarketOrders.class, "/char/MarketOrders.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
@@ -294,10 +636,40 @@ public final class Api {
                 verificationCode, "" + characterId, "" + orderId);
     }
 
+    /**
+     * Medals awarded to the character.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static Medals getMedals(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (Medals) Api.query(Medals.class, "/char/Medals.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode, "" + characterId);
     }
 
+    /**
+     * List of recent notifications sent to the character.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static Notifications getNotifications(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (Notifications) Api.query(Notifications.class, "/char/Notifications.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
@@ -319,6 +691,20 @@ public final class Api {
                 verificationCode, "" + characterId, ids.substring(0, ids.length() - 1));
     }
 
+    /**
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static PlanetaryColonies getPlanetaryColonies(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (PlanetaryColonies) Api.query(PlanetaryColonies.class, "/char/PlanetaryColonies.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId,
                 verificationCode, "" + characterId);
@@ -339,32 +725,123 @@ public final class Api {
                 verificationCode, "" + characterId, "" + planetId);
     }
 
+    /**
+     * List of all Research agents working for the character and the progress of
+     * the research.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static Research getResearch(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
-
         return (Research) Api.query(Research.class, "/char/Research.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode, "" + characterId);
 
     }
 
+    /**
+     * Skill currently in training on the character. Subset of entire Skill
+     * Queue.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static SkillInTraining getSkillInTraining(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (SkillInTraining) Api.query(SkillInTraining.class, "/char/SkillInTraining.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId,
                 verificationCode, "" + characterId);
     }
 
+    /**
+     * Entire skill queue of character.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static SkillQueue getSkillQueue(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (SkillQueue) Api.query(SkillQueue.class, "/char/SkillQueue.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
     }
 
+    /**
+     * NPC Standings towards the character.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static Standings getStandings(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (Standings) Api.query(Standings.class, "/char/Standings.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
     }
 
+    /**
+     * Upcoming events on characters calendar.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static UpcomingCalendarEvents getUpcomingCalendarEvents(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (UpcomingCalendarEvents) Api.query(UpcomingCalendarEvents.class, "/char/UpcomingCalendarEvents.xml.aspx?keyID=%s&vCode=%s&characterID=%s",
                 "" + keyId, verificationCode, "" + characterId);
     }
 
+    /**
+     * Wallet journal of character.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static WalletJournal getWalletJournal(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return getWalletJournal(keyId, verificationCode, characterId, 1000);
     }
@@ -386,6 +863,21 @@ public final class Api {
                 "" + characterId, "" + accountKey, "" + fromId, "" + rowCount);
     }
 
+    /**
+     * Market transaction journal of character.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static WalletTransactions getWalletTransactions(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return getWalletTransactions(keyId, verificationCode, characterId, 1000);
     }
@@ -408,6 +900,23 @@ public final class Api {
                 "" + characterId, "" + accountKey, "" + fromId, "" + rowCount);
     }
 
+    /**
+     * Character information, exposes skill points and current ship information
+     * on top of 'Show Info' information. May also expose account balance and
+     * last known location on top of the other Character Information call.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static CharacterInfo getCharacterInfo(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
         return (CharacterInfo) Api.query(CharacterInfo.class, "/eve/CharacterInfo.xml.aspx?keyID=%s&vCode=%s&characterID=%s", "" + keyId, verificationCode,
                 "" + characterId);
