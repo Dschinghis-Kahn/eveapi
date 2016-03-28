@@ -1,8 +1,5 @@
 package net.dschinghiskahn.eveapi.character.contracts;
 
-import java.lang.Double;
-import java.lang.Long;
-import java.lang.String;
 import java.util.Date;
 
 import org.simpleframework.xml.Attribute;
@@ -53,8 +50,8 @@ public class Contract {
     @Attribute(name = "issuerID", required = false)
     private Long issuerId;
 
-    @Attribute(required = false)
-    private Long numDays;
+    @Attribute(name = "numDays", required = false)
+    private Long numDay;
 
     @Attribute(required = false)
     private Double price;
@@ -65,8 +62,8 @@ public class Contract {
     @Attribute(name = "startStationID", required = false)
     private Long startStationId;
 
-    @Attribute(required = false)
-    private String status;
+    @Attribute(name = "status", required = false)
+    private String statu;
 
     @Attribute(required = false)
     private String title;
@@ -133,8 +130,8 @@ public class Contract {
         return issuerId;
     }
 
-    public Long getNumDays(){
-        return numDays;
+    public Long getNumDay(){
+        return numDay;
     }
 
     public Double getPrice(){
@@ -149,8 +146,8 @@ public class Contract {
         return startStationId;
     }
 
-    public String getStatus(){
-        return status;
+    public String getStatu(){
+        return statu;
     }
 
     public String getTitle(){
@@ -182,11 +179,11 @@ public class Contract {
             "forCorp = " + forCorp + ", " +
             "issuerCorpId = " + issuerCorpId + ", " +
             "issuerId = " + issuerId + ", " +
-            "numDays = " + numDays + ", " +
+            "numDay = " + numDay + ", " +
             "price = " + price + ", " +
             "reward = " + reward + ", " +
             "startStationId = " + startStationId + ", " +
-            "status = " + status + ", " +
+            "statu = " + statu + ", " +
             "title = " + title + ", " +
             "type = " + type + ", " +
             "volume = " + volume + ", " +

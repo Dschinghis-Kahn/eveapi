@@ -1,6 +1,5 @@
 package net.dschinghiskahn.eveapi.account.accountstatus;
 
-import java.lang.Long;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

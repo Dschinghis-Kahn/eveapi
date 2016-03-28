@@ -1,7 +1,5 @@
 package net.dschinghiskahn.eveapi.character.research;
 
-import java.lang.Double;
-import java.lang.Long;
 import java.util.Date;
 
 import org.simpleframework.xml.Attribute;
@@ -16,8 +14,8 @@ public class ResearchItem {
     @Attribute(required = false)
     private Double pointsPerDay;
 
-    @Attribute(required = false)
-    private Double remainderPoints;
+    @Attribute(name = "remainderPoints", required = false)
+    private Double remainderPoint;
 
     @Attribute(required = false)
     private Date researchStartDate;
@@ -33,8 +31,8 @@ public class ResearchItem {
         return pointsPerDay;
     }
 
-    public Double getRemainderPoints(){
-        return remainderPoints;
+    public Double getRemainderPoint(){
+        return remainderPoint;
     }
 
     public Date getResearchStartDate(){
@@ -50,7 +48,7 @@ public class ResearchItem {
         return "ResearchItem [" +
             "agentId = " + agentId + ", " +
             "pointsPerDay = " + pointsPerDay + ", " +
-            "remainderPoints = " + remainderPoints + ", " +
+            "remainderPoint = " + remainderPoint + ", " +
             "researchStartDate = " + researchStartDate + ", " +
             "skillTypeId = " + skillTypeId + ", " +
             "]";

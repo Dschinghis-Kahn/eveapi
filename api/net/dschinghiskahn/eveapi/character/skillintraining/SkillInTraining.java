@@ -1,6 +1,5 @@
 package net.dschinghiskahn.eveapi.character.skillintraining;
 
-import java.lang.Long;
 import java.util.Date;
 
 import net.dschinghiskahn.eveapi.util.AbstractApiResponse;
@@ -13,24 +12,24 @@ import org.simpleframework.xml.Root;
 public class SkillInTraining extends AbstractApiResponse {
 
     @Path("result")
-    @Element(required = false)
-    private Date currentTQTime;
+    @Element(name = "currentTQTime", required = false)
+    private Date currentTqTime;
 
     @Path("result")
     @Element(required = false)
     private Long skillInTraining;
 
     @Path("result")
-    @Element(required = false)
-    private Long trainingDestinationSP;
+    @Element(name = "trainingDestinationSP", required = false)
+    private Long trainingDestinationSp;
 
     @Path("result")
     @Element(required = false)
     private Date trainingEndTime;
 
     @Path("result")
-    @Element(required = false)
-    private Long trainingStartSP;
+    @Element(name = "trainingStartSP", required = false)
+    private Long trainingStartSp;
 
     @Path("result")
     @Element(required = false)
@@ -44,24 +43,24 @@ public class SkillInTraining extends AbstractApiResponse {
     @Element(name = "trainingTypeID", required = false)
     private Long trainingTypeId;
 
-    public Date getCurrentTQTime(){
-        return currentTQTime;
+    public Date getCurrentTqTime(){
+        return currentTqTime;
     }
 
     public Long getSkillInTraining(){
         return skillInTraining;
     }
 
-    public Long getTrainingDestinationSP(){
-        return trainingDestinationSP;
+    public Long getTrainingDestinationSp(){
+        return trainingDestinationSp;
     }
 
     public Date getTrainingEndTime(){
         return trainingEndTime;
     }
 
-    public Long getTrainingStartSP(){
-        return trainingStartSP;
+    public Long getTrainingStartSp(){
+        return trainingStartSp;
     }
 
     public Date getTrainingStartTime(){
@@ -79,11 +78,11 @@ public class SkillInTraining extends AbstractApiResponse {
     @Override
     public String toString(){
         return "SkillInTraining [" +
-            "currentTQTime = " + currentTQTime + ", " +
+            "currentTqTime = " + currentTqTime + ", " +
             "skillInTraining = " + skillInTraining + ", " +
-            "trainingDestinationSP = " + trainingDestinationSP + ", " +
+            "trainingDestinationSp = " + trainingDestinationSp + ", " +
             "trainingEndTime = " + trainingEndTime + ", " +
-            "trainingStartSP = " + trainingStartSP + ", " +
+            "trainingStartSp = " + trainingStartSp + ", " +
             "trainingStartTime = " + trainingStartTime + ", " +
             "trainingToLevel = " + trainingToLevel + ", " +
             "trainingTypeId = " + trainingTypeId + ", " +

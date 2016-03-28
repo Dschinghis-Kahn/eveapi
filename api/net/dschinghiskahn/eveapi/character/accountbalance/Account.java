@@ -1,8 +1,5 @@
 package net.dschinghiskahn.eveapi.character.accountbalance;
 
-import java.lang.Double;
-import java.lang.Long;
-
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 

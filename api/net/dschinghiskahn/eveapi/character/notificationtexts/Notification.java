@@ -1,8 +1,5 @@
 package net.dschinghiskahn.eveapi.character.notificationtexts;
 
-import java.lang.Long;
-import java.lang.String;
-
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 

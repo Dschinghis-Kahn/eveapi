@@ -1,8 +1,5 @@
 package net.dschinghiskahn.eveapi.character.blueprints;
 
-import java.lang.Long;
-import java.lang.String;
-
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -24,8 +21,8 @@ public class Blueprint {
     @Attribute(required = false)
     private Long quantity;
 
-    @Attribute(required = false)
-    private Long runs;
+    @Attribute(name = "runs", required = false)
+    private Long run;
 
     @Attribute(required = false)
     private Long timeEfficiency;
@@ -56,8 +53,8 @@ public class Blueprint {
         return quantity;
     }
 
-    public Long getRuns(){
-        return runs;
+    public Long getRun(){
+        return run;
     }
 
     public Long getTimeEfficiency(){
@@ -80,7 +77,7 @@ public class Blueprint {
             "locationId = " + locationId + ", " +
             "materialEfficiency = " + materialEfficiency + ", " +
             "quantity = " + quantity + ", " +
-            "runs = " + runs + ", " +
+            "run = " + run + ", " +
             "timeEfficiency = " + timeEfficiency + ", " +
             "typeId = " + typeId + ", " +
             "typeName = " + typeName + ", " +

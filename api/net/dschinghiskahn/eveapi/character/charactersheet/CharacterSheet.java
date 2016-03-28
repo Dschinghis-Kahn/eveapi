@@ -1,8 +1,5 @@
 package net.dschinghiskahn.eveapi.character.charactersheet;
 
-import java.lang.Double;
-import java.lang.Long;
-import java.lang.String;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -19,8 +16,8 @@ import org.simpleframework.xml.Root;
 public class CharacterSheet extends AbstractApiResponse {
 
     @Path("result")
-    @Element(required = false)
-    private Date DoB;
+    @Element(name = "DoB", required = false)
+    private Date dob;
 
     @Path("result")
     @Element(name = "allianceID", required = false)
@@ -298,8 +295,8 @@ public class CharacterSheet extends AbstractApiResponse {
     @ElementList(type = Skill.class, required = false, inline = true)
     private List<Skill> skills = new ArrayList<Skill>();
 
-    public Date getDoB(){
-        return DoB;
+    public Date getDob(){
+        return dob;
     }
 
     public Long getAllianceId(){
@@ -461,7 +458,7 @@ public class CharacterSheet extends AbstractApiResponse {
     @Override
     public String toString(){
         return "CharacterSheet [" +
-            "DoB = " + DoB + ", " +
+            "dob = " + dob + ", " +
             "allianceId = " + allianceId + ", " +
             "allianceName = " + allianceName + ", " +
             "ancestry = " + ancestry + ", " +

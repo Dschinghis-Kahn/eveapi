@@ -1,9 +1,5 @@
 package net.dschinghiskahn.eveapi.character.killlog;
 
-import java.lang.Double;
-import java.lang.Long;
-import java.lang.String;
-
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -40,14 +36,14 @@ public class Victim {
     @Attribute(name = "shipTypeID", required = false)
     private Long shipTypeId;
 
-    @Attribute(required = false)
-    private Double x;
+    @Attribute(name = "x", required = false)
+    private Double xx;
 
-    @Attribute(required = false)
-    private Double y;
+    @Attribute(name = "y", required = false)
+    private Double yy;
 
-    @Attribute(required = false)
-    private Double z;
+    @Attribute(name = "z", required = false)
+    private Double zz;
 
     public Long getAllianceId(){
         return allianceId;
@@ -89,16 +85,16 @@ public class Victim {
         return shipTypeId;
     }
 
-    public Double getX(){
-        return x;
+    public Double getXx(){
+        return xx;
     }
 
-    public Double getY(){
-        return y;
+    public Double getYy(){
+        return yy;
     }
 
-    public Double getZ(){
-        return z;
+    public Double getZz(){
+        return zz;
     }
 
     @Override
@@ -114,9 +110,9 @@ public class Victim {
             "factionId = " + factionId + ", " +
             "factionName = " + factionName + ", " +
             "shipTypeId = " + shipTypeId + ", " +
-            "x = " + x + ", " +
-            "y = " + y + ", " +
-            "z = " + z + ", " +
+            "xx = " + xx + ", " +
+            "yy = " + yy + ", " +
+            "zz = " + zz + ", " +
             "]";
     }
 

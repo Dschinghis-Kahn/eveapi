@@ -1,7 +1,5 @@
 package net.dschinghiskahn.eveapi.character.killlog;
 
-import java.lang.Long;
-
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 

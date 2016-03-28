@@ -1,7 +1,5 @@
 package net.dschinghiskahn.eveapi.character.medals;
 
-import java.lang.Long;
-import java.lang.String;
 import java.util.Date;
 
 import org.simpleframework.xml.Attribute;
@@ -28,8 +26,8 @@ public class Medal {
     @Attribute(required = false)
     private String reason;
 
-    @Attribute(required = false)
-    private String status;
+    @Attribute(name = "status", required = false)
+    private String statu;
 
     @Attribute(required = false)
     private String title;
@@ -58,8 +56,8 @@ public class Medal {
         return reason;
     }
 
-    public String getStatus(){
-        return status;
+    public String getStatu(){
+        return statu;
     }
 
     public String getTitle(){
@@ -75,7 +73,7 @@ public class Medal {
             "issuerId = " + issuerId + ", " +
             "medalId = " + medalId + ", " +
             "reason = " + reason + ", " +
-            "status = " + status + ", " +
+            "statu = " + statu + ", " +
             "title = " + title + ", " +
             "]";
     }

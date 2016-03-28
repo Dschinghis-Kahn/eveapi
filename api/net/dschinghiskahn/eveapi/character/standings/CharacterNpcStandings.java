@@ -9,7 +9,7 @@ import org.simpleframework.xml.Path;
 import org.simpleframework.xml.Root;
 
 @Root(name = "row")
-public class characterNPCStandings {
+public class CharacterNpcStandings {
 
     @Path("rowset[2]")
     @Attribute(name="name", required = false)
@@ -25,7 +25,7 @@ public class characterNPCStandings {
 
     @Path("rowset[2]")
     @ElementList(type = NpcCorporation.class, required = false, inline = true)
-    private List<NpcCorporation> NPCCorporations = new ArrayList<NpcCorporation>();
+    private List<NpcCorporation> npcCorporations = new ArrayList<NpcCorporation>();
 
     @Path("rowset[1]")
     @Attribute(name="name", required = false)
@@ -59,8 +59,8 @@ public class characterNPCStandings {
     @ElementList(type = Faction.class, required = false, inline = true)
     private List<Faction> factions = new ArrayList<Faction>();
 
-    public List<NpcCorporation> getNPCCorporations(){
-        return NPCCorporations;
+    public List<NpcCorporation> getNpcCorporations(){
+        return npcCorporations;
     }
 
     public List<Agent> getAgents(){
@@ -73,8 +73,8 @@ public class characterNPCStandings {
 
     @Override
     public String toString(){
-        return "characterNPCStandings [" +
-            "NPCCorporations = " + NPCCorporations + ", " +
+        return "CharacterNpcStandings [" +
+            "npcCorporations = " + npcCorporations + ", " +
             "agents = " + agents + ", " +
             "factions = " + factions + ", " +
             "]";

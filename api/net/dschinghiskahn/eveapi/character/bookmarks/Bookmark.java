@@ -1,8 +1,5 @@
 package net.dschinghiskahn.eveapi.character.bookmarks;
 
-import java.lang.Double;
-import java.lang.Long;
-import java.lang.String;
 import java.util.Date;
 
 import org.simpleframework.xml.Attribute;
@@ -35,14 +32,14 @@ public class Bookmark {
     @Attribute(name = "typeID", required = false)
     private Long typeId;
 
-    @Attribute(required = false)
-    private Double x;
+    @Attribute(name = "x", required = false)
+    private Double xx;
 
-    @Attribute(required = false)
-    private Double y;
+    @Attribute(name = "y", required = false)
+    private Double yy;
 
-    @Attribute(required = false)
-    private Double z;
+    @Attribute(name = "z", required = false)
+    private Double zz;
 
     public Long getBookmarkId(){
         return bookmarkId;
@@ -76,16 +73,16 @@ public class Bookmark {
         return typeId;
     }
 
-    public Double getX(){
-        return x;
+    public Double getXx(){
+        return xx;
     }
 
-    public Double getY(){
-        return y;
+    public Double getYy(){
+        return yy;
     }
 
-    public Double getZ(){
-        return z;
+    public Double getZz(){
+        return zz;
     }
 
     @Override
@@ -99,9 +96,9 @@ public class Bookmark {
             "memo = " + memo + ", " +
             "note = " + note + ", " +
             "typeId = " + typeId + ", " +
-            "x = " + x + ", " +
-            "y = " + y + ", " +
-            "z = " + z + ", " +
+            "xx = " + xx + ", " +
+            "yy = " + yy + ", " +
+            "zz = " + zz + ", " +
             "]";
     }
 

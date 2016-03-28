@@ -1,7 +1,5 @@
 package net.dschinghiskahn.eveapi.character.marketorders;
 
-import java.lang.Double;
-import java.lang.Long;
 import java.util.Date;
 
 import org.simpleframework.xml.Attribute;

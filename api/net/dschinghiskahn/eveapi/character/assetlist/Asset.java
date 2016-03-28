@@ -1,6 +1,5 @@
 package net.dschinghiskahn.eveapi.character.assetlist;
 
-import java.lang.Long;
 import java.util.ArrayList;
 import java.util.List;
 

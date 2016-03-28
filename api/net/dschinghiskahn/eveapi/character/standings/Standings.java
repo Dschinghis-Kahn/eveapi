@@ -10,17 +10,17 @@ import org.simpleframework.xml.Root;
 public class Standings extends AbstractApiResponse {
 
     @Path("result")
-    @Element(required = false)
-    private characterNPCStandings characterNPCStandings;
+    @Element(name = "characterNPCStandings", required = false)
+    private CharacterNpcStandings characterNpcStandings;
 
-    public characterNPCStandings getCharacterNPCStandings(){
-        return characterNPCStandings;
+    public CharacterNpcStandings getCharacterNpcStandings(){
+        return characterNpcStandings;
     }
 
     @Override
     public String toString(){
         return "Standings [" +
-            "characterNPCStandings = " + characterNPCStandings + ", " +
+            "characterNpcStandings = " + characterNpcStandings + ", " +
             "]";
     }
 

@@ -1,7 +1,5 @@
 package net.dschinghiskahn.eveapi.account.apikeyinfo;
 
-import java.lang.Long;
-import java.lang.String;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,8 +30,8 @@ public class Key {
     @ElementList(type = Character.class, required = false, inline = true)
     private List<Character> characters = new ArrayList<Character>();
 
-    @Attribute(required = false)
-    private String expires;
+    @Attribute(name = "expires", required = false)
+    private String expire;
 
     @Attribute(required = false)
     private String type;
@@ -46,8 +44,8 @@ public class Key {
         return characters;
     }
 
-    public String getExpires(){
-        return expires;
+    public String getExpire(){
+        return expire;
     }
 
     public String getType(){
@@ -59,7 +57,7 @@ public class Key {
         return "Key [" +
             "accessMask = " + accessMask + ", " +
             "characters = " + characters + ", " +
-            "expires = " + expires + ", " +
+            "expire = " + expire + ", " +
             "type = " + type + ", " +
             "]";
     }

@@ -1,9 +1,5 @@
 package net.dschinghiskahn.eveapi.character.industryjobs;
 
-import java.lang.Double;
-import java.lang.Long;
-import java.lang.String;
-
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -49,8 +45,8 @@ public class Job {
     @Attribute(name = "jobID", required = false)
     private Long jobId;
 
-    @Attribute(required = false)
-    private Long licensedRuns;
+    @Attribute(name = "licensedRuns", required = false)
+    private Long licensedRun;
 
     @Attribute(name = "outputLocationID", required = false)
     private Long outputLocationId;
@@ -67,8 +63,8 @@ public class Job {
     @Attribute(required = false)
     private String productTypeName;
 
-    @Attribute(required = false)
-    private Long runs;
+    @Attribute(name = "runs", required = false)
+    private Long run;
 
     @Attribute(name = "solarSystemID", required = false)
     private Long solarSystemId;
@@ -82,17 +78,17 @@ public class Job {
     @Attribute(name = "stationID", required = false)
     private Long stationId;
 
-    @Attribute(required = false)
-    private Long status;
+    @Attribute(name = "status", required = false)
+    private Long statu;
 
-    @Attribute(required = false)
-    private Long successfulRuns;
+    @Attribute(name = "successfulRuns", required = false)
+    private Long successfulRun;
 
     @Attribute(name = "teamID", required = false)
     private Long teamId;
 
-    @Attribute(required = false)
-    private Long timeInSeconds;
+    @Attribute(name = "timeInSeconds", required = false)
+    private Long timeInSecond;
 
     public Long getActivityId(){
         return activityId;
@@ -146,8 +142,8 @@ public class Job {
         return jobId;
     }
 
-    public Long getLicensedRuns(){
-        return licensedRuns;
+    public Long getLicensedRun(){
+        return licensedRun;
     }
 
     public Long getOutputLocationId(){
@@ -170,8 +166,8 @@ public class Job {
         return productTypeName;
     }
 
-    public Long getRuns(){
-        return runs;
+    public Long getRun(){
+        return run;
     }
 
     public Long getSolarSystemId(){
@@ -190,20 +186,20 @@ public class Job {
         return stationId;
     }
 
-    public Long getStatus(){
-        return status;
+    public Long getStatu(){
+        return statu;
     }
 
-    public Long getSuccessfulRuns(){
-        return successfulRuns;
+    public Long getSuccessfulRun(){
+        return successfulRun;
     }
 
     public Long getTeamId(){
         return teamId;
     }
 
-    public Long getTimeInSeconds(){
-        return timeInSeconds;
+    public Long getTimeInSecond(){
+        return timeInSecond;
     }
 
     @Override
@@ -222,21 +218,21 @@ public class Job {
             "installerId = " + installerId + ", " +
             "installerName = " + installerName + ", " +
             "jobId = " + jobId + ", " +
-            "licensedRuns = " + licensedRuns + ", " +
+            "licensedRun = " + licensedRun + ", " +
             "outputLocationId = " + outputLocationId + ", " +
             "pauseDate = " + pauseDate + ", " +
             "probability = " + probability + ", " +
             "productTypeId = " + productTypeId + ", " +
             "productTypeName = " + productTypeName + ", " +
-            "runs = " + runs + ", " +
+            "run = " + run + ", " +
             "solarSystemId = " + solarSystemId + ", " +
             "solarSystemName = " + solarSystemName + ", " +
             "startDate = " + startDate + ", " +
             "stationId = " + stationId + ", " +
-            "status = " + status + ", " +
-            "successfulRuns = " + successfulRuns + ", " +
+            "statu = " + statu + ", " +
+            "successfulRun = " + successfulRun + ", " +
             "teamId = " + teamId + ", " +
-            "timeInSeconds = " + timeInSeconds + ", " +
+            "timeInSecond = " + timeInSecond + ", " +
             "]";
     }
 

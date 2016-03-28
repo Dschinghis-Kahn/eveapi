@@ -1,8 +1,5 @@
 package net.dschinghiskahn.eveapi.character.wallettransactions;
 
-import java.lang.Double;
-import java.lang.Long;
-import java.lang.String;
 import java.util.Date;
 
 import org.simpleframework.xml.Attribute;

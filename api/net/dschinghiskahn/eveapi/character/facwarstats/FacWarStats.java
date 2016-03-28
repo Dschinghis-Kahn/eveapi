@@ -1,7 +1,5 @@
 package net.dschinghiskahn.eveapi.character.facwarstats;
 
-import java.lang.Long;
-import java.lang.String;
 import java.util.Date;
 
 import net.dschinghiskahn.eveapi.util.AbstractApiResponse;

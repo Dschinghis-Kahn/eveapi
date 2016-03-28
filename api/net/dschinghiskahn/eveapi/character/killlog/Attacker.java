@@ -1,9 +1,5 @@
 package net.dschinghiskahn.eveapi.character.killlog;
 
-import java.lang.Double;
-import java.lang.Long;
-import java.lang.String;
-
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -40,8 +36,8 @@ public class Attacker {
     @Attribute(required = false)
     private Long finalBlow;
 
-    @Attribute(required = false)
-    private Double securityStatus;
+    @Attribute(name = "securityStatus", required = false)
+    private Double securityStatu;
 
     @Attribute(name = "shipTypeID", required = false)
     private Long shipTypeId;
@@ -89,8 +85,8 @@ public class Attacker {
         return finalBlow;
     }
 
-    public Double getSecurityStatus(){
-        return securityStatus;
+    public Double getSecurityStatu(){
+        return securityStatu;
     }
 
     public Long getShipTypeId(){
@@ -114,7 +110,7 @@ public class Attacker {
             "factionId = " + factionId + ", " +
             "factionName = " + factionName + ", " +
             "finalBlow = " + finalBlow + ", " +
-            "securityStatus = " + securityStatus + ", " +
+            "securityStatu = " + securityStatu + ", " +
             "shipTypeId = " + shipTypeId + ", " +
             "weaponTypeId = " + weaponTypeId + ", " +
             "]";

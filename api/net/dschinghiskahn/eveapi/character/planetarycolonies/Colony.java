@@ -1,7 +1,5 @@
 package net.dschinghiskahn.eveapi.character.planetarycolonies;
 
-import java.lang.Long;
-import java.lang.String;
 import java.util.Date;
 
 import org.simpleframework.xml.Attribute;
@@ -13,8 +11,8 @@ public class Colony {
     @Attribute(required = false)
     private Date lastUpdate;
 
-    @Attribute(required = false)
-    private Long numberOfPins;
+    @Attribute(name = "numberOfPins", required = false)
+    private Long numberOfPin;
 
     @Attribute(name = "ownerID", required = false)
     private Long ownerId;
@@ -47,8 +45,8 @@ public class Colony {
         return lastUpdate;
     }
 
-    public Long getNumberOfPins(){
-        return numberOfPins;
+    public Long getNumberOfPin(){
+        return numberOfPin;
     }
 
     public Long getOwnerId(){
@@ -91,7 +89,7 @@ public class Colony {
     public String toString(){
         return "Colony [" +
             "lastUpdate = " + lastUpdate + ", " +
-            "numberOfPins = " + numberOfPins + ", " +
+            "numberOfPin = " + numberOfPin + ", " +
             "ownerId = " + ownerId + ", " +
             "ownerName = " + ownerName + ", " +
             "planetId = " + planetId + ", " +

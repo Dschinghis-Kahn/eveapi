@@ -1,6 +1,5 @@
 package net.dschinghiskahn.eveapi.character.skillqueue;
 
-import java.lang.Long;
 import java.util.Date;
 
 import org.simpleframework.xml.Attribute;
@@ -9,8 +8,8 @@ import org.simpleframework.xml.Root;
 @Root(name = "row")
 public class Skill {
 
-    @Attribute(required = false)
-    private Long endSP;
+    @Attribute(name = "endSP", required = false)
+    private Long endSp;
 
     @Attribute(required = false)
     private Date endTime;
@@ -21,8 +20,8 @@ public class Skill {
     @Attribute(required = false)
     private Long queuePosition;
 
-    @Attribute(required = false)
-    private Long startSP;
+    @Attribute(name = "startSP", required = false)
+    private Long startSp;
 
     @Attribute(required = false)
     private Date startTime;
@@ -30,8 +29,8 @@ public class Skill {
     @Attribute(name = "typeID", required = false)
     private Long typeId;
 
-    public Long getEndSP(){
-        return endSP;
+    public Long getEndSp(){
+        return endSp;
     }
 
     public Date getEndTime(){
@@ -46,8 +45,8 @@ public class Skill {
         return queuePosition;
     }
 
-    public Long getStartSP(){
-        return startSP;
+    public Long getStartSp(){
+        return startSp;
     }
 
     public Date getStartTime(){
@@ -61,11 +60,11 @@ public class Skill {
     @Override
     public String toString(){
         return "Skill [" +
-            "endSP = " + endSP + ", " +
+            "endSp = " + endSp + ", " +
             "endTime = " + endTime + ", " +
             "level = " + level + ", " +
             "queuePosition = " + queuePosition + ", " +
-            "startSP = " + startSP + ", " +
+            "startSp = " + startSp + ", " +
             "startTime = " + startTime + ", " +
             "typeId = " + typeId + ", " +
             "]";

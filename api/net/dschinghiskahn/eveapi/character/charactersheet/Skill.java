@@ -1,7 +1,5 @@
 package net.dschinghiskahn.eveapi.character.charactersheet;
 
-import java.lang.Long;
-
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -14,8 +12,8 @@ public class Skill {
     @Attribute(required = false)
     private Long published;
 
-    @Attribute(required = false)
-    private Long skillpoints;
+    @Attribute(name = "skillpoints", required = false)
+    private Long skillpoint;
 
     @Attribute(name = "typeID", required = false)
     private Long typeId;
@@ -28,8 +26,8 @@ public class Skill {
         return published;
     }
 
-    public Long getSkillpoints(){
-        return skillpoints;
+    public Long getSkillpoint(){
+        return skillpoint;
     }
 
     public Long getTypeId(){
@@ -41,7 +39,7 @@ public class Skill {
         return "Skill [" +
             "level = " + level + ", " +
             "published = " + published + ", " +
-            "skillpoints = " + skillpoints + ", " +
+            "skillpoint = " + skillpoint + ", " +
             "typeId = " + typeId + ", " +
             "]";
     }

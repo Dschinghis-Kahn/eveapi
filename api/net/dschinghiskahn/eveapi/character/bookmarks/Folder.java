@@ -1,7 +1,5 @@
 package net.dschinghiskahn.eveapi.character.bookmarks;
 
-import java.lang.Long;
-import java.lang.String;
 import java.util.ArrayList;
 import java.util.List;
 

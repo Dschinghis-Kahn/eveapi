@@ -1,8 +1,5 @@
 package net.dschinghiskahn.eveapi.eve.characterinfo;
 
-import java.lang.Double;
-import java.lang.Long;
-import java.lang.String;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

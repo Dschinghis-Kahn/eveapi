@@ -1,7 +1,5 @@
 package net.dschinghiskahn.eveapi.eve.characterinfo;
 
-import java.lang.Long;
-import java.lang.String;
 import java.util.Date;
 
 import org.simpleframework.xml.Attribute;
