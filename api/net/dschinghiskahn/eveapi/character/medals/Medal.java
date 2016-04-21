@@ -26,8 +26,8 @@ public class Medal {
     @Attribute(required = false)
     private String reason;
 
-    @Attribute(name = "status", required = false)
-    private String statu;
+    @Attribute(required = false)
+    private String status;
 
     @Attribute(required = false)
     private String title;
@@ -56,8 +56,8 @@ public class Medal {
         return reason;
     }
 
-    public String getStatu(){
-        return statu;
+    public String getStatus(){
+        return status;
     }
 
     public String getTitle(){
@@ -73,7 +73,7 @@ public class Medal {
             "issuerId = " + issuerId + ", " +
             "medalId = " + medalId + ", " +
             "reason = " + reason + ", " +
-            "statu = " + statu + ", " +
+            "status = " + status + ", " +
             "title = " + title + ", " +
             "]";
     }

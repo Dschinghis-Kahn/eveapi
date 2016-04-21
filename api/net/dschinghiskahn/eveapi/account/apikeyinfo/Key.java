@@ -30,8 +30,8 @@ public class Key {
     @ElementList(type = Character.class, required = false, inline = true)
     private List<Character> characters = new ArrayList<Character>();
 
-    @Attribute(name = "expires", required = false)
-    private String expire;
+    @Attribute(required = false)
+    private String expires;
 
     @Attribute(required = false)
     private String type;
@@ -44,8 +44,8 @@ public class Key {
         return characters;
     }
 
-    public String getExpire(){
-        return expire;
+    public String getExpires(){
+        return expires;
     }
 
     public String getType(){
@@ -57,7 +57,7 @@ public class Key {
         return "Key [" +
             "accessMask = " + accessMask + ", " +
             "characters = " + characters + ", " +
-            "expire = " + expire + ", " +
+            "expires = " + expires + ", " +
             "type = " + type + ", " +
             "]";
     }

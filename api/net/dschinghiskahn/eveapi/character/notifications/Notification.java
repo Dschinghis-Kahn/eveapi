@@ -1,5 +1,7 @@
 package net.dschinghiskahn.eveapi.character.notifications;
 
+import java.util.Date;
+
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -19,7 +21,7 @@ public class Notification {
     private String senderName;
 
     @Attribute(required = false)
-    private String sentDate;
+    private Date sentDate;
 
     @Attribute(name = "typeID", required = false)
     private Long typeId;
@@ -40,7 +42,7 @@ public class Notification {
         return senderName;
     }
 
-    public String getSentDate(){
+    public Date getSentDate(){
         return sentDate;
     }
 

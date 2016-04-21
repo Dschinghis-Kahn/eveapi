@@ -50,8 +50,8 @@ public class Contract {
     @Attribute(name = "issuerID", required = false)
     private Long issuerId;
 
-    @Attribute(name = "numDays", required = false)
-    private Long numDay;
+    @Attribute(required = false)
+    private Long numDays;
 
     @Attribute(required = false)
     private Double price;
@@ -62,8 +62,8 @@ public class Contract {
     @Attribute(name = "startStationID", required = false)
     private Long startStationId;
 
-    @Attribute(name = "status", required = false)
-    private String statu;
+    @Attribute(required = false)
+    private String status;
 
     @Attribute(required = false)
     private String title;
@@ -130,8 +130,8 @@ public class Contract {
         return issuerId;
     }
 
-    public Long getNumDay(){
-        return numDay;
+    public Long getNumDays(){
+        return numDays;
     }
 
     public Double getPrice(){
@@ -146,8 +146,8 @@ public class Contract {
         return startStationId;
     }
 
-    public String getStatu(){
-        return statu;
+    public String getStatus(){
+        return status;
     }
 
     public String getTitle(){
@@ -179,11 +179,11 @@ public class Contract {
             "forCorp = " + forCorp + ", " +
             "issuerCorpId = " + issuerCorpId + ", " +
             "issuerId = " + issuerId + ", " +
-            "numDay = " + numDay + ", " +
+            "numDays = " + numDays + ", " +
             "price = " + price + ", " +
             "reward = " + reward + ", " +
             "startStationId = " + startStationId + ", " +
-            "statu = " + statu + ", " +
+            "status = " + status + ", " +
             "title = " + title + ", " +
             "type = " + type + ", " +
             "volume = " + volume + ", " +

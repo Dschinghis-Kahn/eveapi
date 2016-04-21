@@ -36,8 +36,8 @@ public class Attacker {
     @Attribute(required = false)
     private Long finalBlow;
 
-    @Attribute(name = "securityStatus", required = false)
-    private Double securityStatu;
+    @Attribute(required = false)
+    private Double securityStatus;
 
     @Attribute(name = "shipTypeID", required = false)
     private Long shipTypeId;
@@ -85,8 +85,8 @@ public class Attacker {
         return finalBlow;
     }
 
-    public Double getSecurityStatu(){
-        return securityStatu;
+    public Double getSecurityStatus(){
+        return securityStatus;
     }
 
     public Long getShipTypeId(){
@@ -110,7 +110,7 @@ public class Attacker {
             "factionId = " + factionId + ", " +
             "factionName = " + factionName + ", " +
             "finalBlow = " + finalBlow + ", " +
-            "securityStatu = " + securityStatu + ", " +
+            "securityStatus = " + securityStatus + ", " +
             "shipTypeId = " + shipTypeId + ", " +
             "weaponTypeId = " + weaponTypeId + ", " +
             "]";

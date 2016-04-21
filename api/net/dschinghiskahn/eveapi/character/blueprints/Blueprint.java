@@ -21,8 +21,8 @@ public class Blueprint {
     @Attribute(required = false)
     private Long quantity;
 
-    @Attribute(name = "runs", required = false)
-    private Long run;
+    @Attribute(required = false)
+    private Long runs;
 
     @Attribute(required = false)
     private Long timeEfficiency;
@@ -53,8 +53,8 @@ public class Blueprint {
         return quantity;
     }
 
-    public Long getRun(){
-        return run;
+    public Long getRuns(){
+        return runs;
     }
 
     public Long getTimeEfficiency(){
@@ -77,7 +77,7 @@ public class Blueprint {
             "locationId = " + locationId + ", " +
             "materialEfficiency = " + materialEfficiency + ", " +
             "quantity = " + quantity + ", " +
-            "run = " + run + ", " +
+            "runs = " + runs + ", " +
             "timeEfficiency = " + timeEfficiency + ", " +
             "typeId = " + typeId + ", " +
             "typeName = " + typeName + ", " +

@@ -26,8 +26,8 @@ public class Message {
     @Attribute(required = false)
     private String title;
 
-    @Attribute(name = "toCharacterIDs", required = false)
-    private String toCharacterIds;
+    @Attribute(required = false)
+    private String toCharacterIDs;
 
     @Attribute(name = "toCorpOrAllianceID", required = false)
     private String toCorpOrAllianceId;
@@ -59,8 +59,8 @@ public class Message {
         return title;
     }
 
-    public String getToCharacterIds(){
-        return toCharacterIds;
+    public String getToCharacterIDs(){
+        return toCharacterIDs;
     }
 
     public String getToCorpOrAllianceId(){
@@ -80,7 +80,7 @@ public class Message {
             "senderTypeId = " + senderTypeId + ", " +
             "sentDate = " + sentDate + ", " +
             "title = " + title + ", " +
-            "toCharacterIds = " + toCharacterIds + ", " +
+            "toCharacterIDs = " + toCharacterIDs + ", " +
             "toCorpOrAllianceId = " + toCorpOrAllianceId + ", " +
             "toListId = " + toListId + ", " +
             "]";

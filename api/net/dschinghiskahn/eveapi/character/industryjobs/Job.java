@@ -1,5 +1,7 @@
 package net.dschinghiskahn.eveapi.character.industryjobs;
 
+import java.util.Date;
+
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -25,13 +27,13 @@ public class Job {
     private Long completedCharacterId;
 
     @Attribute(required = false)
-    private String completedDate;
+    private Date completedDate;
 
     @Attribute(required = false)
     private Double cost;
 
     @Attribute(required = false)
-    private String endDate;
+    private Date endDate;
 
     @Attribute(name = "facilityID", required = false)
     private Long facilityId;
@@ -45,14 +47,14 @@ public class Job {
     @Attribute(name = "jobID", required = false)
     private Long jobId;
 
-    @Attribute(name = "licensedRuns", required = false)
-    private Long licensedRun;
+    @Attribute(required = false)
+    private Long licensedRuns;
 
     @Attribute(name = "outputLocationID", required = false)
     private Long outputLocationId;
 
     @Attribute(required = false)
-    private String pauseDate;
+    private Date pauseDate;
 
     @Attribute(required = false)
     private Double probability;
@@ -63,8 +65,8 @@ public class Job {
     @Attribute(required = false)
     private String productTypeName;
 
-    @Attribute(name = "runs", required = false)
-    private Long run;
+    @Attribute(required = false)
+    private Long runs;
 
     @Attribute(name = "solarSystemID", required = false)
     private Long solarSystemId;
@@ -73,22 +75,22 @@ public class Job {
     private String solarSystemName;
 
     @Attribute(required = false)
-    private String startDate;
+    private Date startDate;
 
     @Attribute(name = "stationID", required = false)
     private Long stationId;
 
-    @Attribute(name = "status", required = false)
-    private Long statu;
+    @Attribute(required = false)
+    private Long status;
 
-    @Attribute(name = "successfulRuns", required = false)
-    private Long successfulRun;
+    @Attribute(required = false)
+    private Long successfulRuns;
 
     @Attribute(name = "teamID", required = false)
     private Long teamId;
 
-    @Attribute(name = "timeInSeconds", required = false)
-    private Long timeInSecond;
+    @Attribute(required = false)
+    private Long timeInSeconds;
 
     public Long getActivityId(){
         return activityId;
@@ -114,7 +116,7 @@ public class Job {
         return completedCharacterId;
     }
 
-    public String getCompletedDate(){
+    public Date getCompletedDate(){
         return completedDate;
     }
 
@@ -122,7 +124,7 @@ public class Job {
         return cost;
     }
 
-    public String getEndDate(){
+    public Date getEndDate(){
         return endDate;
     }
 
@@ -142,15 +144,15 @@ public class Job {
         return jobId;
     }
 
-    public Long getLicensedRun(){
-        return licensedRun;
+    public Long getLicensedRuns(){
+        return licensedRuns;
     }
 
     public Long getOutputLocationId(){
         return outputLocationId;
     }
 
-    public String getPauseDate(){
+    public Date getPauseDate(){
         return pauseDate;
     }
 
@@ -166,8 +168,8 @@ public class Job {
         return productTypeName;
     }
 
-    public Long getRun(){
-        return run;
+    public Long getRuns(){
+        return runs;
     }
 
     public Long getSolarSystemId(){
@@ -178,7 +180,7 @@ public class Job {
         return solarSystemName;
     }
 
-    public String getStartDate(){
+    public Date getStartDate(){
         return startDate;
     }
 
@@ -186,20 +188,20 @@ public class Job {
         return stationId;
     }
 
-    public Long getStatu(){
-        return statu;
+    public Long getStatus(){
+        return status;
     }
 
-    public Long getSuccessfulRun(){
-        return successfulRun;
+    public Long getSuccessfulRuns(){
+        return successfulRuns;
     }
 
     public Long getTeamId(){
         return teamId;
     }
 
-    public Long getTimeInSecond(){
-        return timeInSecond;
+    public Long getTimeInSeconds(){
+        return timeInSeconds;
     }
 
     @Override
@@ -218,21 +220,21 @@ public class Job {
             "installerId = " + installerId + ", " +
             "installerName = " + installerName + ", " +
             "jobId = " + jobId + ", " +
-            "licensedRun = " + licensedRun + ", " +
+            "licensedRuns = " + licensedRuns + ", " +
             "outputLocationId = " + outputLocationId + ", " +
             "pauseDate = " + pauseDate + ", " +
             "probability = " + probability + ", " +
             "productTypeId = " + productTypeId + ", " +
             "productTypeName = " + productTypeName + ", " +
-            "run = " + run + ", " +
+            "runs = " + runs + ", " +
             "solarSystemId = " + solarSystemId + ", " +
             "solarSystemName = " + solarSystemName + ", " +
             "startDate = " + startDate + ", " +
             "stationId = " + stationId + ", " +
-            "statu = " + statu + ", " +
-            "successfulRun = " + successfulRun + ", " +
+            "status = " + status + ", " +
+            "successfulRuns = " + successfulRuns + ", " +
             "teamId = " + teamId + ", " +
-            "timeInSecond = " + timeInSecond + ", " +
+            "timeInSeconds = " + timeInSeconds + ", " +
             "]";
     }
 

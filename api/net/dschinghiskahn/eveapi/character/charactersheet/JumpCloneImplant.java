@@ -13,7 +13,7 @@ public class JumpCloneImplant {
     private Long typeId;
 
     @Attribute(required = false)
-    private Long typeName;
+    private String typeName;
 
     public Long getJumpCloneId(){
         return jumpCloneId;
@@ -23,7 +23,7 @@ public class JumpCloneImplant {
         return typeId;
     }
 
-    public Long getTypeName(){
+    public String getTypeName(){
         return typeName;
     }
 

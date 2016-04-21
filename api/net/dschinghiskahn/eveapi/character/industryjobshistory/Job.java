@@ -47,8 +47,8 @@ public class Job {
     @Attribute(name = "jobID", required = false)
     private Long jobId;
 
-    @Attribute(name = "licensedRuns", required = false)
-    private Long licensedRun;
+    @Attribute(required = false)
+    private Long licensedRuns;
 
     @Attribute(name = "outputLocationID", required = false)
     private Long outputLocationId;
@@ -57,7 +57,7 @@ public class Job {
     private Date pauseDate;
 
     @Attribute(required = false)
-    private Long probability;
+    private Double probability;
 
     @Attribute(name = "productTypeID", required = false)
     private Long productTypeId;
@@ -65,8 +65,8 @@ public class Job {
     @Attribute(required = false)
     private String productTypeName;
 
-    @Attribute(name = "runs", required = false)
-    private Long run;
+    @Attribute(required = false)
+    private Long runs;
 
     @Attribute(name = "solarSystemID", required = false)
     private Long solarSystemId;
@@ -80,17 +80,17 @@ public class Job {
     @Attribute(name = "stationID", required = false)
     private Long stationId;
 
-    @Attribute(name = "status", required = false)
-    private Long statu;
+    @Attribute(required = false)
+    private Long status;
 
-    @Attribute(name = "successfulRuns", required = false)
-    private Long successfulRun;
+    @Attribute(required = false)
+    private Long successfulRuns;
 
     @Attribute(name = "teamID", required = false)
     private Long teamId;
 
-    @Attribute(name = "timeInSeconds", required = false)
-    private Long timeInSecond;
+    @Attribute(required = false)
+    private Long timeInSeconds;
 
     public Long getActivityId(){
         return activityId;
@@ -144,8 +144,8 @@ public class Job {
         return jobId;
     }
 
-    public Long getLicensedRun(){
-        return licensedRun;
+    public Long getLicensedRuns(){
+        return licensedRuns;
     }
 
     public Long getOutputLocationId(){
@@ -156,7 +156,7 @@ public class Job {
         return pauseDate;
     }
 
-    public Long getProbability(){
+    public Double getProbability(){
         return probability;
     }
 
@@ -168,8 +168,8 @@ public class Job {
         return productTypeName;
     }
 
-    public Long getRun(){
-        return run;
+    public Long getRuns(){
+        return runs;
     }
 
     public Long getSolarSystemId(){
@@ -188,20 +188,20 @@ public class Job {
         return stationId;
     }
 
-    public Long getStatu(){
-        return statu;
+    public Long getStatus(){
+        return status;
     }
 
-    public Long getSuccessfulRun(){
-        return successfulRun;
+    public Long getSuccessfulRuns(){
+        return successfulRuns;
     }
 
     public Long getTeamId(){
         return teamId;
     }
 
-    public Long getTimeInSecond(){
-        return timeInSecond;
+    public Long getTimeInSeconds(){
+        return timeInSeconds;
     }
 
     @Override
@@ -220,21 +220,21 @@ public class Job {
             "installerId = " + installerId + ", " +
             "installerName = " + installerName + ", " +
             "jobId = " + jobId + ", " +
-            "licensedRun = " + licensedRun + ", " +
+            "licensedRuns = " + licensedRuns + ", " +
             "outputLocationId = " + outputLocationId + ", " +
             "pauseDate = " + pauseDate + ", " +
             "probability = " + probability + ", " +
             "productTypeId = " + productTypeId + ", " +
             "productTypeName = " + productTypeName + ", " +
-            "run = " + run + ", " +
+            "runs = " + runs + ", " +
             "solarSystemId = " + solarSystemId + ", " +
             "solarSystemName = " + solarSystemName + ", " +
             "startDate = " + startDate + ", " +
             "stationId = " + stationId + ", " +
-            "statu = " + statu + ", " +
-            "successfulRun = " + successfulRun + ", " +
+            "status = " + status + ", " +
+            "successfulRuns = " + successfulRuns + ", " +
             "teamId = " + teamId + ", " +
-            "timeInSecond = " + timeInSecond + ", " +
+            "timeInSeconds = " + timeInSeconds + ", " +
             "]";
     }
 

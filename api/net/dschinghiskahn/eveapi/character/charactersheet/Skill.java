@@ -12,8 +12,8 @@ public class Skill {
     @Attribute(required = false)
     private Long published;
 
-    @Attribute(name = "skillpoints", required = false)
-    private Long skillpoint;
+    @Attribute(required = false)
+    private Long skillpoints;
 
     @Attribute(name = "typeID", required = false)
     private Long typeId;
@@ -26,8 +26,8 @@ public class Skill {
         return published;
     }
 
-    public Long getSkillpoint(){
-        return skillpoint;
+    public Long getSkillpoints(){
+        return skillpoints;
     }
 
     public Long getTypeId(){
@@ -39,7 +39,7 @@ public class Skill {
         return "Skill [" +
             "level = " + level + ", " +
             "published = " + published + ", " +
-            "skillpoint = " + skillpoint + ", " +
+            "skillpoints = " + skillpoints + ", " +
             "typeId = " + typeId + ", " +
             "]";
     }

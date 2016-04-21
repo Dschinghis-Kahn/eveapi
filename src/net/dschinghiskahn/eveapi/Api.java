@@ -8,6 +8,7 @@ import java.net.URL;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
@@ -544,6 +545,10 @@ public final class Api {
         return getMailBodies(keyId, verificationCode, characterId, messageIds.toArray(new Long[0]));
     }
 
+    public static MailBodies getMailBodies(long keyId, String verificationCode, long characterId, Set<Long> messageIds) throws IOException, EveApiException {
+        return getMailBodies(keyId, verificationCode, characterId, messageIds.toArray(new Long[0]));
+    }
+
     public static MailBodies getMailBodies(long keyId, String verificationCode, long characterId, Long... messageIds) throws IOException, EveApiException {
         StringBuilder ids = new StringBuilder();
         for (long id : messageIds) {
@@ -676,6 +681,11 @@ public final class Api {
     }
 
     public static NotificationTexts getNotificationTexts(long keyId, String verificationCode, long characterId, List<Long> notificationIds)
+            throws IOException, EveApiException {
+        return getNotificationTexts(keyId, verificationCode, characterId, notificationIds.toArray(new Long[0]));
+    }
+
+    public static NotificationTexts getNotificationTexts(long keyId, String verificationCode, long characterId, Set<Long> notificationIds)
             throws IOException, EveApiException {
         return getNotificationTexts(keyId, verificationCode, characterId, notificationIds.toArray(new Long[0]));
     }
@@ -923,6 +933,10 @@ public final class Api {
     }
 
     public static TypeName getTypeName(List<Long> typeIds) throws IOException, EveApiException {
+        return getTypeName(typeIds.toArray(new Long[0]));
+    }
+
+    public static TypeName getTypeName(Set<Long> typeIds) throws IOException, EveApiException {
         return getTypeName(typeIds.toArray(new Long[0]));
     }
 

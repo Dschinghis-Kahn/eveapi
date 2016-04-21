@@ -14,8 +14,8 @@ public class ResearchItem {
     @Attribute(required = false)
     private Double pointsPerDay;
 
-    @Attribute(name = "remainderPoints", required = false)
-    private Double remainderPoint;
+    @Attribute(required = false)
+    private Double remainderPoints;
 
     @Attribute(required = false)
     private Date researchStartDate;
@@ -31,8 +31,8 @@ public class ResearchItem {
         return pointsPerDay;
     }
 
-    public Double getRemainderPoint(){
-        return remainderPoint;
+    public Double getRemainderPoints(){
+        return remainderPoints;
     }
 
     public Date getResearchStartDate(){
@@ -48,7 +48,7 @@ public class ResearchItem {
         return "ResearchItem [" +
             "agentId = " + agentId + ", " +
             "pointsPerDay = " + pointsPerDay + ", " +
-            "remainderPoint = " + remainderPoint + ", " +
+            "remainderPoints = " + remainderPoints + ", " +
             "researchStartDate = " + researchStartDate + ", " +
             "skillTypeId = " + skillTypeId + ", " +
             "]";

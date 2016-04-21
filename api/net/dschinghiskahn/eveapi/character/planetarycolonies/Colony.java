@@ -11,8 +11,8 @@ public class Colony {
     @Attribute(required = false)
     private Date lastUpdate;
 
-    @Attribute(name = "numberOfPins", required = false)
-    private Long numberOfPin;
+    @Attribute(required = false)
+    private Long numberOfPins;
 
     @Attribute(name = "ownerID", required = false)
     private Long ownerId;
@@ -45,8 +45,8 @@ public class Colony {
         return lastUpdate;
     }
 
-    public Long getNumberOfPin(){
-        return numberOfPin;
+    public Long getNumberOfPins(){
+        return numberOfPins;
     }
 
     public Long getOwnerId(){
@@ -89,7 +89,7 @@ public class Colony {
     public String toString(){
         return "Colony [" +
             "lastUpdate = " + lastUpdate + ", " +
-            "numberOfPin = " + numberOfPin + ", " +
+            "numberOfPins = " + numberOfPins + ", " +
             "ownerId = " + ownerId + ", " +
             "ownerName = " + ownerName + ", " +
             "planetId = " + planetId + ", " +
