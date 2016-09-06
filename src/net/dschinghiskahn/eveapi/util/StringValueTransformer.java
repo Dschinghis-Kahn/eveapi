@@ -5,17 +5,13 @@ import org.simpleframework.xml.transform.Transform;
 public class StringValueTransformer implements Transform<String> {
 
     @Override
-    public String read(String value) {
-        String result = "";
-        if (value != null && value.length() > 0) {
-            result = String.valueOf(value);
-        }
-        return result;
+    public String read(final String value) {
+        return value == null ? "" : value;
     }
 
     @Override
-    public String write(String value) {
-        return value.toString();
+    public String write(final String value) {
+        return value;
     }
 
 }

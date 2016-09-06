@@ -21,7 +21,7 @@ public class DateValueTransformer implements Transform<Date> {
     }
 
     @Override
-    public Date read(String value) {
+    public Date read(final String value) {
         Date result = null;
         if (value != null && value.length() > 0) {
             try {
@@ -36,7 +36,7 @@ public class DateValueTransformer implements Transform<Date> {
     }
 
     @Override
-    public String write(Date value) {
+    public String write(final Date value) {
         String result = null;
         if (value != null) {
             synchronized (DATE_FORMAT) {

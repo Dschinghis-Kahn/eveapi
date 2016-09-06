@@ -64,32 +64,32 @@ import net.dschinghiskahn.eveapi.util.StringValueTransformer;
 
 public final class Api {
 
+    private static final int HTTP_TIMEOUT = 30000;
     private static final String BASE_URL = "https://api.eveonline.com";
 
     private Api() {}
 
-    private static Object query(Class<?> resultClass, String urlPattern, String... parameters) throws IOException, EveApiException {
+    private static Object query(final Class<?> resultClass, final String urlPattern, final String... parameters) throws IOException, EveApiException {
         Object result = null;
         String url = String.format(Locale.getDefault(), BASE_URL + urlPattern, (Object[]) parameters);
         try {
-            if (Class.forName("android.util.Log") != null) { // used for
-                                                             // eveapigenerator
-                                                             // test cases
+            // used for eveapigenerator test cases
+            if (Class.forName("android.util.Log") != null) {
                 Log.d(Api.class.getSimpleName(), "Querying: " + url);
             }
         } catch (ClassNotFoundException e) {
             // Intentionally left empty
         }
 
-        HttpURLConnection connection = null;
         InputStream input = null;
         try {
-            connection = (HttpURLConnection) new URL(url).openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
             connection.setRequestProperty("User-Agent", "EveApi, Author: Genghis Khane");
-            connection.setConnectTimeout(5000);
-            connection.setReadTimeout(5000);
+            connection.setConnectTimeout(HTTP_TIMEOUT);
+            connection.setReadTimeout(HTTP_TIMEOUT);
 
-            if (connection.getResponseCode() == 200 || connection.getResponseCode() <= 0) {
+            int responseCode = connection.getResponseCode();
+            if (responseCode == HttpURLConnection.HTTP_OK || responseCode <= 0) {
                 input = new BufferedInputStream(connection.getInputStream());
             } else {
                 input = new BufferedInputStream(connection.getErrorStream());
@@ -101,7 +101,7 @@ public final class Api {
             matcher.bind(String.class, new StringValueTransformer());
             matcher.bind(Date.class, new DateValueTransformer());
             Serializer serializer = new Persister(matcher);
-            if (connection.getResponseCode() == 200) {
+            if (responseCode == HttpURLConnection.HTTP_OK) {
                 try {
                     result = serializer.read(resultClass, input);
                 } catch (Exception e) {
@@ -141,7 +141,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static AccountStatus getAccountStatus(long keyId, String verificationCode) throws IOException, EveApiException {
+    public static AccountStatus getAccountStatus(final long keyId, final String verificationCode) throws IOException, EveApiException {
         return (AccountStatus) Api.query(AccountStatus.class, "/account/AccountStatus.xml.aspx?keyID=%s&vCode=%s", String.valueOf(keyId), verificationCode);
     }
 
@@ -157,7 +157,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static ApiKeyInfo getApiKeyInfo(long keyId, String verificationCode) throws IOException, EveApiException {
+    public static ApiKeyInfo getApiKeyInfo(final long keyId, final String verificationCode) throws IOException, EveApiException {
         return (ApiKeyInfo) Api.query(ApiKeyInfo.class, "/account/APIKeyInfo.xml.aspx?keyID=%s&vCode=%s", String.valueOf(keyId), verificationCode);
     }
 
@@ -173,7 +173,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static Characters getCharacters(long keyId, String verificationCode) throws IOException, EveApiException {
+    public static Characters getCharacters(final long keyId, final String verificationCode) throws IOException, EveApiException {
         return (Characters) Api.query(Characters.class, "/account/Characters.xml.aspx?keyID=%s&vCode=%s", String.valueOf(keyId), verificationCode);
     }
 
@@ -189,7 +189,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static CallList getCallList(long keyId, String verificationCode) throws IOException, EveApiException {
+    public static CallList getCallList(final long keyId, final String verificationCode) throws IOException, EveApiException {
         return (CallList) Api.query(CallList.class, "/api/CallList.xml.aspx?keyID=%s&vCode=%s", String.valueOf(keyId), verificationCode);
     }
 
@@ -208,7 +208,8 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static AccountBalance getAccountBalance(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static AccountBalance getAccountBalance(final long keyId, final String verificationCode, final long characterId)
+            throws IOException, EveApiException {
         return (AccountBalance) Api.query(AccountBalance.class, "/char/AccountBalance.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
     }
@@ -228,11 +229,12 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static AssetList getAssetList(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static AssetList getAssetList(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return getAssetList(keyId, verificationCode, characterId, false);
     }
 
-    public static AssetList getAssetList(long keyId, String verificationCode, long characterId, boolean flat) throws IOException, EveApiException {
+    public static AssetList getAssetList(final long keyId, final String verificationCode, final long characterId, final boolean flat)
+            throws IOException, EveApiException {
         return (AssetList) Api.query(AssetList.class, "/char/AssetList.xml.aspx?keyID=%s&vCode=%s&characterID=%s&flat=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId), flat ? "1" : "0");
     }
@@ -251,7 +253,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static Blueprints getBlueprints(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static Blueprints getBlueprints(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (Blueprints) Api.query(Blueprints.class, "/char/Blueprints.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId), verificationCode,
                 String.valueOf(characterId));
     }
@@ -271,12 +273,12 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static Bookmarks getBookmarks(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static Bookmarks getBookmarks(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (Bookmarks) Api.query(Bookmarks.class, "/char/Bookmarks.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId), verificationCode,
                 String.valueOf(characterId));
     }
 
-    public static CalendarEventAttendees getCalendarEventAttendees(long keyId, String verificationCode, long characterId, long eventId)
+    public static CalendarEventAttendees getCalendarEventAttendees(final long keyId, final String verificationCode, final long characterId, final long eventId)
             throws IOException, EveApiException {
         return (CalendarEventAttendees) Api.query(CalendarEventAttendees.class,
                 "/char/CalendarEventAttendees.xml.aspx?keyID=%s&vCode=%s&characterID=%s&eventID=%s", String.valueOf(keyId), verificationCode,
@@ -300,7 +302,8 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static CharacterSheet getCharacterSheet(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static CharacterSheet getCharacterSheet(final long keyId, final String verificationCode, final long characterId)
+            throws IOException, EveApiException {
         return (CharacterSheet) Api.query(CharacterSheet.class, "/char/CharacterSheet.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
     }
@@ -320,7 +323,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static ChatChannels getChatChannels(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static ChatChannels getChatChannels(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (ChatChannels) Api.query(ChatChannels.class, "/char/ChatChannels.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
     }
@@ -340,7 +343,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static ContactList getContactList(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static ContactList getContactList(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (ContactList) Api.query(ContactList.class, "/char/ContactList.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
     }
@@ -360,7 +363,8 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static ContactNotifications getContactNotifications(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static ContactNotifications getContactNotifications(final long keyId, final String verificationCode, final long characterId)
+            throws IOException, EveApiException {
         return (ContactNotifications) Api.query(ContactNotifications.class, "/char/ContactNotifications.xml.aspx?keyID=%s&vCode=%s&characterID=%s",
                 String.valueOf(keyId), verificationCode, String.valueOf(characterId));
     }
@@ -379,13 +383,14 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static ContractBids getContactBids(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static ContractBids getContactBids(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (ContractBids) Api.query(ContractBids.class, "/char/ContractBids.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
 
     }
 
-    public static ContractItems getContractItems(long keyId, String verificationCode, long characterId, long contractId) throws IOException, EveApiException {
+    public static ContractItems getContractItems(final long keyId, final String verificationCode, final long characterId, final long contractId)
+            throws IOException, EveApiException {
         return (ContractItems) Api.query(ContractItems.class, "/char/ContractItems.xml.aspx?keyID=%s&vCode=%s&characterID=%s&contractID=%s",
                 String.valueOf(keyId), verificationCode, String.valueOf(characterId), String.valueOf(contractId));
     }
@@ -405,12 +410,13 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static Contracts getContracts(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static Contracts getContracts(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (Contracts) Api.query(Contracts.class, "/char/Contracts.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId), verificationCode,
                 String.valueOf(characterId));
     }
 
-    public static Contracts getContracts(long keyId, String verificationCode, long characterId, long contractId) throws IOException, EveApiException {
+    public static Contracts getContracts(final long keyId, final String verificationCode, final long characterId, final long contractId)
+            throws IOException, EveApiException {
         return (Contracts) Api.query(Contracts.class, "/char/Contracts.xml.aspx?keyID=%s&vCode=%s&characterID=%s&contractID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId), String.valueOf(contractId));
     }
@@ -430,7 +436,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static FacWarStats getFacWarStats(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static FacWarStats getFacWarStats(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (FacWarStats) Api.query(FacWarStats.class, "/char/FacWarStats.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
     }
@@ -448,7 +454,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static IndustryJobs getIndustryJobs(long keyId, String verificationCode) throws IOException, EveApiException {
+    public static IndustryJobs getIndustryJobs(final long keyId, final String verificationCode) throws IOException, EveApiException {
         return (IndustryJobs) Api.query(IndustryJobs.class, "/char/IndustryJobs.xml.aspx?keyID=%s&vCode=%s&", String.valueOf(keyId), verificationCode);
     }
 
@@ -467,7 +473,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static IndustryJobs getIndustryJobs(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static IndustryJobs getIndustryJobs(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (IndustryJobs) Api.query(IndustryJobs.class, "/char/IndustryJobs.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
     }
@@ -484,7 +490,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static IndustryJobsHistory getIndustryJobsHistory(long keyId, String verificationCode) throws IOException, EveApiException {
+    public static IndustryJobsHistory getIndustryJobsHistory(final long keyId, final String verificationCode) throws IOException, EveApiException {
         return (IndustryJobsHistory) Api.query(IndustryJobsHistory.class, "/char/IndustryJobsHistory.xml.aspx?keyID=%s&vCode=%s&", String.valueOf(keyId),
                 verificationCode);
     }
@@ -503,7 +509,8 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static IndustryJobsHistory getIndustryJobsHistory(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static IndustryJobsHistory getIndustryJobsHistory(final long keyId, final String verificationCode, final long characterId)
+            throws IOException, EveApiException {
         return (IndustryJobsHistory) Api.query(IndustryJobsHistory.class, "/char/IndustryJobsHistory.xml.aspx?keyID=%s&vCode=%s&characterID=%s",
                 String.valueOf(keyId), verificationCode, String.valueOf(characterId));
     }
@@ -523,38 +530,43 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static KillLog getKillLog(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static KillLog getKillLog(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (KillLog) Api.query(KillLog.class, "/char/KillLog.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId), verificationCode,
                 String.valueOf(characterId));
     }
 
-    public static Locations getLocations(long keyId, String verificationCode, long characterId, List<Long> itemIds) throws IOException, EveApiException {
-        return getLocations(keyId, verificationCode, characterId, itemIds.toArray(new Long[0]));
+    public static Locations getLocations(final long keyId, final String verificationCode, final long characterId, final List<Long> itemIds)
+            throws IOException, EveApiException {
+        return getLocations(keyId, verificationCode, characterId, itemIds.toArray(new Long[0])); // NOPMD
     }
 
-    public static Locations getLocations(long keyId, String verificationCode, long characterId, Long... itemIds) throws IOException, EveApiException {
+    public static Locations getLocations(final long keyId, final String verificationCode, final long characterId, final Long... itemIds)
+            throws IOException, EveApiException {
         StringBuilder ids = new StringBuilder();
         for (long id : itemIds) {
             ids.append(id);
-            ids.append(",");
+            ids.append(',');
         }
         return (Locations) Api.query(Locations.class, "/char/Locations.xml.aspx?keyID=%s&vCode=%s&characterID=%s&IDs=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId), ids.substring(0, ids.length() - 1));
     }
 
-    public static MailBodies getMailBodies(long keyId, String verificationCode, long characterId, List<Long> messageIds) throws IOException, EveApiException {
-        return getMailBodies(keyId, verificationCode, characterId, messageIds.toArray(new Long[0]));
+    public static MailBodies getMailBodies(final long keyId, final String verificationCode, final long characterId, final List<Long> messageIds)
+            throws IOException, EveApiException {
+        return getMailBodies(keyId, verificationCode, characterId, messageIds.toArray(new Long[0])); // NOPMD
     }
 
-    public static MailBodies getMailBodies(long keyId, String verificationCode, long characterId, Set<Long> messageIds) throws IOException, EveApiException {
-        return getMailBodies(keyId, verificationCode, characterId, messageIds.toArray(new Long[0]));
+    public static MailBodies getMailBodies(final long keyId, final String verificationCode, final long characterId, final Set<Long> messageIds)
+            throws IOException, EveApiException {
+        return getMailBodies(keyId, verificationCode, characterId, messageIds.toArray(new Long[0]));// NOPMD
     }
 
-    public static MailBodies getMailBodies(long keyId, String verificationCode, long characterId, Long... messageIds) throws IOException, EveApiException {
+    public static MailBodies getMailBodies(final long keyId, final String verificationCode, final long characterId, final Long... messageIds)
+            throws IOException, EveApiException {
         StringBuilder ids = new StringBuilder();
         for (long id : messageIds) {
             ids.append(id);
-            ids.append(",");
+            ids.append(',');
         }
         return (MailBodies) Api.query(MailBodies.class, "/char/MailBodies.xml.aspx?keyID=%s&vCode=%s&characterID=%s&IDs=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId), ids.substring(0, ids.length() - 1));
@@ -575,7 +587,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static MailingLists getMailingLists(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static MailingLists getMailingLists(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (MailingLists) Api.query(MailingLists.class, "/char/MailingLists.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
     }
@@ -595,7 +607,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static MailMessages getMailMessages(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static MailMessages getMailMessages(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (MailMessages) Api.query(MailMessages.class, "/char/MailMessages.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
     }
@@ -613,7 +625,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static MarketOrders getMarketOrders(long keyId, String verificationCode) throws IOException, EveApiException {
+    public static MarketOrders getMarketOrders(final long keyId, final String verificationCode) throws IOException, EveApiException {
         return (MarketOrders) Api.query(MarketOrders.class, "/char/MarketOrders.xml.aspx?keyID=%s&vCode=%s", String.valueOf(keyId), verificationCode);
     }
 
@@ -632,12 +644,13 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static MarketOrders getMarketOrders(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static MarketOrders getMarketOrders(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (MarketOrders) Api.query(MarketOrders.class, "/char/MarketOrders.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
     }
 
-    public static MarketOrders getMarketOrders(long keyId, String verificationCode, long characterId, long orderId) throws IOException, EveApiException {
+    public static MarketOrders getMarketOrders(final long keyId, final String verificationCode, final long characterId, final long orderId)
+            throws IOException, EveApiException {
         return (MarketOrders) Api.query(MarketOrders.class, "/char/MarketOrders.xml.aspx?keyID=%s&vCode=%s&characterID=%s&orderID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId), String.valueOf(orderId));
     }
@@ -657,7 +670,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static Medals getMedals(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static Medals getMedals(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (Medals) Api.query(Medals.class, "/char/Medals.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId), verificationCode,
                 String.valueOf(characterId));
     }
@@ -677,27 +690,27 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static Notifications getNotifications(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static Notifications getNotifications(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (Notifications) Api.query(Notifications.class, "/char/Notifications.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
     }
 
-    public static NotificationTexts getNotificationTexts(long keyId, String verificationCode, long characterId, List<Long> notificationIds)
-            throws IOException, EveApiException {
-        return getNotificationTexts(keyId, verificationCode, characterId, notificationIds.toArray(new Long[0]));
+    public static NotificationTexts getNotificationTexts(final long keyId, final String verificationCode, final long characterId,
+            final List<Long> notificationIds) throws IOException, EveApiException {
+        return getNotificationTexts(keyId, verificationCode, characterId, notificationIds.toArray(new Long[0])); // NOPMD
     }
 
-    public static NotificationTexts getNotificationTexts(long keyId, String verificationCode, long characterId, Set<Long> notificationIds)
-            throws IOException, EveApiException {
-        return getNotificationTexts(keyId, verificationCode, characterId, notificationIds.toArray(new Long[0]));
+    public static NotificationTexts getNotificationTexts(final long keyId, final String verificationCode, final long characterId,
+            final Set<Long> notificationIds) throws IOException, EveApiException {
+        return getNotificationTexts(keyId, verificationCode, characterId, notificationIds.toArray(new Long[0])); // NOPMD
     }
 
-    public static NotificationTexts getNotificationTexts(long keyId, String verificationCode, long characterId, Long... notificationIds)
+    public static NotificationTexts getNotificationTexts(final long keyId, final String verificationCode, final long characterId, final Long... notificationIds)
             throws IOException, EveApiException {
         StringBuilder ids = new StringBuilder();
         for (long id : notificationIds) {
             ids.append(id);
-            ids.append(",");
+            ids.append(',');
         }
         return (NotificationTexts) Api.query(NotificationTexts.class, "/char/NotificationTexts.xml.aspx?keyID=%s&vCode=%s&characterID=%s&IDs=%s",
                 String.valueOf(keyId), verificationCode, String.valueOf(characterId), ids.substring(0, ids.length() - 1));
@@ -717,22 +730,26 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static PlanetaryColonies getPlanetaryColonies(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static PlanetaryColonies getPlanetaryColonies(final long keyId, final String verificationCode, final long characterId)
+            throws IOException, EveApiException {
         return (PlanetaryColonies) Api.query(PlanetaryColonies.class, "/char/PlanetaryColonies.xml.aspx?keyID=%s&vCode=%s&characterID=%s",
                 String.valueOf(keyId), verificationCode, String.valueOf(characterId));
     }
 
-    public static PlanetaryLinks getPlanetaryLinks(long keyId, String verificationCode, long characterId, long planetId) throws IOException, EveApiException {
+    public static PlanetaryLinks getPlanetaryLinks(final long keyId, final String verificationCode, final long characterId, final long planetId)
+            throws IOException, EveApiException {
         return (PlanetaryLinks) Api.query(PlanetaryLinks.class, "/char/PlanetaryLinks.xml.aspx?keyID=%s&vCode=%s&characterID=%s&planetID=%s",
                 String.valueOf(keyId), verificationCode, String.valueOf(characterId), String.valueOf(planetId));
     }
 
-    public static PlanetaryPins getPlanetaryPins(long keyId, String verificationCode, long characterId, long planetId) throws IOException, EveApiException {
+    public static PlanetaryPins getPlanetaryPins(final long keyId, final String verificationCode, final long characterId, final long planetId)
+            throws IOException, EveApiException {
         return (PlanetaryPins) Api.query(PlanetaryPins.class, "/char/PlanetaryPins.xml.aspx?keyID=%s&vCode=%s&characterID=%s&planetID=%s",
                 String.valueOf(keyId), verificationCode, String.valueOf(characterId), String.valueOf(planetId));
     }
 
-    public static PlanetaryRoutes getPlanetaryRoutes(long keyId, String verificationCode, long characterId, long planetId) throws IOException, EveApiException {
+    public static PlanetaryRoutes getPlanetaryRoutes(final long keyId, final String verificationCode, final long characterId, final long planetId)
+            throws IOException, EveApiException {
         return (PlanetaryRoutes) Api.query(PlanetaryRoutes.class, "/char/PlanetaryRoutes.xml.aspx?keyID=%s&vCode=%s&characterID=%s&planetID=%s",
                 String.valueOf(keyId), verificationCode, String.valueOf(characterId), String.valueOf(planetId));
     }
@@ -753,7 +770,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static Research getResearch(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static Research getResearch(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (Research) Api.query(Research.class, "/char/Research.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId), verificationCode,
                 String.valueOf(characterId));
 
@@ -775,7 +792,8 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static SkillInTraining getSkillInTraining(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static SkillInTraining getSkillInTraining(final long keyId, final String verificationCode, final long characterId)
+            throws IOException, EveApiException {
         return (SkillInTraining) Api.query(SkillInTraining.class, "/char/SkillInTraining.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
     }
@@ -795,7 +813,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static SkillQueue getSkillQueue(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static SkillQueue getSkillQueue(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (SkillQueue) Api.query(SkillQueue.class, "/char/SkillQueue.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId), verificationCode,
                 String.valueOf(characterId));
     }
@@ -815,7 +833,7 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static Standings getStandings(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static Standings getStandings(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (Standings) Api.query(Standings.class, "/char/Standings.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId), verificationCode,
                 String.valueOf(characterId));
     }
@@ -835,7 +853,8 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static UpcomingCalendarEvents getUpcomingCalendarEvents(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static UpcomingCalendarEvents getUpcomingCalendarEvents(final long keyId, final String verificationCode, final long characterId)
+            throws IOException, EveApiException {
         return (UpcomingCalendarEvents) Api.query(UpcomingCalendarEvents.class, "/char/UpcomingCalendarEvents.xml.aspx?keyID=%s&vCode=%s&characterID=%s",
                 String.valueOf(keyId), verificationCode, String.valueOf(characterId));
     }
@@ -855,22 +874,23 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static WalletJournal getWalletJournal(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static WalletJournal getWalletJournal(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return getWalletJournal(keyId, verificationCode, characterId, 1000);
     }
 
-    public static WalletJournal getWalletJournal(long keyId, String verificationCode, long characterId, int accountKey) throws IOException, EveApiException {
+    public static WalletJournal getWalletJournal(final long keyId, final String verificationCode, final long characterId, final int accountKey)
+            throws IOException, EveApiException {
         return (WalletJournal) Api.query(WalletJournal.class, "/char/WalletJournal.xml.aspx?keyID=%s&vCode=%s&characterID=%s&accountKey=%s",
                 String.valueOf(keyId), verificationCode, String.valueOf(characterId), String.valueOf(accountKey));
     }
 
-    public static WalletJournal getWalletJournal(long keyId, String verificationCode, long characterId, int accountKey, long fromId)
-            throws IOException, EveApiException {
+    public static WalletJournal getWalletJournal(final long keyId, final String verificationCode, final long characterId, final int accountKey,
+            final long fromId) throws IOException, EveApiException {
         return getWalletJournal(keyId, verificationCode, characterId, accountKey, fromId, 1000);
     }
 
-    public static WalletJournal getWalletJournal(long keyId, String verificationCode, long characterId, int accountKey, long fromId, int rowCount)
-            throws IOException, EveApiException {
+    public static WalletJournal getWalletJournal(final long keyId, final String verificationCode, final long characterId, final int accountKey,
+            final long fromId, final int rowCount) throws IOException, EveApiException {
         return (WalletJournal) Api.query(WalletJournal.class,
                 "/char/WalletJournal.xml.aspx?keyID=%s&vCode=%s&characterID=%s&accountKey=%s&fromID=%s&rowCount=%s", String.valueOf(keyId), verificationCode,
                 String.valueOf(characterId), String.valueOf(accountKey), String.valueOf(fromId), String.valueOf(rowCount));
@@ -891,23 +911,24 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static WalletTransactions getWalletTransactions(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static WalletTransactions getWalletTransactions(final long keyId, final String verificationCode, final long characterId)
+            throws IOException, EveApiException {
         return getWalletTransactions(keyId, verificationCode, characterId, 1000);
     }
 
-    public static WalletTransactions getWalletTransactions(long keyId, String verificationCode, long characterId, int accountKey)
+    public static WalletTransactions getWalletTransactions(final long keyId, final String verificationCode, final long characterId, final int accountKey)
             throws IOException, EveApiException {
         return (WalletTransactions) Api.query(WalletTransactions.class, "/char/WalletTransactions.xml.aspx?keyID=%s&vCode=%s&characterID=%s&accountKey=%s",
                 String.valueOf(keyId), verificationCode, String.valueOf(characterId), String.valueOf(accountKey));
     }
 
-    public static WalletTransactions getWalletTransactions(long keyId, String verificationCode, long characterId, int accountKey, long fromId)
-            throws IOException, EveApiException {
+    public static WalletTransactions getWalletTransactions(final long keyId, final String verificationCode, final long characterId, final int accountKey,
+            final long fromId) throws IOException, EveApiException {
         return getWalletTransactions(keyId, verificationCode, characterId, accountKey, fromId, 1000);
     }
 
-    public static WalletTransactions getWalletTransactions(long keyId, String verificationCode, long characterId, int accountKey, long fromId, int rowCount)
-            throws IOException, EveApiException {
+    public static WalletTransactions getWalletTransactions(final long keyId, final String verificationCode, final long characterId, final int accountKey,
+            final long fromId, final int rowCount) throws IOException, EveApiException {
         return (WalletTransactions) Api.query(WalletTransactions.class,
                 "/char/WalletTransactions.xml.aspx?keyID=%s&vCode=%s&characterID=%s&accountKey=%s&fromID=%s&rowCount=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId), String.valueOf(accountKey), String.valueOf(fromId), String.valueOf(rowCount));
@@ -930,24 +951,24 @@ public final class Api {
      * @throws EveApiException
      *             Thrown if the API returned an error.
      */
-    public static CharacterInfo getCharacterInfo(long keyId, String verificationCode, long characterId) throws IOException, EveApiException {
+    public static CharacterInfo getCharacterInfo(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (CharacterInfo) Api.query(CharacterInfo.class, "/eve/CharacterInfo.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId),
                 verificationCode, String.valueOf(characterId));
     }
 
-    public static TypeName getTypeName(List<Long> typeIds) throws IOException, EveApiException {
-        return getTypeName(typeIds.toArray(new Long[0]));
+    public static TypeName getTypeName(final List<Long> typeIds) throws IOException, EveApiException {
+        return getTypeName(typeIds.toArray(new Long[0])); // NOPMD
     }
 
-    public static TypeName getTypeName(Set<Long> typeIds) throws IOException, EveApiException {
-        return getTypeName(typeIds.toArray(new Long[0]));
+    public static TypeName getTypeName(final Set<Long> typeIds) throws IOException, EveApiException {
+        return getTypeName(typeIds.toArray(new Long[0])); // NOPMD
     }
 
-    public static TypeName getTypeName(Long... typeIds) throws IOException, EveApiException {
+    public static TypeName getTypeName(final Long... typeIds) throws IOException, EveApiException {
         StringBuilder ids = new StringBuilder();
         for (long id : typeIds) {
             ids.append(id);
-            ids.append(",");
+            ids.append(',');
         }
         return (TypeName) Api.query(TypeName.class, "/eve/TypeName.xml.aspx?IDs=%s", ids.substring(0, ids.length() - 1));
     }
