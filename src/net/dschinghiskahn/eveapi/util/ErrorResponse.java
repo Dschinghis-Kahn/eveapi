@@ -6,15 +6,15 @@ import org.simpleframework.xml.Root;
 import org.simpleframework.xml.Text;
 
 @Root(name = "eveapi", strict = false)
-public class ErrorResponse extends AbstractApiResponse {
+public class ErrorResponse extends ApiResponse {
 
     @Path("error")
     @Attribute(required = false)
-    private Long code;
+    private transient Long code;
 
     @Path("error")
     @Text(required = false)
-    private String message;
+    private transient String message;
 
     public Long getCode() {
         return code;

@@ -2,14 +2,14 @@ package net.dschinghiskahn.eveapi.character.skillintraining;
 
 import java.util.Date;
 
-import net.dschinghiskahn.eveapi.util.AbstractApiResponse;
+import net.dschinghiskahn.eveapi.util.ApiResponse;
 
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Path;
 import org.simpleframework.xml.Root;
 
 @Root(name = "eveapi")
-public class SkillInTraining extends AbstractApiResponse {
+public class SkillInTraining extends ApiResponse {
 
     @Path("result")
     @Element(name = "currentTQTime", required = false)

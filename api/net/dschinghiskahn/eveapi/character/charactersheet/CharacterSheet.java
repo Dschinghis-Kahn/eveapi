@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import net.dschinghiskahn.eveapi.util.AbstractApiResponse;
+import net.dschinghiskahn.eveapi.util.ApiResponse;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
@@ -13,7 +13,7 @@ import org.simpleframework.xml.Path;
 import org.simpleframework.xml.Root;
 
 @Root(name = "eveapi")
-public class CharacterSheet extends AbstractApiResponse {
+public class CharacterSheet extends ApiResponse {
 
     @Path("result")
     @Element(name = "DoB", required = false)

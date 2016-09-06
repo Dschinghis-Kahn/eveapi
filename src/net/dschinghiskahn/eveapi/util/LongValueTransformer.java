@@ -5,7 +5,7 @@ import org.simpleframework.xml.transform.Transform;
 public class LongValueTransformer implements Transform<Long> {
 
     @Override
-    public Long read(String value) {
+    public Long read(final String value) {
         Long result = 0L;
         if (value != null && value.length() > 0) {
             result = Long.valueOf(value);
@@ -14,7 +14,7 @@ public class LongValueTransformer implements Transform<Long> {
     }
 
     @Override
-    public String write(Long value) {
+    public String write(final Long value) {
         return value.toString();
     }
 

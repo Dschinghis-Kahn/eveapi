@@ -5,7 +5,7 @@ import org.simpleframework.xml.transform.Transform;
 public class DoubleValueTransformer implements Transform<Double> {
 
     @Override
-    public Double read(String value) {
+    public Double read(final String value) {
         Double result = 0.0;
         if (value != null && value.length() > 0) {
             result = Double.valueOf(value);
@@ -14,7 +14,7 @@ public class DoubleValueTransformer implements Transform<Double> {
     }
 
     @Override
-    public String write(Double value) {
+    public String write(final Double value) {
         return value.toString();
     }
 

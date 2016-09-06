@@ -5,13 +5,13 @@ import java.util.Date;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 
-public abstract class AbstractApiResponse {
+public class ApiResponse {
 
     @Attribute(required = false)
-    private Long version;
+    private transient Long version;
 
     @Element(required = false)
-    private Date currentTime, cachedUntil;
+    private transient Date currentTime, cachedUntil;
 
     public Date getCachedUntil() {
         return cachedUntil;

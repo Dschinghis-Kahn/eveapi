@@ -3,7 +3,7 @@ package net.dschinghiskahn.eveapi.character.mailinglists;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.dschinghiskahn.eveapi.util.AbstractApiResponse;
+import net.dschinghiskahn.eveapi.util.ApiResponse;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
@@ -11,7 +11,7 @@ import org.simpleframework.xml.Path;
 import org.simpleframework.xml.Root;
 
 @Root(name = "eveapi")
-public class MailingLists extends AbstractApiResponse {
+public class MailingLists extends ApiResponse {
 
     @Path("result/rowset[1]")
     @Attribute(name="name", required = false)
