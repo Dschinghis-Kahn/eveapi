@@ -41,65 +41,65 @@ public class Colony {
     @Attribute(required = false)
     private Long upgradeLevel;
 
-    public Date getLastUpdate(){
+    public Date getLastUpdate() {
         return lastUpdate;
     }
 
-    public Long getNumberOfPins(){
+    public Long getNumberOfPins() {
         return numberOfPins;
     }
 
-    public Long getOwnerId(){
+    public Long getOwnerId() {
         return ownerId;
     }
 
-    public String getOwnerName(){
+    public String getOwnerName() {
         return ownerName;
     }
 
-    public Long getPlanetId(){
+    public Long getPlanetId() {
         return planetId;
     }
 
-    public String getPlanetName(){
+    public String getPlanetName() {
         return planetName;
     }
 
-    public Long getPlanetTypeId(){
+    public Long getPlanetTypeId() {
         return planetTypeId;
     }
 
-    public String getPlanetTypeName(){
+    public String getPlanetTypeName() {
         return planetTypeName;
     }
 
-    public Long getSolarSystemId(){
+    public Long getSolarSystemId() {
         return solarSystemId;
     }
 
-    public String getSolarSystemName(){
+    public String getSolarSystemName() {
         return solarSystemName;
     }
 
-    public Long getUpgradeLevel(){
+    public Long getUpgradeLevel() {
         return upgradeLevel;
     }
 
     @Override
-    public String toString(){
-        return "Colony [" +
-            "lastUpdate = " + lastUpdate + ", " +
-            "numberOfPins = " + numberOfPins + ", " +
-            "ownerId = " + ownerId + ", " +
-            "ownerName = " + ownerName + ", " +
-            "planetId = " + planetId + ", " +
-            "planetName = " + planetName + ", " +
-            "planetTypeId = " + planetTypeId + ", " +
-            "planetTypeName = " + planetTypeName + ", " +
-            "solarSystemId = " + solarSystemId + ", " +
-            "solarSystemName = " + solarSystemName + ", " +
-            "upgradeLevel = " + upgradeLevel + ", " +
-            "]";
+    public String toString() {
+        return "Colony ["
+            + "lastUpdate = " + lastUpdate + ", "
+            + "numberOfPins = " + numberOfPins + ", "
+            + "ownerId = " + ownerId + ", "
+            + "ownerName = " + ownerName + ", "
+            + "planetId = " + planetId + ", "
+            + "planetName = " + planetName + ", "
+            + "planetTypeId = " + planetTypeId + ", "
+            + "planetTypeName = " + planetTypeName + ", "
+            + "solarSystemId = " + solarSystemId + ", "
+            + "solarSystemName = " + solarSystemName + ", "
+            + "upgradeLevel = " + upgradeLevel + ", "
+            + "]";
     }
 
 }

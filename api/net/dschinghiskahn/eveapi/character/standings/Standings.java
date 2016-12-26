@@ -13,15 +13,15 @@ public class Standings extends ApiResponse {
     @Element(name = "characterNPCStandings", required = false)
     private CharacterNpcStandings characterNpcStandings;
 
-    public CharacterNpcStandings getCharacterNpcStandings(){
+    public CharacterNpcStandings getCharacterNpcStandings() {
         return characterNpcStandings;
     }
 
     @Override
-    public String toString(){
-        return "Standings [" +
-            "characterNpcStandings = " + characterNpcStandings + ", " +
-            "]";
+    public String toString() {
+        return "Standings ["
+            + "characterNpcStandings = " + characterNpcStandings + ", "
+            + "]";
     }
 
 }

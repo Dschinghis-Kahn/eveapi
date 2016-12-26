@@ -14,30 +14,30 @@ import org.simpleframework.xml.Root;
 public class SkillQueue extends ApiResponse {
 
     @Path("result/rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("result/rowset[1]")
     @ElementList(type = Skill.class, required = false, inline = true)
     private List<Skill> skillqueue = new ArrayList<Skill>();
 
-    public List<Skill> getSkillqueue(){
+    public List<Skill> getSkillqueue() {
         return skillqueue;
     }
 
     @Override
-    public String toString(){
-        return "SkillQueue [" +
-            "skillqueue = " + skillqueue + ", " +
-            "]";
+    public String toString() {
+        return "SkillQueue ["
+            + "skillqueue = " + skillqueue + ", "
+            + "]";
     }
 
 }

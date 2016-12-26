@@ -55,65 +55,65 @@ public class FacWarStats extends ApiResponse {
     @Element(required = false)
     private Long victoryPointsYesterday;
 
-    public Long getCurrentRank(){
+    public Long getCurrentRank() {
         return currentRank;
     }
 
-    public Date getEnlisted(){
+    public Date getEnlisted() {
         return enlisted;
     }
 
-    public Long getFactionId(){
+    public Long getFactionId() {
         return factionId;
     }
 
-    public String getFactionName(){
+    public String getFactionName() {
         return factionName;
     }
 
-    public Long getHighestRank(){
+    public Long getHighestRank() {
         return highestRank;
     }
 
-    public Long getKillsLastWeek(){
+    public Long getKillsLastWeek() {
         return killsLastWeek;
     }
 
-    public Long getKillsTotal(){
+    public Long getKillsTotal() {
         return killsTotal;
     }
 
-    public Long getKillsYesterday(){
+    public Long getKillsYesterday() {
         return killsYesterday;
     }
 
-    public Long getVictoryPointsLastWeek(){
+    public Long getVictoryPointsLastWeek() {
         return victoryPointsLastWeek;
     }
 
-    public Long getVictoryPointsTotal(){
+    public Long getVictoryPointsTotal() {
         return victoryPointsTotal;
     }
 
-    public Long getVictoryPointsYesterday(){
+    public Long getVictoryPointsYesterday() {
         return victoryPointsYesterday;
     }
 
     @Override
-    public String toString(){
-        return "FacWarStats [" +
-            "currentRank = " + currentRank + ", " +
-            "enlisted = " + enlisted + ", " +
-            "factionId = " + factionId + ", " +
-            "factionName = " + factionName + ", " +
-            "highestRank = " + highestRank + ", " +
-            "killsLastWeek = " + killsLastWeek + ", " +
-            "killsTotal = " + killsTotal + ", " +
-            "killsYesterday = " + killsYesterday + ", " +
-            "victoryPointsLastWeek = " + victoryPointsLastWeek + ", " +
-            "victoryPointsTotal = " + victoryPointsTotal + ", " +
-            "victoryPointsYesterday = " + victoryPointsYesterday + ", " +
-            "]";
+    public String toString() {
+        return "FacWarStats ["
+            + "currentRank = " + currentRank + ", "
+            + "enlisted = " + enlisted + ", "
+            + "factionId = " + factionId + ", "
+            + "factionName = " + factionName + ", "
+            + "highestRank = " + highestRank + ", "
+            + "killsLastWeek = " + killsLastWeek + ", "
+            + "killsTotal = " + killsTotal + ", "
+            + "killsYesterday = " + killsYesterday + ", "
+            + "victoryPointsLastWeek = " + victoryPointsLastWeek + ", "
+            + "victoryPointsTotal = " + victoryPointsTotal + ", "
+            + "victoryPointsYesterday = " + victoryPointsYesterday + ", "
+            + "]";
     }
 
 }

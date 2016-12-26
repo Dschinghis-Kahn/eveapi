@@ -20,30 +20,30 @@ public class Muted {
     @Attribute(required = false)
     private Date untilWhen;
 
-    public Long getAccessorId(){
+    public Long getAccessorId() {
         return accessorId;
     }
 
-    public String getAccessorName(){
+    public String getAccessorName() {
         return accessorName;
     }
 
-    public String getReason(){
+    public String getReason() {
         return reason;
     }
 
-    public Date getUntilWhen(){
+    public Date getUntilWhen() {
         return untilWhen;
     }
 
     @Override
-    public String toString(){
-        return "Muted [" +
-            "accessorId = " + accessorId + ", " +
-            "accessorName = " + accessorName + ", " +
-            "reason = " + reason + ", " +
-            "untilWhen = " + untilWhen + ", " +
-            "]";
+    public String toString() {
+        return "Muted ["
+            + "accessorId = " + accessorId + ", "
+            + "accessorName = " + accessorName + ", "
+            + "reason = " + reason + ", "
+            + "untilWhen = " + untilWhen + ", "
+            + "]";
     }
 
 }

@@ -14,30 +14,30 @@ import org.simpleframework.xml.Root;
 public class ContactNotifications extends ApiResponse {
 
     @Path("result/rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("result/rowset[1]")
     @ElementList(type = ContactNotification.class, required = false, inline = true)
     private List<ContactNotification> contactNotifications = new ArrayList<ContactNotification>();
 
-    public List<ContactNotification> getContactNotifications(){
+    public List<ContactNotification> getContactNotifications() {
         return contactNotifications;
     }
 
     @Override
-    public String toString(){
-        return "ContactNotifications [" +
-            "contactNotifications = " + contactNotifications + ", " +
-            "]";
+    public String toString() {
+        return "ContactNotifications ["
+            + "contactNotifications = " + contactNotifications + ", "
+            + "]";
     }
 
 }

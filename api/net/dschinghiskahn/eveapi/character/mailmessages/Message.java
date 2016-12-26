@@ -35,55 +35,55 @@ public class Message {
     @Attribute(name = "toListID", required = false)
     private String toListId;
 
-    public Long getMessageId(){
+    public Long getMessageId() {
         return messageId;
     }
 
-    public Long getSenderId(){
+    public Long getSenderId() {
         return senderId;
     }
 
-    public String getSenderName(){
+    public String getSenderName() {
         return senderName;
     }
 
-    public Long getSenderTypeId(){
+    public Long getSenderTypeId() {
         return senderTypeId;
     }
 
-    public Date getSentDate(){
+    public Date getSentDate() {
         return sentDate;
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
 
-    public String getToCharacterIDs(){
+    public String getToCharacterIDs() {
         return toCharacterIDs;
     }
 
-    public String getToCorpOrAllianceId(){
+    public String getToCorpOrAllianceId() {
         return toCorpOrAllianceId;
     }
 
-    public String getToListId(){
+    public String getToListId() {
         return toListId;
     }
 
     @Override
-    public String toString(){
-        return "Message [" +
-            "messageId = " + messageId + ", " +
-            "senderId = " + senderId + ", " +
-            "senderName = " + senderName + ", " +
-            "senderTypeId = " + senderTypeId + ", " +
-            "sentDate = " + sentDate + ", " +
-            "title = " + title + ", " +
-            "toCharacterIDs = " + toCharacterIDs + ", " +
-            "toCorpOrAllianceId = " + toCorpOrAllianceId + ", " +
-            "toListId = " + toListId + ", " +
-            "]";
+    public String toString() {
+        return "Message ["
+            + "messageId = " + messageId + ", "
+            + "senderId = " + senderId + ", "
+            + "senderName = " + senderName + ", "
+            + "senderTypeId = " + senderTypeId + ", "
+            + "sentDate = " + sentDate + ", "
+            + "title = " + title + ", "
+            + "toCharacterIDs = " + toCharacterIDs + ", "
+            + "toCorpOrAllianceId = " + toCorpOrAllianceId + ", "
+            + "toListId = " + toListId + ", "
+            + "]";
     }
 
 }

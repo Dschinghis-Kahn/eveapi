@@ -11,15 +11,15 @@ public class MultiCharacterTraining {
     @Attribute(required = false)
     private Date trainingEnd;
 
-    public Date getTrainingEnd(){
+    public Date getTrainingEnd() {
         return trainingEnd;
     }
 
     @Override
-    public String toString(){
-        return "MultiCharacterTraining [" +
-            "trainingEnd = " + trainingEnd + ", " +
-            "]";
+    public String toString() {
+        return "MultiCharacterTraining ["
+            + "trainingEnd = " + trainingEnd + ", "
+            + "]";
     }
 
 }

@@ -23,35 +23,35 @@ public class ResearchItem {
     @Attribute(name = "skillTypeID", required = false)
     private Long skillTypeId;
 
-    public Long getAgentId(){
+    public Long getAgentId() {
         return agentId;
     }
 
-    public Double getPointsPerDay(){
+    public Double getPointsPerDay() {
         return pointsPerDay;
     }
 
-    public Double getRemainderPoints(){
+    public Double getRemainderPoints() {
         return remainderPoints;
     }
 
-    public Date getResearchStartDate(){
+    public Date getResearchStartDate() {
         return researchStartDate;
     }
 
-    public Long getSkillTypeId(){
+    public Long getSkillTypeId() {
         return skillTypeId;
     }
 
     @Override
-    public String toString(){
-        return "ResearchItem [" +
-            "agentId = " + agentId + ", " +
-            "pointsPerDay = " + pointsPerDay + ", " +
-            "remainderPoints = " + remainderPoints + ", " +
-            "researchStartDate = " + researchStartDate + ", " +
-            "skillTypeId = " + skillTypeId + ", " +
-            "]";
+    public String toString() {
+        return "ResearchItem ["
+            + "agentId = " + agentId + ", "
+            + "pointsPerDay = " + pointsPerDay + ", "
+            + "remainderPoints = " + remainderPoints + ", "
+            + "researchStartDate = " + researchStartDate + ", "
+            + "skillTypeId = " + skillTypeId + ", "
+            + "]";
     }
 
 }

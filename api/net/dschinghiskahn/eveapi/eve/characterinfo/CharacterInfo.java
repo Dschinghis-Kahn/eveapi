@@ -68,15 +68,15 @@ public class CharacterInfo extends ApiResponse {
     private Long corporationId;
 
     @Path("result/rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("result/rowset[1]")
@@ -115,120 +115,120 @@ public class CharacterInfo extends ApiResponse {
     @Element(required = false)
     private Long skillPoints;
 
-    public Double getAccountBalance(){
+    public Double getAccountBalance() {
         return accountBalance;
     }
 
-    public String getAlliance(){
+    public String getAlliance() {
         return alliance;
     }
 
-    public Date getAllianceDate(){
+    public Date getAllianceDate() {
         return allianceDate;
     }
 
-    public Long getAllianceId(){
+    public Long getAllianceId() {
         return allianceId;
     }
 
-    public String getAncestry(){
+    public String getAncestry() {
         return ancestry;
     }
 
-    public Long getAncestryId(){
+    public Long getAncestryId() {
         return ancestryId;
     }
 
-    public String getBloodline(){
+    public String getBloodline() {
         return bloodline;
     }
 
-    public Long getBloodlineId(){
+    public Long getBloodlineId() {
         return bloodlineId;
     }
 
-    public Long getCharacterId(){
+    public Long getCharacterId() {
         return characterId;
     }
 
-    public String getCharacterName(){
+    public String getCharacterName() {
         return characterName;
     }
 
-    public String getCorporation(){
+    public String getCorporation() {
         return corporation;
     }
 
-    public Date getCorporationDate(){
+    public Date getCorporationDate() {
         return corporationDate;
     }
 
-    public Long getCorporationId(){
+    public Long getCorporationId() {
         return corporationId;
     }
 
-    public List<EmploymentHistory> getEmploymentHistory(){
+    public List<EmploymentHistory> getEmploymentHistory() {
         return employmentHistory;
     }
 
-    public String getLastKnownLocation(){
+    public String getLastKnownLocation() {
         return lastKnownLocation;
     }
 
-    public Date getNextTrainingEnds(){
+    public Date getNextTrainingEnds() {
         return nextTrainingEnds;
     }
 
-    public String getRace(){
+    public String getRace() {
         return race;
     }
 
-    public Double getSecurityStatus(){
+    public Double getSecurityStatus() {
         return securityStatus;
     }
 
-    public String getShipName(){
+    public String getShipName() {
         return shipName;
     }
 
-    public Long getShipTypeId(){
+    public Long getShipTypeId() {
         return shipTypeId;
     }
 
-    public String getShipTypeName(){
+    public String getShipTypeName() {
         return shipTypeName;
     }
 
-    public Long getSkillPoints(){
+    public Long getSkillPoints() {
         return skillPoints;
     }
 
     @Override
-    public String toString(){
-        return "CharacterInfo [" +
-            "accountBalance = " + accountBalance + ", " +
-            "alliance = " + alliance + ", " +
-            "allianceDate = " + allianceDate + ", " +
-            "allianceId = " + allianceId + ", " +
-            "ancestry = " + ancestry + ", " +
-            "ancestryId = " + ancestryId + ", " +
-            "bloodline = " + bloodline + ", " +
-            "bloodlineId = " + bloodlineId + ", " +
-            "characterId = " + characterId + ", " +
-            "characterName = " + characterName + ", " +
-            "corporation = " + corporation + ", " +
-            "corporationDate = " + corporationDate + ", " +
-            "corporationId = " + corporationId + ", " +
-            "employmentHistory = " + employmentHistory + ", " +
-            "lastKnownLocation = " + lastKnownLocation + ", " +
-            "nextTrainingEnds = " + nextTrainingEnds + ", " +
-            "race = " + race + ", " +
-            "securityStatus = " + securityStatus + ", " +
-            "shipName = " + shipName + ", " +
-            "shipTypeId = " + shipTypeId + ", " +
-            "shipTypeName = " + shipTypeName + ", " +
-            "skillPoints = " + skillPoints + ", " +
-            "]";
+    public String toString() {
+        return "CharacterInfo ["
+            + "accountBalance = " + accountBalance + ", "
+            + "alliance = " + alliance + ", "
+            + "allianceDate = " + allianceDate + ", "
+            + "allianceId = " + allianceId + ", "
+            + "ancestry = " + ancestry + ", "
+            + "ancestryId = " + ancestryId + ", "
+            + "bloodline = " + bloodline + ", "
+            + "bloodlineId = " + bloodlineId + ", "
+            + "characterId = " + characterId + ", "
+            + "characterName = " + characterName + ", "
+            + "corporation = " + corporation + ", "
+            + "corporationDate = " + corporationDate + ", "
+            + "corporationId = " + corporationId + ", "
+            + "employmentHistory = " + employmentHistory + ", "
+            + "lastKnownLocation = " + lastKnownLocation + ", "
+            + "nextTrainingEnds = " + nextTrainingEnds + ", "
+            + "race = " + race + ", "
+            + "securityStatus = " + securityStatus + ", "
+            + "shipName = " + shipName + ", "
+            + "shipTypeId = " + shipTypeId + ", "
+            + "shipTypeName = " + shipTypeName + ", "
+            + "skillPoints = " + skillPoints + ", "
+            + "]";
     }
 
 }

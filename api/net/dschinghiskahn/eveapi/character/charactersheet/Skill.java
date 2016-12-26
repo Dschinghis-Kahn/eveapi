@@ -18,30 +18,30 @@ public class Skill {
     @Attribute(name = "typeID", required = false)
     private Long typeId;
 
-    public Long getLevel(){
+    public Long getLevel() {
         return level;
     }
 
-    public Long getPublished(){
+    public Long getPublished() {
         return published;
     }
 
-    public Long getSkillpoints(){
+    public Long getSkillpoints() {
         return skillpoints;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
     @Override
-    public String toString(){
-        return "Skill [" +
-            "level = " + level + ", " +
-            "published = " + published + ", " +
-            "skillpoints = " + skillpoints + ", " +
-            "typeId = " + typeId + ", " +
-            "]";
+    public String toString() {
+        return "Skill ["
+            + "level = " + level + ", "
+            + "published = " + published + ", "
+            + "skillpoints = " + skillpoints + ", "
+            + "typeId = " + typeId + ", "
+            + "]";
     }
 
 }

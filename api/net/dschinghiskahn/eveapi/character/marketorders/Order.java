@@ -53,85 +53,85 @@ public class Order {
     @Attribute(required = false)
     private Long volRemaining;
 
-    public Long getAccountKey(){
+    public Long getAccountKey() {
         return accountKey;
     }
 
-    public Long getBid(){
+    public Long getBid() {
         return bid;
     }
 
-    public Long getCharId(){
+    public Long getCharId() {
         return charId;
     }
 
-    public Long getDuration(){
+    public Long getDuration() {
         return duration;
     }
 
-    public Double getEscrow(){
+    public Double getEscrow() {
         return escrow;
     }
 
-    public Date getIssued(){
+    public Date getIssued() {
         return issued;
     }
 
-    public Long getMinVolume(){
+    public Long getMinVolume() {
         return minVolume;
     }
 
-    public Long getOrderId(){
+    public Long getOrderId() {
         return orderId;
     }
 
-    public Long getOrderState(){
+    public Long getOrderState() {
         return orderState;
     }
 
-    public Double getPrice(){
+    public Double getPrice() {
         return price;
     }
 
-    public Long getRange(){
+    public Long getRange() {
         return range;
     }
 
-    public Long getStationId(){
+    public Long getStationId() {
         return stationId;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
-    public Long getVolEntered(){
+    public Long getVolEntered() {
         return volEntered;
     }
 
-    public Long getVolRemaining(){
+    public Long getVolRemaining() {
         return volRemaining;
     }
 
     @Override
-    public String toString(){
-        return "Order [" +
-            "accountKey = " + accountKey + ", " +
-            "bid = " + bid + ", " +
-            "charId = " + charId + ", " +
-            "duration = " + duration + ", " +
-            "escrow = " + escrow + ", " +
-            "issued = " + issued + ", " +
-            "minVolume = " + minVolume + ", " +
-            "orderId = " + orderId + ", " +
-            "orderState = " + orderState + ", " +
-            "price = " + price + ", " +
-            "range = " + range + ", " +
-            "stationId = " + stationId + ", " +
-            "typeId = " + typeId + ", " +
-            "volEntered = " + volEntered + ", " +
-            "volRemaining = " + volRemaining + ", " +
-            "]";
+    public String toString() {
+        return "Order ["
+            + "accountKey = " + accountKey + ", "
+            + "bid = " + bid + ", "
+            + "charId = " + charId + ", "
+            + "duration = " + duration + ", "
+            + "escrow = " + escrow + ", "
+            + "issued = " + issued + ", "
+            + "minVolume = " + minVolume + ", "
+            + "orderId = " + orderId + ", "
+            + "orderState = " + orderState + ", "
+            + "price = " + price + ", "
+            + "range = " + range + ", "
+            + "stationId = " + stationId + ", "
+            + "typeId = " + typeId + ", "
+            + "volEntered = " + volEntered + ", "
+            + "volRemaining = " + volRemaining + ", "
+            + "]";
     }
 
 }

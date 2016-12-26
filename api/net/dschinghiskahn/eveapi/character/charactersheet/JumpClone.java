@@ -18,30 +18,30 @@ public class JumpClone {
     @Attribute(name = "typeID", required = false)
     private Long typeId;
 
-    public String getCloneName(){
+    public String getCloneName() {
         return cloneName;
     }
 
-    public Long getJumpCloneId(){
+    public Long getJumpCloneId() {
         return jumpCloneId;
     }
 
-    public Long getLocationId(){
+    public Long getLocationId() {
         return locationId;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
     @Override
-    public String toString(){
-        return "JumpClone [" +
-            "cloneName = " + cloneName + ", " +
-            "jumpCloneId = " + jumpCloneId + ", " +
-            "locationId = " + locationId + ", " +
-            "typeId = " + typeId + ", " +
-            "]";
+    public String toString() {
+        return "JumpClone ["
+            + "cloneName = " + cloneName + ", "
+            + "jumpCloneId = " + jumpCloneId + ", "
+            + "locationId = " + locationId + ", "
+            + "typeId = " + typeId + ", "
+            + "]";
     }
 
 }

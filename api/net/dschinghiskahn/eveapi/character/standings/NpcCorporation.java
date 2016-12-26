@@ -15,25 +15,25 @@ public class NpcCorporation {
     @Attribute(required = false)
     private Double standing;
 
-    public Long getFromId(){
+    public Long getFromId() {
         return fromId;
     }
 
-    public String getFromName(){
+    public String getFromName() {
         return fromName;
     }
 
-    public Double getStanding(){
+    public Double getStanding() {
         return standing;
     }
 
     @Override
-    public String toString(){
-        return "NpcCorporation [" +
-            "fromId = " + fromId + ", " +
-            "fromName = " + fromName + ", " +
-            "standing = " + standing + ", " +
-            "]";
+    public String toString() {
+        return "NpcCorporation ["
+            + "fromId = " + fromId + ", "
+            + "fromName = " + fromName + ", "
+            + "standing = " + standing + ", "
+            + "]";
     }
 
 }

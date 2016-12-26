@@ -14,30 +14,30 @@ import org.simpleframework.xml.Root;
 public class PlanetaryRoutes extends ApiResponse {
 
     @Path("result/rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("result/rowset[1]")
     @ElementList(type = Route.class, required = false, inline = true)
     private List<Route> routes = new ArrayList<Route>();
 
-    public List<Route> getRoutes(){
+    public List<Route> getRoutes() {
         return routes;
     }
 
     @Override
-    public String toString(){
-        return "PlanetaryRoutes [" +
-            "routes = " + routes + ", " +
-            "]";
+    public String toString() {
+        return "PlanetaryRoutes ["
+            + "routes = " + routes + ", "
+            + "]";
     }
 
 }

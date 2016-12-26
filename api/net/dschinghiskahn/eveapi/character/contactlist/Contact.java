@@ -24,40 +24,40 @@ public class Contact {
     @Attribute(required = false)
     private Double standing;
 
-    public Long getContactId(){
+    public Long getContactId() {
         return contactId;
     }
 
-    public String getContactName(){
+    public String getContactName() {
         return contactName;
     }
 
-    public Long getContactTypeId(){
+    public Long getContactTypeId() {
         return contactTypeId;
     }
 
-    public String getInWatchlist(){
+    public String getInWatchlist() {
         return inWatchlist;
     }
 
-    public Long getLabelMask(){
+    public Long getLabelMask() {
         return labelMask;
     }
 
-    public Double getStanding(){
+    public Double getStanding() {
         return standing;
     }
 
     @Override
-    public String toString(){
-        return "Contact [" +
-            "contactId = " + contactId + ", " +
-            "contactName = " + contactName + ", " +
-            "contactTypeId = " + contactTypeId + ", " +
-            "inWatchlist = " + inWatchlist + ", " +
-            "labelMask = " + labelMask + ", " +
-            "standing = " + standing + ", " +
-            "]";
+    public String toString() {
+        return "Contact ["
+            + "contactId = " + contactId + ", "
+            + "contactName = " + contactName + ", "
+            + "contactTypeId = " + contactTypeId + ", "
+            + "inWatchlist = " + inWatchlist + ", "
+            + "labelMask = " + labelMask + ", "
+            + "standing = " + standing + ", "
+            + "]";
     }
 
 }

@@ -14,30 +14,30 @@ import org.simpleframework.xml.Root;
 public class UpcomingCalendarEvents extends ApiResponse {
 
     @Path("result/rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("result/rowset[1]")
     @ElementList(type = UpcomingEvent.class, required = false, inline = true)
     private List<UpcomingEvent> upcomingEvents = new ArrayList<UpcomingEvent>();
 
-    public List<UpcomingEvent> getUpcomingEvents(){
+    public List<UpcomingEvent> getUpcomingEvents() {
         return upcomingEvents;
     }
 
     @Override
-    public String toString(){
-        return "UpcomingCalendarEvents [" +
-            "upcomingEvents = " + upcomingEvents + ", " +
-            "]";
+    public String toString() {
+        return "UpcomingCalendarEvents ["
+            + "upcomingEvents = " + upcomingEvents + ", "
+            + "]";
     }
 
 }

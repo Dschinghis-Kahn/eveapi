@@ -15,25 +15,25 @@ public class Account {
     @Attribute(required = false)
     private Double balance;
 
-    public Long getAccountId(){
+    public Long getAccountId() {
         return accountId;
     }
 
-    public Long getAccountKey(){
+    public Long getAccountKey() {
         return accountKey;
     }
 
-    public Double getBalance(){
+    public Double getBalance() {
         return balance;
     }
 
     @Override
-    public String toString(){
-        return "Account [" +
-            "accountId = " + accountId + ", " +
-            "accountKey = " + accountKey + ", " +
-            "balance = " + balance + ", " +
-            "]";
+    public String toString() {
+        return "Account ["
+            + "accountId = " + accountId + ", "
+            + "accountKey = " + accountKey + ", "
+            + "balance = " + balance + ", "
+            + "]";
     }
 
 }

@@ -24,40 +24,40 @@ public class Item {
     @Attribute(name = "typeID", required = false)
     private Long typeId;
 
-    public Long getIncluded(){
+    public Long getIncluded() {
         return included;
     }
 
-    public Long getQuantity(){
+    public Long getQuantity() {
         return quantity;
     }
 
-    public Long getRawQuantity(){
+    public Long getRawQuantity() {
         return rawQuantity;
     }
 
-    public Long getRecordId(){
+    public Long getRecordId() {
         return recordId;
     }
 
-    public Long getSingleton(){
+    public Long getSingleton() {
         return singleton;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
     @Override
-    public String toString(){
-        return "Item [" +
-            "included = " + included + ", " +
-            "quantity = " + quantity + ", " +
-            "rawQuantity = " + rawQuantity + ", " +
-            "recordId = " + recordId + ", " +
-            "singleton = " + singleton + ", " +
-            "typeId = " + typeId + ", " +
-            "]";
+    public String toString() {
+        return "Item ["
+            + "included = " + included + ", "
+            + "quantity = " + quantity + ", "
+            + "rawQuantity = " + rawQuantity + ", "
+            + "recordId = " + recordId + ", "
+            + "singleton = " + singleton + ", "
+            + "typeId = " + typeId + ", "
+            + "]";
     }
 
 }

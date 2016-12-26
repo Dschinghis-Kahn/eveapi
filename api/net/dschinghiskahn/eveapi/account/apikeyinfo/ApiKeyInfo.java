@@ -13,15 +13,15 @@ public class ApiKeyInfo extends ApiResponse {
     @Element(required = false)
     private Key key;
 
-    public Key getKey(){
+    public Key getKey() {
         return key;
     }
 
     @Override
-    public String toString(){
-        return "ApiKeyInfo [" +
-            "key = " + key + ", " +
-            "]";
+    public String toString() {
+        return "ApiKeyInfo ["
+            + "key = " + key + ", "
+            + "]";
     }
 
 }

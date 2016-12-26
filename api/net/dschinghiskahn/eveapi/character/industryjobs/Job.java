@@ -92,150 +92,150 @@ public class Job {
     @Attribute(required = false)
     private Long timeInSeconds;
 
-    public Long getActivityId(){
+    public Long getActivityId() {
         return activityId;
     }
 
-    public Long getBlueprintId(){
+    public Long getBlueprintId() {
         return blueprintId;
     }
 
-    public Long getBlueprintLocationId(){
+    public Long getBlueprintLocationId() {
         return blueprintLocationId;
     }
 
-    public Long getBlueprintTypeId(){
+    public Long getBlueprintTypeId() {
         return blueprintTypeId;
     }
 
-    public String getBlueprintTypeName(){
+    public String getBlueprintTypeName() {
         return blueprintTypeName;
     }
 
-    public Long getCompletedCharacterId(){
+    public Long getCompletedCharacterId() {
         return completedCharacterId;
     }
 
-    public Date getCompletedDate(){
+    public Date getCompletedDate() {
         return completedDate;
     }
 
-    public Double getCost(){
+    public Double getCost() {
         return cost;
     }
 
-    public Date getEndDate(){
+    public Date getEndDate() {
         return endDate;
     }
 
-    public Long getFacilityId(){
+    public Long getFacilityId() {
         return facilityId;
     }
 
-    public Long getInstallerId(){
+    public Long getInstallerId() {
         return installerId;
     }
 
-    public String getInstallerName(){
+    public String getInstallerName() {
         return installerName;
     }
 
-    public Long getJobId(){
+    public Long getJobId() {
         return jobId;
     }
 
-    public Long getLicensedRuns(){
+    public Long getLicensedRuns() {
         return licensedRuns;
     }
 
-    public Long getOutputLocationId(){
+    public Long getOutputLocationId() {
         return outputLocationId;
     }
 
-    public Date getPauseDate(){
+    public Date getPauseDate() {
         return pauseDate;
     }
 
-    public Double getProbability(){
+    public Double getProbability() {
         return probability;
     }
 
-    public Long getProductTypeId(){
+    public Long getProductTypeId() {
         return productTypeId;
     }
 
-    public String getProductTypeName(){
+    public String getProductTypeName() {
         return productTypeName;
     }
 
-    public Long getRuns(){
+    public Long getRuns() {
         return runs;
     }
 
-    public Long getSolarSystemId(){
+    public Long getSolarSystemId() {
         return solarSystemId;
     }
 
-    public String getSolarSystemName(){
+    public String getSolarSystemName() {
         return solarSystemName;
     }
 
-    public Date getStartDate(){
+    public Date getStartDate() {
         return startDate;
     }
 
-    public Long getStationId(){
+    public Long getStationId() {
         return stationId;
     }
 
-    public Long getStatus(){
+    public Long getStatus() {
         return status;
     }
 
-    public Long getSuccessfulRuns(){
+    public Long getSuccessfulRuns() {
         return successfulRuns;
     }
 
-    public Long getTeamId(){
+    public Long getTeamId() {
         return teamId;
     }
 
-    public Long getTimeInSeconds(){
+    public Long getTimeInSeconds() {
         return timeInSeconds;
     }
 
     @Override
-    public String toString(){
-        return "Job [" +
-            "activityId = " + activityId + ", " +
-            "blueprintId = " + blueprintId + ", " +
-            "blueprintLocationId = " + blueprintLocationId + ", " +
-            "blueprintTypeId = " + blueprintTypeId + ", " +
-            "blueprintTypeName = " + blueprintTypeName + ", " +
-            "completedCharacterId = " + completedCharacterId + ", " +
-            "completedDate = " + completedDate + ", " +
-            "cost = " + cost + ", " +
-            "endDate = " + endDate + ", " +
-            "facilityId = " + facilityId + ", " +
-            "installerId = " + installerId + ", " +
-            "installerName = " + installerName + ", " +
-            "jobId = " + jobId + ", " +
-            "licensedRuns = " + licensedRuns + ", " +
-            "outputLocationId = " + outputLocationId + ", " +
-            "pauseDate = " + pauseDate + ", " +
-            "probability = " + probability + ", " +
-            "productTypeId = " + productTypeId + ", " +
-            "productTypeName = " + productTypeName + ", " +
-            "runs = " + runs + ", " +
-            "solarSystemId = " + solarSystemId + ", " +
-            "solarSystemName = " + solarSystemName + ", " +
-            "startDate = " + startDate + ", " +
-            "stationId = " + stationId + ", " +
-            "status = " + status + ", " +
-            "successfulRuns = " + successfulRuns + ", " +
-            "teamId = " + teamId + ", " +
-            "timeInSeconds = " + timeInSeconds + ", " +
-            "]";
+    public String toString() {
+        return "Job ["
+            + "activityId = " + activityId + ", "
+            + "blueprintId = " + blueprintId + ", "
+            + "blueprintLocationId = " + blueprintLocationId + ", "
+            + "blueprintTypeId = " + blueprintTypeId + ", "
+            + "blueprintTypeName = " + blueprintTypeName + ", "
+            + "completedCharacterId = " + completedCharacterId + ", "
+            + "completedDate = " + completedDate + ", "
+            + "cost = " + cost + ", "
+            + "endDate = " + endDate + ", "
+            + "facilityId = " + facilityId + ", "
+            + "installerId = " + installerId + ", "
+            + "installerName = " + installerName + ", "
+            + "jobId = " + jobId + ", "
+            + "licensedRuns = " + licensedRuns + ", "
+            + "outputLocationId = " + outputLocationId + ", "
+            + "pauseDate = " + pauseDate + ", "
+            + "probability = " + probability + ", "
+            + "productTypeId = " + productTypeId + ", "
+            + "productTypeName = " + productTypeName + ", "
+            + "runs = " + runs + ", "
+            + "solarSystemId = " + solarSystemId + ", "
+            + "solarSystemName = " + solarSystemName + ", "
+            + "startDate = " + startDate + ", "
+            + "stationId = " + stationId + ", "
+            + "status = " + status + ", "
+            + "successfulRuns = " + successfulRuns + ", "
+            + "teamId = " + teamId + ", "
+            + "timeInSeconds = " + timeInSeconds + ", "
+            + "]";
     }
 
 }

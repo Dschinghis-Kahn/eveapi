@@ -29,45 +29,45 @@ public class Skill {
     @Attribute(name = "typeID", required = false)
     private Long typeId;
 
-    public Long getEndSp(){
+    public Long getEndSp() {
         return endSp;
     }
 
-    public Date getEndTime(){
+    public Date getEndTime() {
         return endTime;
     }
 
-    public Long getLevel(){
+    public Long getLevel() {
         return level;
     }
 
-    public Long getQueuePosition(){
+    public Long getQueuePosition() {
         return queuePosition;
     }
 
-    public Long getStartSp(){
+    public Long getStartSp() {
         return startSp;
     }
 
-    public Date getStartTime(){
+    public Date getStartTime() {
         return startTime;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
     @Override
-    public String toString(){
-        return "Skill [" +
-            "endSp = " + endSp + ", " +
-            "endTime = " + endTime + ", " +
-            "level = " + level + ", " +
-            "queuePosition = " + queuePosition + ", " +
-            "startSp = " + startSp + ", " +
-            "startTime = " + startTime + ", " +
-            "typeId = " + typeId + ", " +
-            "]";
+    public String toString() {
+        return "Skill ["
+            + "endSp = " + endSp + ", "
+            + "endTime = " + endTime + ", "
+            + "level = " + level + ", "
+            + "queuePosition = " + queuePosition + ", "
+            + "startSp = " + startSp + ", "
+            + "startTime = " + startTime + ", "
+            + "typeId = " + typeId + ", "
+            + "]";
     }
 
 }

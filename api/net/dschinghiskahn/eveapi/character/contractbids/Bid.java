@@ -23,35 +23,35 @@ public class Bid {
     @Attribute(required = false)
     private Date dateBid;
 
-    public Double getAmount(){
+    public Double getAmount() {
         return amount;
     }
 
-    public Long getBidId(){
+    public Long getBidId() {
         return bidId;
     }
 
-    public Long getBidderId(){
+    public Long getBidderId() {
         return bidderId;
     }
 
-    public Long getContractId(){
+    public Long getContractId() {
         return contractId;
     }
 
-    public Date getDateBid(){
+    public Date getDateBid() {
         return dateBid;
     }
 
     @Override
-    public String toString(){
-        return "Bid [" +
-            "amount = " + amount + ", " +
-            "bidId = " + bidId + ", " +
-            "bidderId = " + bidderId + ", " +
-            "contractId = " + contractId + ", " +
-            "dateBid = " + dateBid + ", " +
-            "]";
+    public String toString() {
+        return "Bid ["
+            + "amount = " + amount + ", "
+            + "bidId = " + bidId + ", "
+            + "bidderId = " + bidderId + ", "
+            + "contractId = " + contractId + ", "
+            + "dateBid = " + dateBid + ", "
+            + "]";
     }
 
 }

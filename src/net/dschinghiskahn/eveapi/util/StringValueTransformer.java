@@ -6,7 +6,11 @@ public class StringValueTransformer implements Transform<String> {
 
     @Override
     public String read(final String value) {
-        return value == null ? "" : value;
+        String result = value;
+        if (value == null) {
+            result = "";
+        }
+        return result;
     }
 
     @Override

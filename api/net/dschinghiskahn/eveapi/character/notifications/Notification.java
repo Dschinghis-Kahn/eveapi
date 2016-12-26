@@ -26,40 +26,40 @@ public class Notification {
     @Attribute(name = "typeID", required = false)
     private Long typeId;
 
-    public Long getNotificationId(){
+    public Long getNotificationId() {
         return notificationId;
     }
 
-    public Long getRead(){
+    public Long getRead() {
         return read;
     }
 
-    public Long getSenderId(){
+    public Long getSenderId() {
         return senderId;
     }
 
-    public String getSenderName(){
+    public String getSenderName() {
         return senderName;
     }
 
-    public Date getSentDate(){
+    public Date getSentDate() {
         return sentDate;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
     @Override
-    public String toString(){
-        return "Notification [" +
-            "notificationId = " + notificationId + ", " +
-            "read = " + read + ", " +
-            "senderId = " + senderId + ", " +
-            "senderName = " + senderName + ", " +
-            "sentDate = " + sentDate + ", " +
-            "typeId = " + typeId + ", " +
-            "]";
+    public String toString() {
+        return "Notification ["
+            + "notificationId = " + notificationId + ", "
+            + "read = " + read + ", "
+            + "senderId = " + senderId + ", "
+            + "senderName = " + senderName + ", "
+            + "sentDate = " + sentDate + ", "
+            + "typeId = " + typeId + ", "
+            + "]";
     }
 
 }

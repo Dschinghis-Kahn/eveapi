@@ -56,90 +56,90 @@ public class Transaction {
     @Attribute(name = "taxReceiverID", required = false)
     private Long taxReceiverId;
 
-    public Double getAmount(){
+    public Double getAmount() {
         return amount;
     }
 
-    public Long getArgId1(){
+    public Long getArgId1() {
         return argId1;
     }
 
-    public String getArgName1(){
+    public String getArgName1() {
         return argName1;
     }
 
-    public Double getBalance(){
+    public Double getBalance() {
         return balance;
     }
 
-    public Date getDate(){
+    public Date getDate() {
         return date;
     }
 
-    public Long getOwner1TypeId(){
+    public Long getOwner1TypeId() {
         return owner1TypeId;
     }
 
-    public Long getOwner2TypeId(){
+    public Long getOwner2TypeId() {
         return owner2TypeId;
     }
 
-    public Long getOwnerId1(){
+    public Long getOwnerId1() {
         return ownerId1;
     }
 
-    public Long getOwnerId2(){
+    public Long getOwnerId2() {
         return ownerId2;
     }
 
-    public String getOwnerName1(){
+    public String getOwnerName1() {
         return ownerName1;
     }
 
-    public String getOwnerName2(){
+    public String getOwnerName2() {
         return ownerName2;
     }
 
-    public String getReason(){
+    public String getReason() {
         return reason;
     }
 
-    public Long getRefId(){
+    public Long getRefId() {
         return refId;
     }
 
-    public Long getRefTypeId(){
+    public Long getRefTypeId() {
         return refTypeId;
     }
 
-    public Double getTaxAmount(){
+    public Double getTaxAmount() {
         return taxAmount;
     }
 
-    public Long getTaxReceiverId(){
+    public Long getTaxReceiverId() {
         return taxReceiverId;
     }
 
     @Override
-    public String toString(){
-        return "Transaction [" +
-            "amount = " + amount + ", " +
-            "argId1 = " + argId1 + ", " +
-            "argName1 = " + argName1 + ", " +
-            "balance = " + balance + ", " +
-            "date = " + date + ", " +
-            "owner1TypeId = " + owner1TypeId + ", " +
-            "owner2TypeId = " + owner2TypeId + ", " +
-            "ownerId1 = " + ownerId1 + ", " +
-            "ownerId2 = " + ownerId2 + ", " +
-            "ownerName1 = " + ownerName1 + ", " +
-            "ownerName2 = " + ownerName2 + ", " +
-            "reason = " + reason + ", " +
-            "refId = " + refId + ", " +
-            "refTypeId = " + refTypeId + ", " +
-            "taxAmount = " + taxAmount + ", " +
-            "taxReceiverId = " + taxReceiverId + ", " +
-            "]";
+    public String toString() {
+        return "Transaction ["
+            + "amount = " + amount + ", "
+            + "argId1 = " + argId1 + ", "
+            + "argName1 = " + argName1 + ", "
+            + "balance = " + balance + ", "
+            + "date = " + date + ", "
+            + "owner1TypeId = " + owner1TypeId + ", "
+            + "owner2TypeId = " + owner2TypeId + ", "
+            + "ownerId1 = " + ownerId1 + ", "
+            + "ownerId2 = " + ownerId2 + ", "
+            + "ownerName1 = " + ownerName1 + ", "
+            + "ownerName2 = " + ownerName2 + ", "
+            + "reason = " + reason + ", "
+            + "refId = " + refId + ", "
+            + "refTypeId = " + refTypeId + ", "
+            + "taxAmount = " + taxAmount + ", "
+            + "taxReceiverId = " + taxReceiverId + ", "
+            + "]";
     }
 
 }

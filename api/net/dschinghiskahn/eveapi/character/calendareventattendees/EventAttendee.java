@@ -15,25 +15,25 @@ public class EventAttendee {
     @Attribute(required = false)
     private String response;
 
-    public Long getCharacterId(){
+    public Long getCharacterId() {
         return characterId;
     }
 
-    public String getCharacterName(){
+    public String getCharacterName() {
         return characterName;
     }
 
-    public String getResponse(){
+    public String getResponse() {
         return response;
     }
 
     @Override
-    public String toString(){
-        return "EventAttendee [" +
-            "characterId = " + characterId + ", " +
-            "characterName = " + characterName + ", " +
-            "response = " + response + ", " +
-            "]";
+    public String toString() {
+        return "EventAttendee ["
+            + "characterId = " + characterId + ", "
+            + "characterName = " + characterName + ", "
+            + "response = " + response + ", "
+            + "]";
     }
 
 }

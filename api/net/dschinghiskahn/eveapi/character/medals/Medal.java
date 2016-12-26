@@ -32,50 +32,50 @@ public class Medal {
     @Attribute(required = false)
     private String title;
 
-    public Long getCorporationId(){
+    public Long getCorporationId() {
         return corporationId;
     }
 
-    public String getDescription(){
+    public String getDescription() {
         return description;
     }
 
-    public Date getIssued(){
+    public Date getIssued() {
         return issued;
     }
 
-    public Long getIssuerId(){
+    public Long getIssuerId() {
         return issuerId;
     }
 
-    public Long getMedalId(){
+    public Long getMedalId() {
         return medalId;
     }
 
-    public String getReason(){
+    public String getReason() {
         return reason;
     }
 
-    public String getStatus(){
+    public String getStatus() {
         return status;
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
 
     @Override
-    public String toString(){
-        return "Medal [" +
-            "corporationId = " + corporationId + ", " +
-            "description = " + description + ", " +
-            "issued = " + issued + ", " +
-            "issuerId = " + issuerId + ", " +
-            "medalId = " + medalId + ", " +
-            "reason = " + reason + ", " +
-            "status = " + status + ", " +
-            "title = " + title + ", " +
-            "]";
+    public String toString() {
+        return "Medal ["
+            + "corporationId = " + corporationId + ", "
+            + "description = " + description + ", "
+            + "issued = " + issued + ", "
+            + "issuerId = " + issuerId + ", "
+            + "medalId = " + medalId + ", "
+            + "reason = " + reason + ", "
+            + "status = " + status + ", "
+            + "title = " + title + ", "
+            + "]";
     }
 
 }

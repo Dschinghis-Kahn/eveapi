@@ -30,50 +30,50 @@ public class Character {
     @Attribute(required = false)
     private String name;
 
-    public Long getAllianceId(){
+    public Long getAllianceId() {
         return allianceId;
     }
 
-    public String getAllianceName(){
+    public String getAllianceName() {
         return allianceName;
     }
 
-    public Long getCharacterId(){
+    public Long getCharacterId() {
         return characterId;
     }
 
-    public Long getCorporationId(){
+    public Long getCorporationId() {
         return corporationId;
     }
 
-    public String getCorporationName(){
+    public String getCorporationName() {
         return corporationName;
     }
 
-    public Long getFactionId(){
+    public Long getFactionId() {
         return factionId;
     }
 
-    public String getFactionName(){
+    public String getFactionName() {
         return factionName;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
     @Override
-    public String toString(){
-        return "Character [" +
-            "allianceId = " + allianceId + ", " +
-            "allianceName = " + allianceName + ", " +
-            "characterId = " + characterId + ", " +
-            "corporationId = " + corporationId + ", " +
-            "corporationName = " + corporationName + ", " +
-            "factionId = " + factionId + ", " +
-            "factionName = " + factionName + ", " +
-            "name = " + name + ", " +
-            "]";
+    public String toString() {
+        return "Character ["
+            + "allianceId = " + allianceId + ", "
+            + "allianceName = " + allianceName + ", "
+            + "characterId = " + characterId + ", "
+            + "corporationId = " + corporationId + ", "
+            + "corporationName = " + corporationName + ", "
+            + "factionId = " + factionId + ", "
+            + "factionName = " + factionName + ", "
+            + "name = " + name + ", "
+            + "]";
     }
 
 }

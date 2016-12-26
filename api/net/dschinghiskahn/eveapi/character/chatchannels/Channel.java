@@ -12,15 +12,15 @@ import org.simpleframework.xml.Root;
 public class Channel {
 
     @Path("rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("rowset[1]")
@@ -28,15 +28,15 @@ public class Channel {
     private List<Allowed> allowed = new ArrayList<Allowed>();
 
     @Path("rowset[2]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName2;
 
     @Path("rowset[2]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey2;
 
     @Path("rowset[2]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns2;
 
     @Path("rowset[2]")
@@ -59,15 +59,15 @@ public class Channel {
     private String motd;
 
     @Path("rowset[3]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName3;
 
     @Path("rowset[3]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey3;
 
     @Path("rowset[3]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns3;
 
     @Path("rowset[3]")
@@ -75,15 +75,15 @@ public class Channel {
     private List<Muted> muted = new ArrayList<Muted>();
 
     @Path("rowset[4]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName4;
 
     @Path("rowset[4]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey4;
 
     @Path("rowset[4]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns4;
 
     @Path("rowset[4]")
@@ -96,65 +96,65 @@ public class Channel {
     @Attribute(required = false)
     private String ownerName;
 
-    public List<Allowed> getAllowed(){
+    public List<Allowed> getAllowed() {
         return allowed;
     }
 
-    public List<Blocked> getBlocked(){
+    public List<Blocked> getBlocked() {
         return blocked;
     }
 
-    public Long getChannelId(){
+    public Long getChannelId() {
         return channelId;
     }
 
-    public String getComparisonKey(){
+    public String getComparisonKey() {
         return comparisonKey;
     }
 
-    public String getDisplayName(){
+    public String getDisplayName() {
         return displayName;
     }
 
-    public String getHasPassword(){
+    public String getHasPassword() {
         return hasPassword;
     }
 
-    public String getMotd(){
+    public String getMotd() {
         return motd;
     }
 
-    public List<Muted> getMuted(){
+    public List<Muted> getMuted() {
         return muted;
     }
 
-    public List<Operator> getOperators(){
+    public List<Operator> getOperators() {
         return operators;
     }
 
-    public Long getOwnerId(){
+    public Long getOwnerId() {
         return ownerId;
     }
 
-    public String getOwnerName(){
+    public String getOwnerName() {
         return ownerName;
     }
 
     @Override
-    public String toString(){
-        return "Channel [" +
-            "allowed = " + allowed + ", " +
-            "blocked = " + blocked + ", " +
-            "channelId = " + channelId + ", " +
-            "comparisonKey = " + comparisonKey + ", " +
-            "displayName = " + displayName + ", " +
-            "hasPassword = " + hasPassword + ", " +
-            "motd = " + motd + ", " +
-            "muted = " + muted + ", " +
-            "operators = " + operators + ", " +
-            "ownerId = " + ownerId + ", " +
-            "ownerName = " + ownerName + ", " +
-            "]";
+    public String toString() {
+        return "Channel ["
+            + "allowed = " + allowed + ", "
+            + "blocked = " + blocked + ", "
+            + "channelId = " + channelId + ", "
+            + "comparisonKey = " + comparisonKey + ", "
+            + "displayName = " + displayName + ", "
+            + "hasPassword = " + hasPassword + ", "
+            + "motd = " + motd + ", "
+            + "muted = " + muted + ", "
+            + "operators = " + operators + ", "
+            + "ownerId = " + ownerId + ", "
+            + "ownerName = " + ownerName + ", "
+            + "]";
     }
 
 }

@@ -12,20 +12,20 @@ public class Message {
     @Attribute(required = false)
     private String text;
 
-    public Long getMessageId(){
+    public Long getMessageId() {
         return messageId;
     }
 
-    public String getText(){
+    public String getText() {
         return text;
     }
 
     @Override
-    public String toString(){
-        return "Message [" +
-            "messageId = " + messageId + ", " +
-            "text = " + text + ", " +
-            "]";
+    public String toString() {
+        return "Message ["
+            + "messageId = " + messageId + ", "
+            + "text = " + text + ", "
+            + "]";
     }
 
 }

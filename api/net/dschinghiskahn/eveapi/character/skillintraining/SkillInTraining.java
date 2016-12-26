@@ -43,50 +43,50 @@ public class SkillInTraining extends ApiResponse {
     @Element(name = "trainingTypeID", required = false)
     private Long trainingTypeId;
 
-    public Date getCurrentTqTime(){
+    public Date getCurrentTqTime() {
         return currentTqTime;
     }
 
-    public Long getSkillInTraining(){
+    public Long getSkillInTraining() {
         return skillInTraining;
     }
 
-    public Long getTrainingDestinationSp(){
+    public Long getTrainingDestinationSp() {
         return trainingDestinationSp;
     }
 
-    public Date getTrainingEndTime(){
+    public Date getTrainingEndTime() {
         return trainingEndTime;
     }
 
-    public Long getTrainingStartSp(){
+    public Long getTrainingStartSp() {
         return trainingStartSp;
     }
 
-    public Date getTrainingStartTime(){
+    public Date getTrainingStartTime() {
         return trainingStartTime;
     }
 
-    public Long getTrainingToLevel(){
+    public Long getTrainingToLevel() {
         return trainingToLevel;
     }
 
-    public Long getTrainingTypeId(){
+    public Long getTrainingTypeId() {
         return trainingTypeId;
     }
 
     @Override
-    public String toString(){
-        return "SkillInTraining [" +
-            "currentTqTime = " + currentTqTime + ", " +
-            "skillInTraining = " + skillInTraining + ", " +
-            "trainingDestinationSp = " + trainingDestinationSp + ", " +
-            "trainingEndTime = " + trainingEndTime + ", " +
-            "trainingStartSp = " + trainingStartSp + ", " +
-            "trainingStartTime = " + trainingStartTime + ", " +
-            "trainingToLevel = " + trainingToLevel + ", " +
-            "trainingTypeId = " + trainingTypeId + ", " +
-            "]";
+    public String toString() {
+        return "SkillInTraining ["
+            + "currentTqTime = " + currentTqTime + ", "
+            + "skillInTraining = " + skillInTraining + ", "
+            + "trainingDestinationSp = " + trainingDestinationSp + ", "
+            + "trainingEndTime = " + trainingEndTime + ", "
+            + "trainingStartSp = " + trainingStartSp + ", "
+            + "trainingStartTime = " + trainingStartTime + ", "
+            + "trainingToLevel = " + trainingToLevel + ", "
+            + "trainingTypeId = " + trainingTypeId + ", "
+            + "]";
     }
 
 }

@@ -38,60 +38,60 @@ public class UpcomingEvent {
     @Attribute(required = false)
     private String response;
 
-    public Long getDuration(){
+    public Long getDuration() {
         return duration;
     }
 
-    public Date getEventDate(){
+    public Date getEventDate() {
         return eventDate;
     }
 
-    public Long getEventId(){
+    public Long getEventId() {
         return eventId;
     }
 
-    public String getEventText(){
+    public String getEventText() {
         return eventText;
     }
 
-    public String getEventTitle(){
+    public String getEventTitle() {
         return eventTitle;
     }
 
-    public Long getImportance(){
+    public Long getImportance() {
         return importance;
     }
 
-    public Long getOwnerId(){
+    public Long getOwnerId() {
         return ownerId;
     }
 
-    public String getOwnerName(){
+    public String getOwnerName() {
         return ownerName;
     }
 
-    public Long getOwnerTypeId(){
+    public Long getOwnerTypeId() {
         return ownerTypeId;
     }
 
-    public String getResponse(){
+    public String getResponse() {
         return response;
     }
 
     @Override
-    public String toString(){
-        return "UpcomingEvent [" +
-            "duration = " + duration + ", " +
-            "eventDate = " + eventDate + ", " +
-            "eventId = " + eventId + ", " +
-            "eventText = " + eventText + ", " +
-            "eventTitle = " + eventTitle + ", " +
-            "importance = " + importance + ", " +
-            "ownerId = " + ownerId + ", " +
-            "ownerName = " + ownerName + ", " +
-            "ownerTypeId = " + ownerTypeId + ", " +
-            "response = " + response + ", " +
-            "]";
+    public String toString() {
+        return "UpcomingEvent ["
+            + "duration = " + duration + ", "
+            + "eventDate = " + eventDate + ", "
+            + "eventId = " + eventId + ", "
+            + "eventText = " + eventText + ", "
+            + "eventTitle = " + eventTitle + ", "
+            + "importance = " + importance + ", "
+            + "ownerId = " + ownerId + ", "
+            + "ownerName = " + ownerName + ", "
+            + "ownerTypeId = " + ownerTypeId + ", "
+            + "response = " + response + ", "
+            + "]";
     }
 
 }

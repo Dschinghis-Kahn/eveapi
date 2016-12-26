@@ -12,20 +12,20 @@ public class ContactLabel {
     @Attribute(required = false)
     private String name;
 
-    public Long getLabelId(){
+    public Long getLabelId() {
         return labelId;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
     @Override
-    public String toString(){
-        return "ContactLabel [" +
-            "labelId = " + labelId + ", " +
-            "name = " + name + ", " +
-            "]";
+    public String toString() {
+        return "ContactLabel ["
+            + "labelId = " + labelId + ", "
+            + "name = " + name + ", "
+            + "]";
     }
 
 }

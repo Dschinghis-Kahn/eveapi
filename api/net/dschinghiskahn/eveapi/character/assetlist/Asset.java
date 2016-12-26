@@ -12,15 +12,15 @@ import org.simpleframework.xml.Root;
 public class Asset {
 
     @Path("rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("rowset[1]")
@@ -48,50 +48,50 @@ public class Asset {
     @Attribute(name = "typeID", required = false)
     private Long typeId;
 
-    public List<Content> getContents(){
+    public List<Content> getContents() {
         return contents;
     }
 
-    public Long getFlag(){
+    public Long getFlag() {
         return flag;
     }
 
-    public Long getItemId(){
+    public Long getItemId() {
         return itemId;
     }
 
-    public Long getLocationId(){
+    public Long getLocationId() {
         return locationId;
     }
 
-    public Long getQuantity(){
+    public Long getQuantity() {
         return quantity;
     }
 
-    public Long getRawQuantity(){
+    public Long getRawQuantity() {
         return rawQuantity;
     }
 
-    public Long getSingleton(){
+    public Long getSingleton() {
         return singleton;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
     @Override
-    public String toString(){
-        return "Asset [" +
-            "contents = " + contents + ", " +
-            "flag = " + flag + ", " +
-            "itemId = " + itemId + ", " +
-            "locationId = " + locationId + ", " +
-            "quantity = " + quantity + ", " +
-            "rawQuantity = " + rawQuantity + ", " +
-            "singleton = " + singleton + ", " +
-            "typeId = " + typeId + ", " +
-            "]";
+    public String toString() {
+        return "Asset ["
+            + "contents = " + contents + ", "
+            + "flag = " + flag + ", "
+            + "itemId = " + itemId + ", "
+            + "locationId = " + locationId + ", "
+            + "quantity = " + quantity + ", "
+            + "rawQuantity = " + rawQuantity + ", "
+            + "singleton = " + singleton + ", "
+            + "typeId = " + typeId + ", "
+            + "]";
     }
 
 }

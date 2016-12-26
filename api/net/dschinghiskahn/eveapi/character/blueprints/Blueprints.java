@@ -14,30 +14,30 @@ import org.simpleframework.xml.Root;
 public class Blueprints extends ApiResponse {
 
     @Path("result/rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("result/rowset[1]")
     @ElementList(type = Blueprint.class, required = false, inline = true)
     private List<Blueprint> blueprints = new ArrayList<Blueprint>();
 
-    public List<Blueprint> getBlueprints(){
+    public List<Blueprint> getBlueprints() {
         return blueprints;
     }
 
     @Override
-    public String toString(){
-        return "Blueprints [" +
-            "blueprints = " + blueprints + ", " +
-            "]";
+    public String toString() {
+        return "Blueprints ["
+            + "blueprints = " + blueprints + ", "
+            + "]";
     }
 
 }

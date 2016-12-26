@@ -9,15 +9,15 @@ public class Certificate {
     @Attribute(name = "certificateID", required = false)
     private Long certificateId;
 
-    public Long getCertificateId(){
+    public Long getCertificateId() {
         return certificateId;
     }
 
     @Override
-    public String toString(){
-        return "Certificate [" +
-            "certificateId = " + certificateId + ", " +
-            "]";
+    public String toString() {
+        return "Certificate ["
+            + "certificateId = " + certificateId + ", "
+            + "]";
     }
 
 }

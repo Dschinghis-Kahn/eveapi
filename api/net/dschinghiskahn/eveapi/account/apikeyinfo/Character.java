@@ -30,50 +30,50 @@ public class Character {
     @Attribute(required = false)
     private String factionName;
 
-    public Long getAllianceId(){
+    public Long getAllianceId() {
         return allianceId;
     }
 
-    public String getAllianceName(){
+    public String getAllianceName() {
         return allianceName;
     }
 
-    public Long getCharacterId(){
+    public Long getCharacterId() {
         return characterId;
     }
 
-    public String getCharacterName(){
+    public String getCharacterName() {
         return characterName;
     }
 
-    public Long getCorporationId(){
+    public Long getCorporationId() {
         return corporationId;
     }
 
-    public String getCorporationName(){
+    public String getCorporationName() {
         return corporationName;
     }
 
-    public Long getFactionId(){
+    public Long getFactionId() {
         return factionId;
     }
 
-    public String getFactionName(){
+    public String getFactionName() {
         return factionName;
     }
 
     @Override
-    public String toString(){
-        return "Character [" +
-            "allianceId = " + allianceId + ", " +
-            "allianceName = " + allianceName + ", " +
-            "characterId = " + characterId + ", " +
-            "characterName = " + characterName + ", " +
-            "corporationId = " + corporationId + ", " +
-            "corporationName = " + corporationName + ", " +
-            "factionId = " + factionId + ", " +
-            "factionName = " + factionName + ", " +
-            "]";
+    public String toString() {
+        return "Character ["
+            + "allianceId = " + allianceId + ", "
+            + "allianceName = " + allianceName + ", "
+            + "characterId = " + characterId + ", "
+            + "characterName = " + characterName + ", "
+            + "corporationId = " + corporationId + ", "
+            + "corporationName = " + corporationName + ", "
+            + "factionId = " + factionId + ", "
+            + "factionName = " + factionName + ", "
+            + "]";
     }
 
 }

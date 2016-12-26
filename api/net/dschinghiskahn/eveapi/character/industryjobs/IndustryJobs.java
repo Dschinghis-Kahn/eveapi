@@ -14,30 +14,30 @@ import org.simpleframework.xml.Root;
 public class IndustryJobs extends ApiResponse {
 
     @Path("result/rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("result/rowset[1]")
     @ElementList(type = Job.class, required = false, inline = true)
     private List<Job> jobs = new ArrayList<Job>();
 
-    public List<Job> getJobs(){
+    public List<Job> getJobs() {
         return jobs;
     }
 
     @Override
-    public String toString(){
-        return "IndustryJobs [" +
-            "jobs = " + jobs + ", " +
-            "]";
+    public String toString() {
+        return "IndustryJobs ["
+            + "jobs = " + jobs + ", "
+            + "]";
     }
 
 }

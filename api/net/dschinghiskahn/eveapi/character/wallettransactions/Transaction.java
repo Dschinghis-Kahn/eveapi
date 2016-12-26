@@ -50,80 +50,80 @@ public class Transaction {
     @Attribute(required = false)
     private String typeName;
 
-    public Long getClientId(){
+    public Long getClientId() {
         return clientId;
     }
 
-    public String getClientName(){
+    public String getClientName() {
         return clientName;
     }
 
-    public Long getClientTypeId(){
+    public Long getClientTypeId() {
         return clientTypeId;
     }
 
-    public Long getJournalTransactionId(){
+    public Long getJournalTransactionId() {
         return journalTransactionId;
     }
 
-    public Double getPrice(){
+    public Double getPrice() {
         return price;
     }
 
-    public Long getQuantity(){
+    public Long getQuantity() {
         return quantity;
     }
 
-    public Long getStationId(){
+    public Long getStationId() {
         return stationId;
     }
 
-    public String getStationName(){
+    public String getStationName() {
         return stationName;
     }
 
-    public Date getTransactionDateTime(){
+    public Date getTransactionDateTime() {
         return transactionDateTime;
     }
 
-    public String getTransactionFor(){
+    public String getTransactionFor() {
         return transactionFor;
     }
 
-    public Long getTransactionId(){
+    public Long getTransactionId() {
         return transactionId;
     }
 
-    public String getTransactionType(){
+    public String getTransactionType() {
         return transactionType;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
-    public String getTypeName(){
+    public String getTypeName() {
         return typeName;
     }
 
     @Override
-    public String toString(){
-        return "Transaction [" +
-            "clientId = " + clientId + ", " +
-            "clientName = " + clientName + ", " +
-            "clientTypeId = " + clientTypeId + ", " +
-            "journalTransactionId = " + journalTransactionId + ", " +
-            "price = " + price + ", " +
-            "quantity = " + quantity + ", " +
-            "stationId = " + stationId + ", " +
-            "stationName = " + stationName + ", " +
-            "transactionDateTime = " + transactionDateTime + ", " +
-            "transactionFor = " + transactionFor + ", " +
-            "transactionId = " + transactionId + ", " +
-            "transactionType = " + transactionType + ", " +
-            "typeId = " + typeId + ", " +
-            "typeName = " + typeName + ", " +
-            "]";
+    public String toString() {
+        return "Transaction ["
+            + "clientId = " + clientId + ", "
+            + "clientName = " + clientName + ", "
+            + "clientTypeId = " + clientTypeId + ", "
+            + "journalTransactionId = " + journalTransactionId + ", "
+            + "price = " + price + ", "
+            + "quantity = " + quantity + ", "
+            + "stationId = " + stationId + ", "
+            + "stationName = " + stationName + ", "
+            + "transactionDateTime = " + transactionDateTime + ", "
+            + "transactionFor = " + transactionFor + ", "
+            + "transactionId = " + transactionId + ", "
+            + "transactionType = " + transactionType + ", "
+            + "typeId = " + typeId + ", "
+            + "typeName = " + typeName + ", "
+            + "]";
     }
 
 }

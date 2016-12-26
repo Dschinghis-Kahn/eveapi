@@ -28,15 +28,15 @@ public class AccountStatus extends ApiResponse {
     private Long logonMinutes;
 
     @Path("result/rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("result/rowset[1]")
@@ -47,35 +47,35 @@ public class AccountStatus extends ApiResponse {
     @Element(required = false)
     private Date paidUntil;
 
-    public Date getCreateDate(){
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public Long getLogonCount(){
+    public Long getLogonCount() {
         return logonCount;
     }
 
-    public Long getLogonMinutes(){
+    public Long getLogonMinutes() {
         return logonMinutes;
     }
 
-    public List<MultiCharacterTraining> getMultiCharacterTraining(){
+    public List<MultiCharacterTraining> getMultiCharacterTraining() {
         return multiCharacterTraining;
     }
 
-    public Date getPaidUntil(){
+    public Date getPaidUntil() {
         return paidUntil;
     }
 
     @Override
-    public String toString(){
-        return "AccountStatus [" +
-            "createDate = " + createDate + ", " +
-            "logonCount = " + logonCount + ", " +
-            "logonMinutes = " + logonMinutes + ", " +
-            "multiCharacterTraining = " + multiCharacterTraining + ", " +
-            "paidUntil = " + paidUntil + ", " +
-            "]";
+    public String toString() {
+        return "AccountStatus ["
+            + "createDate = " + createDate + ", "
+            + "logonCount = " + logonCount + ", "
+            + "logonMinutes = " + logonMinutes + ", "
+            + "multiCharacterTraining = " + multiCharacterTraining + ", "
+            + "paidUntil = " + paidUntil + ", "
+            + "]";
     }
 
 }

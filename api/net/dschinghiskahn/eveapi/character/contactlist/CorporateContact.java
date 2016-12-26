@@ -21,35 +21,35 @@ public class CorporateContact {
     @Attribute(required = false)
     private Double standing;
 
-    public Long getContactId(){
+    public Long getContactId() {
         return contactId;
     }
 
-    public String getContactName(){
+    public String getContactName() {
         return contactName;
     }
 
-    public Long getContactTypeId(){
+    public Long getContactTypeId() {
         return contactTypeId;
     }
 
-    public Long getLabelMask(){
+    public Long getLabelMask() {
         return labelMask;
     }
 
-    public Double getStanding(){
+    public Double getStanding() {
         return standing;
     }
 
     @Override
-    public String toString(){
-        return "CorporateContact [" +
-            "contactId = " + contactId + ", " +
-            "contactName = " + contactName + ", " +
-            "contactTypeId = " + contactTypeId + ", " +
-            "labelMask = " + labelMask + ", " +
-            "standing = " + standing + ", " +
-            "]";
+    public String toString() {
+        return "CorporateContact ["
+            + "contactId = " + contactId + ", "
+            + "contactName = " + contactName + ", "
+            + "contactTypeId = " + contactTypeId + ", "
+            + "labelMask = " + labelMask + ", "
+            + "standing = " + standing + ", "
+            + "]";
     }
 
 }

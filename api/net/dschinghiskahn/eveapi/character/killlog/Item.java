@@ -21,35 +21,35 @@ public class Item {
     @Attribute(name = "typeID", required = false)
     private Long typeId;
 
-    public Long getFlag(){
+    public Long getFlag() {
         return flag;
     }
 
-    public Long getQtyDestroyed(){
+    public Long getQtyDestroyed() {
         return qtyDestroyed;
     }
 
-    public Long getQtyDropped(){
+    public Long getQtyDropped() {
         return qtyDropped;
     }
 
-    public Long getSingleton(){
+    public Long getSingleton() {
         return singleton;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
     @Override
-    public String toString(){
-        return "Item [" +
-            "flag = " + flag + ", " +
-            "qtyDestroyed = " + qtyDestroyed + ", " +
-            "qtyDropped = " + qtyDropped + ", " +
-            "singleton = " + singleton + ", " +
-            "typeId = " + typeId + ", " +
-            "]";
+    public String toString() {
+        return "Item ["
+            + "flag = " + flag + ", "
+            + "qtyDestroyed = " + qtyDestroyed + ", "
+            + "qtyDropped = " + qtyDropped + ", "
+            + "singleton = " + singleton + ", "
+            + "typeId = " + typeId + ", "
+            + "]";
     }
 
 }

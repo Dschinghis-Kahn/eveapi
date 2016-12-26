@@ -23,35 +23,35 @@ public class ContactNotification {
     @Attribute(required = false)
     private Date sentDate;
 
-    public String getMessageData(){
+    public String getMessageData() {
         return messageData;
     }
 
-    public Long getNotificationId(){
+    public Long getNotificationId() {
         return notificationId;
     }
 
-    public Long getSenderId(){
+    public Long getSenderId() {
         return senderId;
     }
 
-    public String getSenderName(){
+    public String getSenderName() {
         return senderName;
     }
 
-    public Date getSentDate(){
+    public Date getSentDate() {
         return sentDate;
     }
 
     @Override
-    public String toString(){
-        return "ContactNotification [" +
-            "messageData = " + messageData + ", " +
-            "notificationId = " + notificationId + ", " +
-            "senderId = " + senderId + ", " +
-            "senderName = " + senderName + ", " +
-            "sentDate = " + sentDate + ", " +
-            "]";
+    public String toString() {
+        return "ContactNotification ["
+            + "messageData = " + messageData + ", "
+            + "notificationId = " + notificationId + ", "
+            + "senderId = " + senderId + ", "
+            + "senderName = " + senderName + ", "
+            + "sentDate = " + sentDate + ", "
+            + "]";
     }
 
 }

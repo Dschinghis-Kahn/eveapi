@@ -12,20 +12,20 @@ public class Allowed {
     @Attribute(required = false)
     private String accessorName;
 
-    public Long getAccessorId(){
+    public Long getAccessorId() {
         return accessorId;
     }
 
-    public String getAccessorName(){
+    public String getAccessorName() {
         return accessorName;
     }
 
     @Override
-    public String toString(){
-        return "Allowed [" +
-            "accessorId = " + accessorId + ", " +
-            "accessorName = " + accessorName + ", " +
-            "]";
+    public String toString() {
+        return "Allowed ["
+            + "accessorId = " + accessorId + ", "
+            + "accessorName = " + accessorName + ", "
+            + "]";
     }
 
 }

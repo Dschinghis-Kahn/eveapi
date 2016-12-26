@@ -14,15 +14,15 @@ import org.simpleframework.xml.Root;
 public class Medals extends ApiResponse {
 
     @Path("result/rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("result/rowset[1]")
@@ -30,35 +30,35 @@ public class Medals extends ApiResponse {
     private List<Medal> currentCorporation = new ArrayList<Medal>();
 
     @Path("result/rowset[2]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName2;
 
     @Path("result/rowset[2]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey2;
 
     @Path("result/rowset[2]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns2;
 
     @Path("result/rowset[2]")
     @ElementList(type = Medal.class, required = false, inline = true)
     private List<Medal> otherCorporations = new ArrayList<Medal>();
 
-    public List<Medal> getCurrentCorporation(){
+    public List<Medal> getCurrentCorporation() {
         return currentCorporation;
     }
 
-    public List<Medal> getOtherCorporations(){
+    public List<Medal> getOtherCorporations() {
         return otherCorporations;
     }
 
     @Override
-    public String toString(){
-        return "Medals [" +
-            "currentCorporation = " + currentCorporation + ", " +
-            "otherCorporations = " + otherCorporations + ", " +
-            "]";
+    public String toString() {
+        return "Medals ["
+            + "currentCorporation = " + currentCorporation + ", "
+            + "otherCorporations = " + otherCorporations + ", "
+            + "]";
     }
 
 }

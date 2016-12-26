@@ -21,35 +21,35 @@ public class Call {
     @Attribute(required = false)
     private String type;
 
-    public Long getAccessMask(){
+    public Long getAccessMask() {
         return accessMask;
     }
 
-    public String getDescription(){
+    public String getDescription() {
         return description;
     }
 
-    public Long getGroupId(){
+    public Long getGroupId() {
         return groupId;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public String getType(){
+    public String getType() {
         return type;
     }
 
     @Override
-    public String toString(){
-        return "Call [" +
-            "accessMask = " + accessMask + ", " +
-            "description = " + description + ", " +
-            "groupId = " + groupId + ", " +
-            "name = " + name + ", " +
-            "type = " + type + ", " +
-            "]";
+    public String toString() {
+        return "Call ["
+            + "accessMask = " + accessMask + ", "
+            + "description = " + description + ", "
+            + "groupId = " + groupId + ", "
+            + "name = " + name + ", "
+            + "type = " + type + ", "
+            + "]";
     }
 
 }

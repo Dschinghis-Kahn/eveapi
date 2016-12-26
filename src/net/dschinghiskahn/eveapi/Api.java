@@ -237,8 +237,14 @@ public final class Api {
 
     public static AssetList getAssetList(final long keyId, final String verificationCode, final long characterId, final boolean flat)
             throws IOException, EveApiException {
+        String argFlat;
+        if (flat) {
+            argFlat = "1";
+        } else {
+            argFlat = "0";
+        }
         return (AssetList) Api.query(AssetList.class, "/char/AssetList.xml.aspx?keyID=%s&vCode=%s&characterID=%s&flat=%s", String.valueOf(keyId),
-                verificationCode, String.valueOf(characterId), flat ? "1" : "0");
+                verificationCode, String.valueOf(characterId), argFlat);
     }
 
     /**
@@ -597,7 +603,7 @@ public final class Api {
 
     public static MailBodies getMailBodies(final long keyId, final String verificationCode, final long characterId, final Set<Long> messageIds)
             throws IOException, EveApiException {
-        return getMailBodies(keyId, verificationCode, characterId, messageIds.toArray(new Long[0]));// NOPMD
+        return getMailBodies(keyId, verificationCode, characterId, messageIds.toArray(new Long[0])); // NOPMD
     }
 
     public static MailBodies getMailBodies(final long keyId, final String verificationCode, final long characterId, final Long... messageIds)

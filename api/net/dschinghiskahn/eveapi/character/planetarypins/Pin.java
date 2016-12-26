@@ -50,80 +50,80 @@ public class Pin {
     @Attribute(required = false)
     private String typeName;
 
-    public Long getContentQuantity(){
+    public Long getContentQuantity() {
         return contentQuantity;
     }
 
-    public Long getContentTypeId(){
+    public Long getContentTypeId() {
         return contentTypeId;
     }
 
-    public String getContentTypeName(){
+    public String getContentTypeName() {
         return contentTypeName;
     }
 
-    public Long getCycleTime(){
+    public Long getCycleTime() {
         return cycleTime;
     }
 
-    public Date getExpiryTime(){
+    public Date getExpiryTime() {
         return expiryTime;
     }
 
-    public Date getInstallTime(){
+    public Date getInstallTime() {
         return installTime;
     }
 
-    public Date getLastLaunchTime(){
+    public Date getLastLaunchTime() {
         return lastLaunchTime;
     }
 
-    public Double getLatitude(){
+    public Double getLatitude() {
         return latitude;
     }
 
-    public Double getLongitude(){
+    public Double getLongitude() {
         return longitude;
     }
 
-    public Long getPinId(){
+    public Long getPinId() {
         return pinId;
     }
 
-    public Long getQuantityPerCycle(){
+    public Long getQuantityPerCycle() {
         return quantityPerCycle;
     }
 
-    public Long getSchematicId(){
+    public Long getSchematicId() {
         return schematicId;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
-    public String getTypeName(){
+    public String getTypeName() {
         return typeName;
     }
 
     @Override
-    public String toString(){
-        return "Pin [" +
-            "contentQuantity = " + contentQuantity + ", " +
-            "contentTypeId = " + contentTypeId + ", " +
-            "contentTypeName = " + contentTypeName + ", " +
-            "cycleTime = " + cycleTime + ", " +
-            "expiryTime = " + expiryTime + ", " +
-            "installTime = " + installTime + ", " +
-            "lastLaunchTime = " + lastLaunchTime + ", " +
-            "latitude = " + latitude + ", " +
-            "longitude = " + longitude + ", " +
-            "pinId = " + pinId + ", " +
-            "quantityPerCycle = " + quantityPerCycle + ", " +
-            "schematicId = " + schematicId + ", " +
-            "typeId = " + typeId + ", " +
-            "typeName = " + typeName + ", " +
-            "]";
+    public String toString() {
+        return "Pin ["
+            + "contentQuantity = " + contentQuantity + ", "
+            + "contentTypeId = " + contentTypeId + ", "
+            + "contentTypeName = " + contentTypeName + ", "
+            + "cycleTime = " + cycleTime + ", "
+            + "expiryTime = " + expiryTime + ", "
+            + "installTime = " + installTime + ", "
+            + "lastLaunchTime = " + lastLaunchTime + ", "
+            + "latitude = " + latitude + ", "
+            + "longitude = " + longitude + ", "
+            + "pinId = " + pinId + ", "
+            + "quantityPerCycle = " + quantityPerCycle + ", "
+            + "schematicId = " + schematicId + ", "
+            + "typeId = " + typeId + ", "
+            + "typeName = " + typeName + ", "
+            + "]";
     }
 
 }

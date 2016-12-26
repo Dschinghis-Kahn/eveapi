@@ -15,25 +15,25 @@ public class CallGroup {
     @Attribute(required = false)
     private String name;
 
-    public String getDescription(){
+    public String getDescription() {
         return description;
     }
 
-    public Long getGroupId(){
+    public Long getGroupId() {
         return groupId;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
     @Override
-    public String toString(){
-        return "CallGroup [" +
-            "description = " + description + ", " +
-            "groupId = " + groupId + ", " +
-            "name = " + name + ", " +
-            "]";
+    public String toString() {
+        return "CallGroup ["
+            + "description = " + description + ", "
+            + "groupId = " + groupId + ", "
+            + "name = " + name + ", "
+            + "]";
     }
 
 }

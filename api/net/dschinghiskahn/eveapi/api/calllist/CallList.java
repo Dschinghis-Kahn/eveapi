@@ -14,15 +14,15 @@ import org.simpleframework.xml.Root;
 public class CallList extends ApiResponse {
 
     @Path("result/rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("result/rowset[1]")
@@ -30,35 +30,35 @@ public class CallList extends ApiResponse {
     private List<CallGroup> callGroups = new ArrayList<CallGroup>();
 
     @Path("result/rowset[2]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName2;
 
     @Path("result/rowset[2]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey2;
 
     @Path("result/rowset[2]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns2;
 
     @Path("result/rowset[2]")
     @ElementList(type = Call.class, required = false, inline = true)
     private List<Call> calls = new ArrayList<Call>();
 
-    public List<CallGroup> getCallGroups(){
+    public List<CallGroup> getCallGroups() {
         return callGroups;
     }
 
-    public List<Call> getCalls(){
+    public List<Call> getCalls() {
         return calls;
     }
 
     @Override
-    public String toString(){
-        return "CallList [" +
-            "callGroups = " + callGroups + ", " +
-            "calls = " + calls + ", " +
-            "]";
+    public String toString() {
+        return "CallList ["
+            + "callGroups = " + callGroups + ", "
+            + "calls = " + calls + ", "
+            + "]";
     }
 
 }

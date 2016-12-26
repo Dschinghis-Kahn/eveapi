@@ -12,20 +12,20 @@ public class CorporationTitle {
     @Attribute(required = false)
     private String titleName;
 
-    public Long getTitleId(){
+    public Long getTitleId() {
         return titleId;
     }
 
-    public String getTitleName(){
+    public String getTitleName() {
         return titleName;
     }
 
     @Override
-    public String toString(){
-        return "CorporationTitle [" +
-            "titleId = " + titleId + ", " +
-            "titleName = " + titleName + ", " +
-            "]";
+    public String toString() {
+        return "CorporationTitle ["
+            + "titleId = " + titleId + ", "
+            + "titleName = " + titleName + ", "
+            + "]";
     }
 
 }

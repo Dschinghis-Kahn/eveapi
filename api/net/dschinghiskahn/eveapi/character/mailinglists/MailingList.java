@@ -12,20 +12,20 @@ public class MailingList {
     @Attribute(name = "listID", required = false)
     private Long listId;
 
-    public String getDisplayName(){
+    public String getDisplayName() {
         return displayName;
     }
 
-    public Long getListId(){
+    public Long getListId() {
         return listId;
     }
 
     @Override
-    public String toString(){
-        return "MailingList [" +
-            "displayName = " + displayName + ", " +
-            "listId = " + listId + ", " +
-            "]";
+    public String toString() {
+        return "MailingList ["
+            + "displayName = " + displayName + ", "
+            + "listId = " + listId + ", "
+            + "]";
     }
 
 }

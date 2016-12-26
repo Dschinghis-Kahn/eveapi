@@ -12,20 +12,20 @@ public class CorporationRoleAtOther {
     @Attribute(required = false)
     private String roleName;
 
-    public Long getRoleId(){
+    public Long getRoleId() {
         return roleId;
     }
 
-    public String getRoleName(){
+    public String getRoleName() {
         return roleName;
     }
 
     @Override
-    public String toString(){
-        return "CorporationRoleAtOther [" +
-            "roleId = " + roleId + ", " +
-            "roleName = " + roleName + ", " +
-            "]";
+    public String toString() {
+        return "CorporationRoleAtOther ["
+            + "roleId = " + roleId + ", "
+            + "roleName = " + roleName + ", "
+            + "]";
     }
 
 }

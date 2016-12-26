@@ -45,75 +45,75 @@ public class Attacker {
     @Attribute(name = "weaponTypeID", required = false)
     private Long weaponTypeId;
 
-    public Long getAllianceId(){
+    public Long getAllianceId() {
         return allianceId;
     }
 
-    public String getAllianceName(){
+    public String getAllianceName() {
         return allianceName;
     }
 
-    public Long getCharacterId(){
+    public Long getCharacterId() {
         return characterId;
     }
 
-    public String getCharacterName(){
+    public String getCharacterName() {
         return characterName;
     }
 
-    public Long getCorporationId(){
+    public Long getCorporationId() {
         return corporationId;
     }
 
-    public String getCorporationName(){
+    public String getCorporationName() {
         return corporationName;
     }
 
-    public Long getDamageDone(){
+    public Long getDamageDone() {
         return damageDone;
     }
 
-    public Long getFactionId(){
+    public Long getFactionId() {
         return factionId;
     }
 
-    public String getFactionName(){
+    public String getFactionName() {
         return factionName;
     }
 
-    public Long getFinalBlow(){
+    public Long getFinalBlow() {
         return finalBlow;
     }
 
-    public Double getSecurityStatus(){
+    public Double getSecurityStatus() {
         return securityStatus;
     }
 
-    public Long getShipTypeId(){
+    public Long getShipTypeId() {
         return shipTypeId;
     }
 
-    public Long getWeaponTypeId(){
+    public Long getWeaponTypeId() {
         return weaponTypeId;
     }
 
     @Override
-    public String toString(){
-        return "Attacker [" +
-            "allianceId = " + allianceId + ", " +
-            "allianceName = " + allianceName + ", " +
-            "characterId = " + characterId + ", " +
-            "characterName = " + characterName + ", " +
-            "corporationId = " + corporationId + ", " +
-            "corporationName = " + corporationName + ", " +
-            "damageDone = " + damageDone + ", " +
-            "factionId = " + factionId + ", " +
-            "factionName = " + factionName + ", " +
-            "finalBlow = " + finalBlow + ", " +
-            "securityStatus = " + securityStatus + ", " +
-            "shipTypeId = " + shipTypeId + ", " +
-            "weaponTypeId = " + weaponTypeId + ", " +
-            "]";
+    public String toString() {
+        return "Attacker ["
+            + "allianceId = " + allianceId + ", "
+            + "allianceName = " + allianceName + ", "
+            + "characterId = " + characterId + ", "
+            + "characterName = " + characterName + ", "
+            + "corporationId = " + corporationId + ", "
+            + "corporationName = " + corporationName + ", "
+            + "damageDone = " + damageDone + ", "
+            + "factionId = " + factionId + ", "
+            + "factionName = " + factionName + ", "
+            + "finalBlow = " + finalBlow + ", "
+            + "securityStatus = " + securityStatus + ", "
+            + "shipTypeId = " + shipTypeId + ", "
+            + "weaponTypeId = " + weaponTypeId + ", "
+            + "]";
     }
 
 }

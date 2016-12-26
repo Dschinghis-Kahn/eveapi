@@ -74,120 +74,120 @@ public class Contract {
     @Attribute(required = false)
     private Long volume;
 
-    public Long getAcceptorId(){
+    public Long getAcceptorId() {
         return acceptorId;
     }
 
-    public Long getAssigneeId(){
+    public Long getAssigneeId() {
         return assigneeId;
     }
 
-    public String getAvailability(){
+    public String getAvailability() {
         return availability;
     }
 
-    public Double getBuyout(){
+    public Double getBuyout() {
         return buyout;
     }
 
-    public Long getCollateral(){
+    public Long getCollateral() {
         return collateral;
     }
 
-    public Long getContractId(){
+    public Long getContractId() {
         return contractId;
     }
 
-    public Date getDateAccepted(){
+    public Date getDateAccepted() {
         return dateAccepted;
     }
 
-    public Date getDateCompleted(){
+    public Date getDateCompleted() {
         return dateCompleted;
     }
 
-    public Date getDateExpired(){
+    public Date getDateExpired() {
         return dateExpired;
     }
 
-    public Date getDateIssued(){
+    public Date getDateIssued() {
         return dateIssued;
     }
 
-    public Long getEndStationId(){
+    public Long getEndStationId() {
         return endStationId;
     }
 
-    public Long getForCorp(){
+    public Long getForCorp() {
         return forCorp;
     }
 
-    public Long getIssuerCorpId(){
+    public Long getIssuerCorpId() {
         return issuerCorpId;
     }
 
-    public Long getIssuerId(){
+    public Long getIssuerId() {
         return issuerId;
     }
 
-    public Long getNumDays(){
+    public Long getNumDays() {
         return numDays;
     }
 
-    public Double getPrice(){
+    public Double getPrice() {
         return price;
     }
 
-    public Long getReward(){
+    public Long getReward() {
         return reward;
     }
 
-    public Long getStartStationId(){
+    public Long getStartStationId() {
         return startStationId;
     }
 
-    public String getStatus(){
+    public String getStatus() {
         return status;
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
 
-    public String getType(){
+    public String getType() {
         return type;
     }
 
-    public Long getVolume(){
+    public Long getVolume() {
         return volume;
     }
 
     @Override
-    public String toString(){
-        return "Contract [" +
-            "acceptorId = " + acceptorId + ", " +
-            "assigneeId = " + assigneeId + ", " +
-            "availability = " + availability + ", " +
-            "buyout = " + buyout + ", " +
-            "collateral = " + collateral + ", " +
-            "contractId = " + contractId + ", " +
-            "dateAccepted = " + dateAccepted + ", " +
-            "dateCompleted = " + dateCompleted + ", " +
-            "dateExpired = " + dateExpired + ", " +
-            "dateIssued = " + dateIssued + ", " +
-            "endStationId = " + endStationId + ", " +
-            "forCorp = " + forCorp + ", " +
-            "issuerCorpId = " + issuerCorpId + ", " +
-            "issuerId = " + issuerId + ", " +
-            "numDays = " + numDays + ", " +
-            "price = " + price + ", " +
-            "reward = " + reward + ", " +
-            "startStationId = " + startStationId + ", " +
-            "status = " + status + ", " +
-            "title = " + title + ", " +
-            "type = " + type + ", " +
-            "volume = " + volume + ", " +
-            "]";
+    public String toString() {
+        return "Contract ["
+            + "acceptorId = " + acceptorId + ", "
+            + "assigneeId = " + assigneeId + ", "
+            + "availability = " + availability + ", "
+            + "buyout = " + buyout + ", "
+            + "collateral = " + collateral + ", "
+            + "contractId = " + contractId + ", "
+            + "dateAccepted = " + dateAccepted + ", "
+            + "dateCompleted = " + dateCompleted + ", "
+            + "dateExpired = " + dateExpired + ", "
+            + "dateIssued = " + dateIssued + ", "
+            + "endStationId = " + endStationId + ", "
+            + "forCorp = " + forCorp + ", "
+            + "issuerCorpId = " + issuerCorpId + ", "
+            + "issuerId = " + issuerId + ", "
+            + "numDays = " + numDays + ", "
+            + "price = " + price + ", "
+            + "reward = " + reward + ", "
+            + "startStationId = " + startStationId + ", "
+            + "status = " + status + ", "
+            + "title = " + title + ", "
+            + "type = " + type + ", "
+            + "volume = " + volume + ", "
+            + "]";
     }
 
 }

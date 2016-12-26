@@ -12,20 +12,20 @@ public class Notification {
     @Attribute(required = false)
     private String text;
 
-    public Long getNotificationId(){
+    public Long getNotificationId() {
         return notificationId;
     }
 
-    public String getText(){
+    public String getText() {
         return text;
     }
 
     @Override
-    public String toString(){
-        return "Notification [" +
-            "notificationId = " + notificationId + ", " +
-            "text = " + text + ", " +
-            "]";
+    public String toString() {
+        return "Notification ["
+            + "notificationId = " + notificationId + ", "
+            + "text = " + text + ", "
+            + "]";
     }
 
 }

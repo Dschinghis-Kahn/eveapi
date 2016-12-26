@@ -39,65 +39,65 @@ public class Route {
     @Attribute(required = false)
     private Long waypoint5;
 
-    public Long getContentTypeId(){
+    public Long getContentTypeId() {
         return contentTypeId;
     }
 
-    public String getContentTypeName(){
+    public String getContentTypeName() {
         return contentTypeName;
     }
 
-    public Long getDestinationPinId(){
+    public Long getDestinationPinId() {
         return destinationPinId;
     }
 
-    public Long getQuantity(){
+    public Long getQuantity() {
         return quantity;
     }
 
-    public Long getRouteId(){
+    public Long getRouteId() {
         return routeId;
     }
 
-    public Long getSourcePinId(){
+    public Long getSourcePinId() {
         return sourcePinId;
     }
 
-    public Long getWaypoint1(){
+    public Long getWaypoint1() {
         return waypoint1;
     }
 
-    public Long getWaypoint2(){
+    public Long getWaypoint2() {
         return waypoint2;
     }
 
-    public Long getWaypoint3(){
+    public Long getWaypoint3() {
         return waypoint3;
     }
 
-    public Long getWaypoint4(){
+    public Long getWaypoint4() {
         return waypoint4;
     }
 
-    public Long getWaypoint5(){
+    public Long getWaypoint5() {
         return waypoint5;
     }
 
     @Override
-    public String toString(){
-        return "Route [" +
-            "contentTypeId = " + contentTypeId + ", " +
-            "contentTypeName = " + contentTypeName + ", " +
-            "destinationPinId = " + destinationPinId + ", " +
-            "quantity = " + quantity + ", " +
-            "routeId = " + routeId + ", " +
-            "sourcePinId = " + sourcePinId + ", " +
-            "waypoint1 = " + waypoint1 + ", " +
-            "waypoint2 = " + waypoint2 + ", " +
-            "waypoint3 = " + waypoint3 + ", " +
-            "waypoint4 = " + waypoint4 + ", " +
-            "waypoint5 = " + waypoint5 + ", " +
-            "]";
+    public String toString() {
+        return "Route ["
+            + "contentTypeId = " + contentTypeId + ", "
+            + "contentTypeName = " + contentTypeName + ", "
+            + "destinationPinId = " + destinationPinId + ", "
+            + "quantity = " + quantity + ", "
+            + "routeId = " + routeId + ", "
+            + "sourcePinId = " + sourcePinId + ", "
+            + "waypoint1 = " + waypoint1 + ", "
+            + "waypoint2 = " + waypoint2 + ", "
+            + "waypoint3 = " + waypoint3 + ", "
+            + "waypoint4 = " + waypoint4 + ", "
+            + "waypoint5 = " + waypoint5 + ", "
+            + "]";
     }
 
 }

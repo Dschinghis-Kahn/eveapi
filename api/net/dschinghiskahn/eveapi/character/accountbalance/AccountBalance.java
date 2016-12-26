@@ -14,30 +14,30 @@ import org.simpleframework.xml.Root;
 public class AccountBalance extends ApiResponse {
 
     @Path("result/rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("result/rowset[1]")
     @ElementList(type = Account.class, required = false, inline = true)
     private List<Account> accounts = new ArrayList<Account>();
 
-    public List<Account> getAccounts(){
+    public List<Account> getAccounts() {
         return accounts;
     }
 
     @Override
-    public String toString(){
-        return "AccountBalance [" +
-            "accounts = " + accounts + ", " +
-            "]";
+    public String toString() {
+        return "AccountBalance ["
+            + "accounts = " + accounts + ", "
+            + "]";
     }
 
 }

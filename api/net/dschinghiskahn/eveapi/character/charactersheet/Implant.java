@@ -12,20 +12,20 @@ public class Implant {
     @Attribute(required = false)
     private String typeName;
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
-    public String getTypeName(){
+    public String getTypeName() {
         return typeName;
     }
 
     @Override
-    public String toString(){
-        return "Implant [" +
-            "typeId = " + typeId + ", " +
-            "typeName = " + typeName + ", " +
-            "]";
+    public String toString() {
+        return "Implant ["
+            + "typeId = " + typeId + ", "
+            + "typeName = " + typeName + ", "
+            + "]";
     }
 
 }

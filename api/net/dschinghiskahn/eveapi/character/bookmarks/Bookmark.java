@@ -41,65 +41,65 @@ public class Bookmark {
     @Attribute(name = "z", required = false)
     private Double zz;
 
-    public Long getBookmarkId(){
+    public Long getBookmarkId() {
         return bookmarkId;
     }
 
-    public Date getCreated(){
+    public Date getCreated() {
         return created;
     }
 
-    public Long getCreatorId(){
+    public Long getCreatorId() {
         return creatorId;
     }
 
-    public Long getItemId(){
+    public Long getItemId() {
         return itemId;
     }
 
-    public Long getLocationId(){
+    public Long getLocationId() {
         return locationId;
     }
 
-    public String getMemo(){
+    public String getMemo() {
         return memo;
     }
 
-    public String getNote(){
+    public String getNote() {
         return note;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
-    public Double getXx(){
+    public Double getXx() {
         return xx;
     }
 
-    public Double getYy(){
+    public Double getYy() {
         return yy;
     }
 
-    public Double getZz(){
+    public Double getZz() {
         return zz;
     }
 
     @Override
-    public String toString(){
-        return "Bookmark [" +
-            "bookmarkId = " + bookmarkId + ", " +
-            "created = " + created + ", " +
-            "creatorId = " + creatorId + ", " +
-            "itemId = " + itemId + ", " +
-            "locationId = " + locationId + ", " +
-            "memo = " + memo + ", " +
-            "note = " + note + ", " +
-            "typeId = " + typeId + ", " +
-            "xx = " + xx + ", " +
-            "yy = " + yy + ", " +
-            "zz = " + zz + ", " +
-            "]";
+    public String toString() {
+        return "Bookmark ["
+            + "bookmarkId = " + bookmarkId + ", "
+            + "created = " + created + ", "
+            + "creatorId = " + creatorId + ", "
+            + "itemId = " + itemId + ", "
+            + "locationId = " + locationId + ", "
+            + "memo = " + memo + ", "
+            + "note = " + note + ", "
+            + "typeId = " + typeId + ", "
+            + "xx = " + xx + ", "
+            + "yy = " + yy + ", "
+            + "zz = " + zz + ", "
+            + "]";
     }
 
 }

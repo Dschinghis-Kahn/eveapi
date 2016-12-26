@@ -21,35 +21,35 @@ public class Location {
     @Attribute(name = "z", required = false)
     private Double zz;
 
-    public Long getItemId(){
+    public Long getItemId() {
         return itemId;
     }
 
-    public String getItemName(){
+    public String getItemName() {
         return itemName;
     }
 
-    public Double getXx(){
+    public Double getXx() {
         return xx;
     }
 
-    public Double getYy(){
+    public Double getYy() {
         return yy;
     }
 
-    public Double getZz(){
+    public Double getZz() {
         return zz;
     }
 
     @Override
-    public String toString(){
-        return "Location [" +
-            "itemId = " + itemId + ", " +
-            "itemName = " + itemName + ", " +
-            "xx = " + xx + ", " +
-            "yy = " + yy + ", " +
-            "zz = " + zz + ", " +
-            "]";
+    public String toString() {
+        return "Location ["
+            + "itemId = " + itemId + ", "
+            + "itemName = " + itemName + ", "
+            + "xx = " + xx + ", "
+            + "yy = " + yy + ", "
+            + "zz = " + zz + ", "
+            + "]";
     }
 
 }

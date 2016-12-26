@@ -21,35 +21,35 @@ public class Attributes {
     @Element(required = false)
     private Long willpower;
 
-    public Long getCharisma(){
+    public Long getCharisma() {
         return charisma;
     }
 
-    public Long getIntelligence(){
+    public Long getIntelligence() {
         return intelligence;
     }
 
-    public Long getMemory(){
+    public Long getMemory() {
         return memory;
     }
 
-    public Long getPerception(){
+    public Long getPerception() {
         return perception;
     }
 
-    public Long getWillpower(){
+    public Long getWillpower() {
         return willpower;
     }
 
     @Override
-    public String toString(){
-        return "Attributes [" +
-            "charisma = " + charisma + ", " +
-            "intelligence = " + intelligence + ", " +
-            "memory = " + memory + ", " +
-            "perception = " + perception + ", " +
-            "willpower = " + willpower + ", " +
-            "]";
+    public String toString() {
+        return "Attributes ["
+            + "charisma = " + charisma + ", "
+            + "intelligence = " + intelligence + ", "
+            + "memory = " + memory + ", "
+            + "perception = " + perception + ", "
+            + "willpower = " + willpower + ", "
+            + "]";
     }
 
 }

@@ -15,15 +15,15 @@ public class Key {
     private Long accessMask;
 
     @Path("rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("rowset[1]")
@@ -36,30 +36,30 @@ public class Key {
     @Attribute(required = false)
     private String type;
 
-    public Long getAccessMask(){
+    public Long getAccessMask() {
         return accessMask;
     }
 
-    public List<Character> getCharacters(){
+    public List<Character> getCharacters() {
         return characters;
     }
 
-    public String getExpires(){
+    public String getExpires() {
         return expires;
     }
 
-    public String getType(){
+    public String getType() {
         return type;
     }
 
     @Override
-    public String toString(){
-        return "Key [" +
-            "accessMask = " + accessMask + ", " +
-            "characters = " + characters + ", " +
-            "expires = " + expires + ", " +
-            "type = " + type + ", " +
-            "]";
+    public String toString() {
+        return "Key ["
+            + "accessMask = " + accessMask + ", "
+            + "characters = " + characters + ", "
+            + "expires = " + expires + ", "
+            + "type = " + type + ", "
+            + "]";
     }
 
 }

@@ -45,75 +45,75 @@ public class Victim {
     @Attribute(name = "z", required = false)
     private Double zz;
 
-    public Long getAllianceId(){
+    public Long getAllianceId() {
         return allianceId;
     }
 
-    public String getAllianceName(){
+    public String getAllianceName() {
         return allianceName;
     }
 
-    public Long getCharacterId(){
+    public Long getCharacterId() {
         return characterId;
     }
 
-    public String getCharacterName(){
+    public String getCharacterName() {
         return characterName;
     }
 
-    public Long getCorporationId(){
+    public Long getCorporationId() {
         return corporationId;
     }
 
-    public String getCorporationName(){
+    public String getCorporationName() {
         return corporationName;
     }
 
-    public Long getDamageTaken(){
+    public Long getDamageTaken() {
         return damageTaken;
     }
 
-    public Long getFactionId(){
+    public Long getFactionId() {
         return factionId;
     }
 
-    public String getFactionName(){
+    public String getFactionName() {
         return factionName;
     }
 
-    public Long getShipTypeId(){
+    public Long getShipTypeId() {
         return shipTypeId;
     }
 
-    public Double getXx(){
+    public Double getXx() {
         return xx;
     }
 
-    public Double getYy(){
+    public Double getYy() {
         return yy;
     }
 
-    public Double getZz(){
+    public Double getZz() {
         return zz;
     }
 
     @Override
-    public String toString(){
-        return "Victim [" +
-            "allianceId = " + allianceId + ", " +
-            "allianceName = " + allianceName + ", " +
-            "characterId = " + characterId + ", " +
-            "characterName = " + characterName + ", " +
-            "corporationId = " + corporationId + ", " +
-            "corporationName = " + corporationName + ", " +
-            "damageTaken = " + damageTaken + ", " +
-            "factionId = " + factionId + ", " +
-            "factionName = " + factionName + ", " +
-            "shipTypeId = " + shipTypeId + ", " +
-            "xx = " + xx + ", " +
-            "yy = " + yy + ", " +
-            "zz = " + zz + ", " +
-            "]";
+    public String toString() {
+        return "Victim ["
+            + "allianceId = " + allianceId + ", "
+            + "allianceName = " + allianceName + ", "
+            + "characterId = " + characterId + ", "
+            + "characterName = " + characterName + ", "
+            + "corporationId = " + corporationId + ", "
+            + "corporationName = " + corporationName + ", "
+            + "damageTaken = " + damageTaken + ", "
+            + "factionId = " + factionId + ", "
+            + "factionName = " + factionName + ", "
+            + "shipTypeId = " + shipTypeId + ", "
+            + "xx = " + xx + ", "
+            + "yy = " + yy + ", "
+            + "zz = " + zz + ", "
+            + "]";
     }
 
 }

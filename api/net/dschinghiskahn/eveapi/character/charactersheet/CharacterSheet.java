@@ -52,15 +52,15 @@ public class CharacterSheet extends ApiResponse {
     private Long bloodLineId;
 
     @Path("result/rowset[5]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName5;
 
     @Path("result/rowset[5]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey5;
 
     @Path("result/rowset[5]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns5;
 
     @Path("result/rowset[5]")
@@ -96,15 +96,15 @@ public class CharacterSheet extends ApiResponse {
     private String corporationName;
 
     @Path("result/rowset[6]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName6;
 
     @Path("result/rowset[6]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey6;
 
     @Path("result/rowset[6]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns6;
 
     @Path("result/rowset[6]")
@@ -112,15 +112,15 @@ public class CharacterSheet extends ApiResponse {
     private List<CorporationRole> corporationRoles = new ArrayList<CorporationRole>();
 
     @Path("result/rowset[8]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName8;
 
     @Path("result/rowset[8]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey8;
 
     @Path("result/rowset[8]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns8;
 
     @Path("result/rowset[8]")
@@ -128,15 +128,15 @@ public class CharacterSheet extends ApiResponse {
     private List<CorporationRoleAtBase> corporationRolesAtBase = new ArrayList<CorporationRoleAtBase>();
 
     @Path("result/rowset[7]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName7;
 
     @Path("result/rowset[7]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey7;
 
     @Path("result/rowset[7]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns7;
 
     @Path("result/rowset[7]")
@@ -144,15 +144,15 @@ public class CharacterSheet extends ApiResponse {
     private List<CorporationRoleAtHq> corporationRolesAtHq = new ArrayList<CorporationRoleAtHq>();
 
     @Path("result/rowset[9]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName9;
 
     @Path("result/rowset[9]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey9;
 
     @Path("result/rowset[9]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns9;
 
     @Path("result/rowset[9]")
@@ -160,15 +160,15 @@ public class CharacterSheet extends ApiResponse {
     private List<CorporationRoleAtOther> corporationRolesAtOther = new ArrayList<CorporationRoleAtOther>();
 
     @Path("result/rowset[10]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName10;
 
     @Path("result/rowset[10]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey10;
 
     @Path("result/rowset[10]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns10;
 
     @Path("result/rowset[10]")
@@ -200,15 +200,15 @@ public class CharacterSheet extends ApiResponse {
     private Long homeStationId;
 
     @Path("result/rowset[3]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName3;
 
     @Path("result/rowset[3]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey3;
 
     @Path("result/rowset[3]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns3;
 
     @Path("result/rowset[3]")
@@ -220,15 +220,15 @@ public class CharacterSheet extends ApiResponse {
     private Date jumpActivation;
 
     @Path("result/rowset[2]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName2;
 
     @Path("result/rowset[2]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey2;
 
     @Path("result/rowset[2]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns2;
 
     @Path("result/rowset[2]")
@@ -236,15 +236,15 @@ public class CharacterSheet extends ApiResponse {
     private List<JumpCloneImplant> jumpCloneImplants = new ArrayList<JumpCloneImplant>();
 
     @Path("result/rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("result/rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("result/rowset[1]")
@@ -280,225 +280,225 @@ public class CharacterSheet extends ApiResponse {
     private Date remoteStationDate;
 
     @Path("result/rowset[4]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName4;
 
     @Path("result/rowset[4]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey4;
 
     @Path("result/rowset[4]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns4;
 
     @Path("result/rowset[4]")
     @ElementList(type = Skill.class, required = false, inline = true)
     private List<Skill> skills = new ArrayList<Skill>();
 
-    public Date getDob(){
+    public Date getDob() {
         return dob;
     }
 
-    public Long getAllianceId(){
+    public Long getAllianceId() {
         return allianceId;
     }
 
-    public String getAllianceName(){
+    public String getAllianceName() {
         return allianceName;
     }
 
-    public String getAncestry(){
+    public String getAncestry() {
         return ancestry;
     }
 
-    public Long getAncestryId(){
+    public Long getAncestryId() {
         return ancestryId;
     }
 
-    public Attributes getAttributes(){
+    public Attributes getAttributes() {
         return attributes;
     }
 
-    public Double getBalance(){
+    public Double getBalance() {
         return balance;
     }
 
-    public String getBloodLine(){
+    public String getBloodLine() {
         return bloodLine;
     }
 
-    public Long getBloodLineId(){
+    public Long getBloodLineId() {
         return bloodLineId;
     }
 
-    public List<Certificate> getCertificates(){
+    public List<Certificate> getCertificates() {
         return certificates;
     }
 
-    public Long getCharacterId(){
+    public Long getCharacterId() {
         return characterId;
     }
 
-    public Date getCloneJumpDate(){
+    public Date getCloneJumpDate() {
         return cloneJumpDate;
     }
 
-    public String getCloneName(){
+    public String getCloneName() {
         return cloneName;
     }
 
-    public Long getCloneSkillPoints(){
+    public Long getCloneSkillPoints() {
         return cloneSkillPoints;
     }
 
-    public Long getCloneTypeId(){
+    public Long getCloneTypeId() {
         return cloneTypeId;
     }
 
-    public Long getCorporationId(){
+    public Long getCorporationId() {
         return corporationId;
     }
 
-    public String getCorporationName(){
+    public String getCorporationName() {
         return corporationName;
     }
 
-    public List<CorporationRole> getCorporationRoles(){
+    public List<CorporationRole> getCorporationRoles() {
         return corporationRoles;
     }
 
-    public List<CorporationRoleAtBase> getCorporationRolesAtBase(){
+    public List<CorporationRoleAtBase> getCorporationRolesAtBase() {
         return corporationRolesAtBase;
     }
 
-    public List<CorporationRoleAtHq> getCorporationRolesAtHq(){
+    public List<CorporationRoleAtHq> getCorporationRolesAtHq() {
         return corporationRolesAtHq;
     }
 
-    public List<CorporationRoleAtOther> getCorporationRolesAtOther(){
+    public List<CorporationRoleAtOther> getCorporationRolesAtOther() {
         return corporationRolesAtOther;
     }
 
-    public List<CorporationTitle> getCorporationTitles(){
+    public List<CorporationTitle> getCorporationTitles() {
         return corporationTitles;
     }
 
-    public Long getFactionId(){
+    public Long getFactionId() {
         return factionId;
     }
 
-    public String getFactionName(){
+    public String getFactionName() {
         return factionName;
     }
 
-    public Long getFreeRespecs(){
+    public Long getFreeRespecs() {
         return freeRespecs;
     }
 
-    public Long getFreeSkillPoints(){
+    public Long getFreeSkillPoints() {
         return freeSkillPoints;
     }
 
-    public String getGender(){
+    public String getGender() {
         return gender;
     }
 
-    public Long getHomeStationId(){
+    public Long getHomeStationId() {
         return homeStationId;
     }
 
-    public List<Implant> getImplants(){
+    public List<Implant> getImplants() {
         return implants;
     }
 
-    public Date getJumpActivation(){
+    public Date getJumpActivation() {
         return jumpActivation;
     }
 
-    public List<JumpCloneImplant> getJumpCloneImplants(){
+    public List<JumpCloneImplant> getJumpCloneImplants() {
         return jumpCloneImplants;
     }
 
-    public List<JumpClone> getJumpClones(){
+    public List<JumpClone> getJumpClones() {
         return jumpClones;
     }
 
-    public Date getJumpFatigue(){
+    public Date getJumpFatigue() {
         return jumpFatigue;
     }
 
-    public Date getJumpLastUpdate(){
+    public Date getJumpLastUpdate() {
         return jumpLastUpdate;
     }
 
-    public Date getLastRespecDate(){
+    public Date getLastRespecDate() {
         return lastRespecDate;
     }
 
-    public Date getLastTimedRespec(){
+    public Date getLastTimedRespec() {
         return lastTimedRespec;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public String getRace(){
+    public String getRace() {
         return race;
     }
 
-    public Date getRemoteStationDate(){
+    public Date getRemoteStationDate() {
         return remoteStationDate;
     }
 
-    public List<Skill> getSkills(){
+    public List<Skill> getSkills() {
         return skills;
     }
 
     @Override
-    public String toString(){
-        return "CharacterSheet [" +
-            "dob = " + dob + ", " +
-            "allianceId = " + allianceId + ", " +
-            "allianceName = " + allianceName + ", " +
-            "ancestry = " + ancestry + ", " +
-            "ancestryId = " + ancestryId + ", " +
-            "attributes = " + attributes + ", " +
-            "balance = " + balance + ", " +
-            "bloodLine = " + bloodLine + ", " +
-            "bloodLineId = " + bloodLineId + ", " +
-            "certificates = " + certificates + ", " +
-            "characterId = " + characterId + ", " +
-            "cloneJumpDate = " + cloneJumpDate + ", " +
-            "cloneName = " + cloneName + ", " +
-            "cloneSkillPoints = " + cloneSkillPoints + ", " +
-            "cloneTypeId = " + cloneTypeId + ", " +
-            "corporationId = " + corporationId + ", " +
-            "corporationName = " + corporationName + ", " +
-            "corporationRoles = " + corporationRoles + ", " +
-            "corporationRolesAtBase = " + corporationRolesAtBase + ", " +
-            "corporationRolesAtHq = " + corporationRolesAtHq + ", " +
-            "corporationRolesAtOther = " + corporationRolesAtOther + ", " +
-            "corporationTitles = " + corporationTitles + ", " +
-            "factionId = " + factionId + ", " +
-            "factionName = " + factionName + ", " +
-            "freeRespecs = " + freeRespecs + ", " +
-            "freeSkillPoints = " + freeSkillPoints + ", " +
-            "gender = " + gender + ", " +
-            "homeStationId = " + homeStationId + ", " +
-            "implants = " + implants + ", " +
-            "jumpActivation = " + jumpActivation + ", " +
-            "jumpCloneImplants = " + jumpCloneImplants + ", " +
-            "jumpClones = " + jumpClones + ", " +
-            "jumpFatigue = " + jumpFatigue + ", " +
-            "jumpLastUpdate = " + jumpLastUpdate + ", " +
-            "lastRespecDate = " + lastRespecDate + ", " +
-            "lastTimedRespec = " + lastTimedRespec + ", " +
-            "name = " + name + ", " +
-            "race = " + race + ", " +
-            "remoteStationDate = " + remoteStationDate + ", " +
-            "skills = " + skills + ", " +
-            "]";
+    public String toString() {
+        return "CharacterSheet ["
+            + "dob = " + dob + ", "
+            + "allianceId = " + allianceId + ", "
+            + "allianceName = " + allianceName + ", "
+            + "ancestry = " + ancestry + ", "
+            + "ancestryId = " + ancestryId + ", "
+            + "attributes = " + attributes + ", "
+            + "balance = " + balance + ", "
+            + "bloodLine = " + bloodLine + ", "
+            + "bloodLineId = " + bloodLineId + ", "
+            + "certificates = " + certificates + ", "
+            + "characterId = " + characterId + ", "
+            + "cloneJumpDate = " + cloneJumpDate + ", "
+            + "cloneName = " + cloneName + ", "
+            + "cloneSkillPoints = " + cloneSkillPoints + ", "
+            + "cloneTypeId = " + cloneTypeId + ", "
+            + "corporationId = " + corporationId + ", "
+            + "corporationName = " + corporationName + ", "
+            + "corporationRoles = " + corporationRoles + ", "
+            + "corporationRolesAtBase = " + corporationRolesAtBase + ", "
+            + "corporationRolesAtHq = " + corporationRolesAtHq + ", "
+            + "corporationRolesAtOther = " + corporationRolesAtOther + ", "
+            + "corporationTitles = " + corporationTitles + ", "
+            + "factionId = " + factionId + ", "
+            + "factionName = " + factionName + ", "
+            + "freeRespecs = " + freeRespecs + ", "
+            + "freeSkillPoints = " + freeSkillPoints + ", "
+            + "gender = " + gender + ", "
+            + "homeStationId = " + homeStationId + ", "
+            + "implants = " + implants + ", "
+            + "jumpActivation = " + jumpActivation + ", "
+            + "jumpCloneImplants = " + jumpCloneImplants + ", "
+            + "jumpClones = " + jumpClones + ", "
+            + "jumpFatigue = " + jumpFatigue + ", "
+            + "jumpLastUpdate = " + jumpLastUpdate + ", "
+            + "lastRespecDate = " + lastRespecDate + ", "
+            + "lastTimedRespec = " + lastTimedRespec + ", "
+            + "name = " + name + ", "
+            + "race = " + race + ", "
+            + "remoteStationDate = " + remoteStationDate + ", "
+            + "skills = " + skills + ", "
+            + "]";
     }
 
 }

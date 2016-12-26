@@ -12,15 +12,15 @@ import org.simpleframework.xml.Root;
 public class Folder {
 
     @Path("rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("rowset[1]")
@@ -33,25 +33,25 @@ public class Folder {
     @Attribute(required = false)
     private String folderName;
 
-    public List<Bookmark> getBookmarks(){
+    public List<Bookmark> getBookmarks() {
         return bookmarks;
     }
 
-    public Long getFolderId(){
+    public Long getFolderId() {
         return folderId;
     }
 
-    public String getFolderName(){
+    public String getFolderName() {
         return folderName;
     }
 
     @Override
-    public String toString(){
-        return "Folder [" +
-            "bookmarks = " + bookmarks + ", " +
-            "folderId = " + folderId + ", " +
-            "folderName = " + folderName + ", " +
-            "]";
+    public String toString() {
+        return "Folder ["
+            + "bookmarks = " + bookmarks + ", "
+            + "folderId = " + folderId + ", "
+            + "folderName = " + folderName + ", "
+            + "]";
     }
 
 }

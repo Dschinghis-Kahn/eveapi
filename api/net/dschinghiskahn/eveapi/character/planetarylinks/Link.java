@@ -15,25 +15,25 @@ public class Link {
     @Attribute(name = "sourcePinID", required = false)
     private Long sourcePinId;
 
-    public Long getDestinationPinId(){
+    public Long getDestinationPinId() {
         return destinationPinId;
     }
 
-    public Long getLinkLevel(){
+    public Long getLinkLevel() {
         return linkLevel;
     }
 
-    public Long getSourcePinId(){
+    public Long getSourcePinId() {
         return sourcePinId;
     }
 
     @Override
-    public String toString(){
-        return "Link [" +
-            "destinationPinId = " + destinationPinId + ", " +
-            "linkLevel = " + linkLevel + ", " +
-            "sourcePinId = " + sourcePinId + ", " +
-            "]";
+    public String toString() {
+        return "Link ["
+            + "destinationPinId = " + destinationPinId + ", "
+            + "linkLevel = " + linkLevel + ", "
+            + "sourcePinId = " + sourcePinId + ", "
+            + "]";
     }
 
 }

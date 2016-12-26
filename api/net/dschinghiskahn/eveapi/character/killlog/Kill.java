@@ -14,15 +14,15 @@ import org.simpleframework.xml.Root;
 public class Kill {
 
     @Path("rowset[1]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName1;
 
     @Path("rowset[1]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey1;
 
     @Path("rowset[1]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns1;
 
     @Path("rowset[1]")
@@ -30,15 +30,15 @@ public class Kill {
     private List<Attacker> attackers = new ArrayList<Attacker>();
 
     @Path("rowset[2]")
-    @Attribute(name="name", required = false)
+    @Attribute(name = "name", required = false)
     private String rowsetName2;
 
     @Path("rowset[2]")
-    @Attribute(name="key", required = false)
+    @Attribute(name = "key", required = false)
     private String rowsetKey2;
 
     @Path("rowset[2]")
-    @Attribute(name="columns", required = false)
+    @Attribute(name = "columns", required = false)
     private String rowsetColumns2;
 
     @Path("rowset[2]")
@@ -60,45 +60,45 @@ public class Kill {
     @Element(required = false)
     private Victim victim;
 
-    public List<Attacker> getAttackers(){
+    public List<Attacker> getAttackers() {
         return attackers;
     }
 
-    public List<Item> getItems(){
+    public List<Item> getItems() {
         return items;
     }
 
-    public Long getKillId(){
+    public Long getKillId() {
         return killId;
     }
 
-    public Date getKillTime(){
+    public Date getKillTime() {
         return killTime;
     }
 
-    public Long getMoonId(){
+    public Long getMoonId() {
         return moonId;
     }
 
-    public Long getSolarSystemId(){
+    public Long getSolarSystemId() {
         return solarSystemId;
     }
 
-    public Victim getVictim(){
+    public Victim getVictim() {
         return victim;
     }
 
     @Override
-    public String toString(){
-        return "Kill [" +
-            "attackers = " + attackers + ", " +
-            "items = " + items + ", " +
-            "killId = " + killId + ", " +
-            "killTime = " + killTime + ", " +
-            "moonId = " + moonId + ", " +
-            "solarSystemId = " + solarSystemId + ", " +
-            "victim = " + victim + ", " +
-            "]";
+    public String toString() {
+        return "Kill ["
+            + "attackers = " + attackers + ", "
+            + "items = " + items + ", "
+            + "killId = " + killId + ", "
+            + "killTime = " + killTime + ", "
+            + "moonId = " + moonId + ", "
+            + "solarSystemId = " + solarSystemId + ", "
+            + "victim = " + victim + ", "
+            + "]";
     }
 
 }

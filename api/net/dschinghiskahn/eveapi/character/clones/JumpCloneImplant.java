@@ -15,25 +15,25 @@ public class JumpCloneImplant {
     @Attribute(required = false)
     private String typeName;
 
-    public Long getJumpCloneId(){
+    public Long getJumpCloneId() {
         return jumpCloneId;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
-    public String getTypeName(){
+    public String getTypeName() {
         return typeName;
     }
 
     @Override
-    public String toString(){
-        return "JumpCloneImplant [" +
-            "jumpCloneId = " + jumpCloneId + ", " +
-            "typeId = " + typeId + ", " +
-            "typeName = " + typeName + ", " +
-            "]";
+    public String toString() {
+        return "JumpCloneImplant ["
+            + "jumpCloneId = " + jumpCloneId + ", "
+            + "typeId = " + typeId + ", "
+            + "typeName = " + typeName + ", "
+            + "]";
     }
 
 }

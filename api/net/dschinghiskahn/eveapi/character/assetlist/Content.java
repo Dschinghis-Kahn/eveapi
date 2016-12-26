@@ -24,40 +24,40 @@ public class Content {
     @Attribute(name = "typeID", required = false)
     private Long typeId;
 
-    public Long getFlag(){
+    public Long getFlag() {
         return flag;
     }
 
-    public Long getItemId(){
+    public Long getItemId() {
         return itemId;
     }
 
-    public Long getQuantity(){
+    public Long getQuantity() {
         return quantity;
     }
 
-    public Long getRawQuantity(){
+    public Long getRawQuantity() {
         return rawQuantity;
     }
 
-    public Long getSingleton(){
+    public Long getSingleton() {
         return singleton;
     }
 
-    public Long getTypeId(){
+    public Long getTypeId() {
         return typeId;
     }
 
     @Override
-    public String toString(){
-        return "Content [" +
-            "flag = " + flag + ", " +
-            "itemId = " + itemId + ", " +
-            "quantity = " + quantity + ", " +
-            "rawQuantity = " + rawQuantity + ", " +
-            "singleton = " + singleton + ", " +
-            "typeId = " + typeId + ", " +
-            "]";
+    public String toString() {
+        return "Content ["
+            + "flag = " + flag + ", "
+            + "itemId = " + itemId + ", "
+            + "quantity = " + quantity + ", "
+            + "rawQuantity = " + rawQuantity + ", "
+            + "singleton = " + singleton + ", "
+            + "typeId = " + typeId + ", "
+            + "]";
     }
 
 }

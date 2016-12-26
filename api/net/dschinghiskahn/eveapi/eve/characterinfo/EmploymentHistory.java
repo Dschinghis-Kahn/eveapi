@@ -20,30 +20,30 @@ public class EmploymentHistory {
     @Attribute(required = false)
     private Date startDate;
 
-    public Long getCorporationId(){
+    public Long getCorporationId() {
         return corporationId;
     }
 
-    public String getCorporationName(){
+    public String getCorporationName() {
         return corporationName;
     }
 
-    public Long getRecordId(){
+    public Long getRecordId() {
         return recordId;
     }
 
-    public Date getStartDate(){
+    public Date getStartDate() {
         return startDate;
     }
 
     @Override
-    public String toString(){
-        return "EmploymentHistory [" +
-            "corporationId = " + corporationId + ", " +
-            "corporationName = " + corporationName + ", " +
-            "recordId = " + recordId + ", " +
-            "startDate = " + startDate + ", " +
-            "]";
+    public String toString() {
+        return "EmploymentHistory ["
+            + "corporationId = " + corporationId + ", "
+            + "corporationName = " + corporationName + ", "
+            + "recordId = " + recordId + ", "
+            + "startDate = " + startDate + ", "
+            + "]";
     }
 
 }
