@@ -26,6 +26,7 @@ import net.dschinghiskahn.eveapi.character.bookmarks.Bookmarks;
 import net.dschinghiskahn.eveapi.character.calendareventattendees.CalendarEventAttendees;
 import net.dschinghiskahn.eveapi.character.charactersheet.CharacterSheet;
 import net.dschinghiskahn.eveapi.character.chatchannels.ChatChannels;
+import net.dschinghiskahn.eveapi.character.clones.Clones;
 import net.dschinghiskahn.eveapi.character.contactlist.ContactList;
 import net.dschinghiskahn.eveapi.character.contactnotifications.ContactNotifications;
 import net.dschinghiskahn.eveapi.character.contractbids.ContractBids;
@@ -50,6 +51,7 @@ import net.dschinghiskahn.eveapi.character.planetaryroutes.PlanetaryRoutes;
 import net.dschinghiskahn.eveapi.character.research.Research;
 import net.dschinghiskahn.eveapi.character.skillintraining.SkillInTraining;
 import net.dschinghiskahn.eveapi.character.skillqueue.SkillQueue;
+import net.dschinghiskahn.eveapi.character.skills.Skills;
 import net.dschinghiskahn.eveapi.character.standings.Standings;
 import net.dschinghiskahn.eveapi.character.upcomingcalendarevents.UpcomingCalendarEvents;
 import net.dschinghiskahn.eveapi.character.walletjournal.WalletJournal;
@@ -370,6 +372,27 @@ public final class Api {
     }
 
     /**
+     * All clones of the character.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
+    public static Clones getClones(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
+        return (Clones) Api.query(Clones.class, "/char/Clones.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId), verificationCode,
+                String.valueOf(characterId));
+
+    }
+
+    /**
      * 
      * @param keyId
      *            The key id.
@@ -389,6 +412,22 @@ public final class Api {
 
     }
 
+    /**
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @param contractId
+     *            The contract id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
     public static ContractItems getContractItems(final long keyId, final String verificationCode, final long characterId, final long contractId)
             throws IOException, EveApiException {
         return (ContractItems) Api.query(ContractItems.class, "/char/ContractItems.xml.aspx?keyID=%s&vCode=%s&characterID=%s&contractID=%s",
@@ -815,6 +854,26 @@ public final class Api {
      */
     public static SkillQueue getSkillQueue(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
         return (SkillQueue) Api.query(SkillQueue.class, "/char/SkillQueue.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId), verificationCode,
+                String.valueOf(characterId));
+    }
+
+    /**
+     * All skills of the character.
+     * 
+     * @param keyId
+     *            The key id.
+     * @param verificationCode
+     *            The verification code.
+     * @param characterId
+     *            The character id.
+     * @return An object holding the data.
+     * @throws IOException
+     *             Thrown on connection problems.
+     * @throws EveApiException
+     *             Thrown if the API returned an error.
+     */
+    public static Skills getSkills(final long keyId, final String verificationCode, final long characterId) throws IOException, EveApiException {
+        return (Skills) Api.query(Skills.class, "/char/Skills.xml.aspx?keyID=%s&vCode=%s&characterID=%s", String.valueOf(keyId), verificationCode,
                 String.valueOf(characterId));
     }
 
