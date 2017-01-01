@@ -132,7 +132,7 @@ public final class Api {
 
     /**
      * EVE player account status.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -148,7 +148,7 @@ public final class Api {
     }
 
     /**
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -164,7 +164,7 @@ public final class Api {
     }
 
     /**
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -180,7 +180,7 @@ public final class Api {
     }
 
     /**
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -197,7 +197,7 @@ public final class Api {
 
     /**
      * Current balance of characters wallet.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -218,7 +218,7 @@ public final class Api {
 
     /**
      * Entire asset list of character.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -248,7 +248,7 @@ public final class Api {
     }
 
     /**
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -268,7 +268,7 @@ public final class Api {
 
     /**
      * List of all personal bookmarks.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -297,7 +297,7 @@ public final class Api {
      * Character Sheet information. Contains basic 'Show Info' information along
      * with clones, account balance, implants, attributes, skills, certificates
      * and corporation roles.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -318,7 +318,7 @@ public final class Api {
 
     /**
      * List of all chat channels the character owns or is an operator of.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -338,7 +338,7 @@ public final class Api {
 
     /**
      * List of character contacts and relationship levels.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -358,7 +358,7 @@ public final class Api {
 
     /**
      * Most recent contact notifications for the character.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -379,7 +379,7 @@ public final class Api {
 
     /**
      * All clones of the character.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -399,7 +399,7 @@ public final class Api {
     }
 
     /**
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -419,7 +419,7 @@ public final class Api {
     }
 
     /**
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -442,7 +442,7 @@ public final class Api {
 
     /**
      * List of all Contracts the character is involved in.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -468,7 +468,7 @@ public final class Api {
 
     /**
      * Characters Factional Warfare Statistics.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -488,7 +488,7 @@ public final class Api {
 
     /**
      * Character jobs, completed and active.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -505,7 +505,7 @@ public final class Api {
 
     /**
      * Character jobs, completed and active.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -524,7 +524,7 @@ public final class Api {
     }
 
     /**
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -541,7 +541,7 @@ public final class Api {
     }
 
     /**
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -562,7 +562,7 @@ public final class Api {
 
     /**
      * Characters kill log.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -619,7 +619,7 @@ public final class Api {
 
     /**
      * List of all Mailing Lists the character subscribes to.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -639,7 +639,7 @@ public final class Api {
 
     /**
      * List of all messages in the characters EVE Mail Inbox.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -659,7 +659,7 @@ public final class Api {
 
     /**
      * List of all Market Orders the character has made.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -676,7 +676,7 @@ public final class Api {
 
     /**
      * List of all Market Orders the character has made.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -702,7 +702,7 @@ public final class Api {
 
     /**
      * Medals awarded to the character.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -722,7 +722,7 @@ public final class Api {
 
     /**
      * List of recent notifications sent to the character.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -762,7 +762,7 @@ public final class Api {
     }
 
     /**
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -802,7 +802,7 @@ public final class Api {
     /**
      * List of all Research agents working for the character and the progress of
      * the research.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -824,7 +824,7 @@ public final class Api {
     /**
      * Skill currently in training on the character. Subset of entire Skill
      * Queue.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -845,7 +845,7 @@ public final class Api {
 
     /**
      * Entire skill queue of character.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -865,7 +865,7 @@ public final class Api {
 
     /**
      * All skills of the character.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -885,7 +885,7 @@ public final class Api {
 
     /**
      * NPC Standings towards the character.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -905,7 +905,7 @@ public final class Api {
 
     /**
      * Upcoming events on characters calendar.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -926,7 +926,7 @@ public final class Api {
 
     /**
      * Wallet journal of character.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -963,7 +963,7 @@ public final class Api {
 
     /**
      * Market transaction journal of character.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
@@ -1003,7 +1003,7 @@ public final class Api {
      * Character information, exposes skill points and current ship information
      * on top of 'Show Info' information. May also expose account balance and
      * last known location on top of the other Character Information call.
-     * 
+     *
      * @param keyId
      *            The key id.
      * @param verificationCode
