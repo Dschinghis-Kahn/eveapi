@@ -41,7 +41,7 @@ public class AccountStatus extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = MultiCharacterTraining.class, required = false, inline = true)
-    private List<MultiCharacterTraining> multiCharacterTraining = new ArrayList<MultiCharacterTraining>();
+    private List<MultiCharacterTraining> multiCharacterTraining = new ArrayList<>();
 
     @Path("result")
     @Element(required = false)

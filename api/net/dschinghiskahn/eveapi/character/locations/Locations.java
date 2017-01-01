@@ -27,7 +27,7 @@ public class Locations extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Location.class, required = false, inline = true)
-    private List<Location> locations = new ArrayList<Location>();
+    private List<Location> locations = new ArrayList<>();
 
     public List<Location> getLocations() {
         return locations;

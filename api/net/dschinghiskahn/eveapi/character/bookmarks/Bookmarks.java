@@ -27,7 +27,7 @@ public class Bookmarks extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Folder.class, required = false, inline = true)
-    private List<Folder> folders = new ArrayList<Folder>();
+    private List<Folder> folders = new ArrayList<>();
 
     public List<Folder> getFolders() {
         return folders;

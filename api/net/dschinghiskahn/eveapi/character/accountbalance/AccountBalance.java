@@ -27,7 +27,7 @@ public class AccountBalance extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Account.class, required = false, inline = true)
-    private List<Account> accounts = new ArrayList<Account>();
+    private List<Account> accounts = new ArrayList<>();
 
     public List<Account> getAccounts() {
         return accounts;

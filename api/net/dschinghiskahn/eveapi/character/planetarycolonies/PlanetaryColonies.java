@@ -27,7 +27,7 @@ public class PlanetaryColonies extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Colony.class, required = false, inline = true)
-    private List<Colony> colonies = new ArrayList<Colony>();
+    private List<Colony> colonies = new ArrayList<>();
 
     public List<Colony> getColonies() {
         return colonies;

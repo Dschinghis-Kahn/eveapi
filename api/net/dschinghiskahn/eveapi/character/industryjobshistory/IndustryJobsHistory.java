@@ -27,7 +27,7 @@ public class IndustryJobsHistory extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Job.class, required = false, inline = true)
-    private List<Job> jobs = new ArrayList<Job>();
+    private List<Job> jobs = new ArrayList<>();
 
     public List<Job> getJobs() {
         return jobs;

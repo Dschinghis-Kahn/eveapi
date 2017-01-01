@@ -27,7 +27,7 @@ public class Medals extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Medal.class, required = false, inline = true)
-    private List<Medal> currentCorporation = new ArrayList<Medal>();
+    private List<Medal> currentCorporation = new ArrayList<>();
 
     @Path("result/rowset[2]")
     @Attribute(name = "name", required = false)
@@ -43,7 +43,7 @@ public class Medals extends ApiResponse {
 
     @Path("result/rowset[2]")
     @ElementList(type = Medal.class, required = false, inline = true)
-    private List<Medal> otherCorporations = new ArrayList<Medal>();
+    private List<Medal> otherCorporations = new ArrayList<>();
 
     public List<Medal> getCurrentCorporation() {
         return currentCorporation;

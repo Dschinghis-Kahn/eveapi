@@ -27,7 +27,7 @@ public class AssetList extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Asset.class, required = false, inline = true)
-    private List<Asset> assets = new ArrayList<Asset>();
+    private List<Asset> assets = new ArrayList<>();
 
     public List<Asset> getAssets() {
         return assets;

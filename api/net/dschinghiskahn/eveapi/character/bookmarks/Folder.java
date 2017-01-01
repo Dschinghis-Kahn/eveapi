@@ -25,7 +25,7 @@ public class Folder {
 
     @Path("rowset[1]")
     @ElementList(type = Bookmark.class, required = false, inline = true)
-    private List<Bookmark> bookmarks = new ArrayList<Bookmark>();
+    private List<Bookmark> bookmarks = new ArrayList<>();
 
     @Attribute(name = "folderID", required = false)
     private Long folderId;

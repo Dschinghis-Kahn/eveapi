@@ -65,7 +65,7 @@ public class Clones extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Implant.class, required = false, inline = true)
-    private List<Implant> implants = new ArrayList<Implant>();
+    private List<Implant> implants = new ArrayList<>();
 
     @Path("result")
     @Element(required = false)
@@ -85,7 +85,7 @@ public class Clones extends ApiResponse {
 
     @Path("result/rowset[3]")
     @ElementList(type = JumpCloneImplant.class, required = false, inline = true)
-    private List<JumpCloneImplant> jumpCloneImplants = new ArrayList<JumpCloneImplant>();
+    private List<JumpCloneImplant> jumpCloneImplants = new ArrayList<>();
 
     @Path("result/rowset[2]")
     @Attribute(name = "name", required = false)
@@ -101,7 +101,7 @@ public class Clones extends ApiResponse {
 
     @Path("result/rowset[2]")
     @ElementList(type = JumpClone.class, required = false, inline = true)
-    private List<JumpClone> jumpClones = new ArrayList<JumpClone>();
+    private List<JumpClone> jumpClones = new ArrayList<>();
 
     @Path("result")
     @Element(required = false)

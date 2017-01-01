@@ -27,7 +27,7 @@ public class PlanetaryPins extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Pin.class, required = false, inline = true)
-    private List<Pin> pins = new ArrayList<Pin>();
+    private List<Pin> pins = new ArrayList<>();
 
     public List<Pin> getPins() {
         return pins;

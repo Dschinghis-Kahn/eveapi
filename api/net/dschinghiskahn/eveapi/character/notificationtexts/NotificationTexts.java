@@ -27,7 +27,7 @@ public class NotificationTexts extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Notification.class, required = false, inline = true)
-    private List<Notification> notifications = new ArrayList<Notification>();
+    private List<Notification> notifications = new ArrayList<>();
 
     public List<Notification> getNotifications() {
         return notifications;

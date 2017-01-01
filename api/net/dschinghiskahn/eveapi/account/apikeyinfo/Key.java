@@ -28,7 +28,7 @@ public class Key {
 
     @Path("rowset[1]")
     @ElementList(type = Character.class, required = false, inline = true)
-    private List<Character> characters = new ArrayList<Character>();
+    private List<Character> characters = new ArrayList<>();
 
     @Attribute(required = false)
     private String expires;

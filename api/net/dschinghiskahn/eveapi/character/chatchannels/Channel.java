@@ -25,7 +25,7 @@ public class Channel {
 
     @Path("rowset[1]")
     @ElementList(type = Allowed.class, required = false, inline = true)
-    private List<Allowed> allowed = new ArrayList<Allowed>();
+    private List<Allowed> allowed = new ArrayList<>();
 
     @Path("rowset[2]")
     @Attribute(name = "name", required = false)
@@ -41,7 +41,7 @@ public class Channel {
 
     @Path("rowset[2]")
     @ElementList(type = Blocked.class, required = false, inline = true)
-    private List<Blocked> blocked = new ArrayList<Blocked>();
+    private List<Blocked> blocked = new ArrayList<>();
 
     @Attribute(name = "channelID", required = false)
     private Long channelId;
@@ -72,7 +72,7 @@ public class Channel {
 
     @Path("rowset[3]")
     @ElementList(type = Muted.class, required = false, inline = true)
-    private List<Muted> muted = new ArrayList<Muted>();
+    private List<Muted> muted = new ArrayList<>();
 
     @Path("rowset[4]")
     @Attribute(name = "name", required = false)
@@ -88,7 +88,7 @@ public class Channel {
 
     @Path("rowset[4]")
     @ElementList(type = Operator.class, required = false, inline = true)
-    private List<Operator> operators = new ArrayList<Operator>();
+    private List<Operator> operators = new ArrayList<>();
 
     @Attribute(name = "ownerID", required = false)
     private Long ownerId;

@@ -65,7 +65,7 @@ public class CharacterSheet extends ApiResponse {
 
     @Path("result/rowset[5]")
     @ElementList(type = Certificate.class, required = false, inline = true)
-    private List<Certificate> certificates = new ArrayList<Certificate>();
+    private List<Certificate> certificates = new ArrayList<>();
 
     @Path("result")
     @Element(name = "characterID", required = false)
@@ -109,7 +109,7 @@ public class CharacterSheet extends ApiResponse {
 
     @Path("result/rowset[6]")
     @ElementList(type = CorporationRole.class, required = false, inline = true)
-    private List<CorporationRole> corporationRoles = new ArrayList<CorporationRole>();
+    private List<CorporationRole> corporationRoles = new ArrayList<>();
 
     @Path("result/rowset[8]")
     @Attribute(name = "name", required = false)
@@ -125,7 +125,7 @@ public class CharacterSheet extends ApiResponse {
 
     @Path("result/rowset[8]")
     @ElementList(type = CorporationRoleAtBase.class, required = false, inline = true)
-    private List<CorporationRoleAtBase> corporationRolesAtBase = new ArrayList<CorporationRoleAtBase>();
+    private List<CorporationRoleAtBase> corporationRolesAtBase = new ArrayList<>();
 
     @Path("result/rowset[7]")
     @Attribute(name = "name", required = false)
@@ -141,7 +141,7 @@ public class CharacterSheet extends ApiResponse {
 
     @Path("result/rowset[7]")
     @ElementList(type = CorporationRoleAtHq.class, required = false, inline = true)
-    private List<CorporationRoleAtHq> corporationRolesAtHq = new ArrayList<CorporationRoleAtHq>();
+    private List<CorporationRoleAtHq> corporationRolesAtHq = new ArrayList<>();
 
     @Path("result/rowset[9]")
     @Attribute(name = "name", required = false)
@@ -157,7 +157,7 @@ public class CharacterSheet extends ApiResponse {
 
     @Path("result/rowset[9]")
     @ElementList(type = CorporationRoleAtOther.class, required = false, inline = true)
-    private List<CorporationRoleAtOther> corporationRolesAtOther = new ArrayList<CorporationRoleAtOther>();
+    private List<CorporationRoleAtOther> corporationRolesAtOther = new ArrayList<>();
 
     @Path("result/rowset[10]")
     @Attribute(name = "name", required = false)
@@ -173,7 +173,7 @@ public class CharacterSheet extends ApiResponse {
 
     @Path("result/rowset[10]")
     @ElementList(type = CorporationTitle.class, required = false, inline = true)
-    private List<CorporationTitle> corporationTitles = new ArrayList<CorporationTitle>();
+    private List<CorporationTitle> corporationTitles = new ArrayList<>();
 
     @Path("result")
     @Element(name = "factionID", required = false)
@@ -213,7 +213,7 @@ public class CharacterSheet extends ApiResponse {
 
     @Path("result/rowset[3]")
     @ElementList(type = Implant.class, required = false, inline = true)
-    private List<Implant> implants = new ArrayList<Implant>();
+    private List<Implant> implants = new ArrayList<>();
 
     @Path("result")
     @Element(required = false)
@@ -233,7 +233,7 @@ public class CharacterSheet extends ApiResponse {
 
     @Path("result/rowset[2]")
     @ElementList(type = JumpCloneImplant.class, required = false, inline = true)
-    private List<JumpCloneImplant> jumpCloneImplants = new ArrayList<JumpCloneImplant>();
+    private List<JumpCloneImplant> jumpCloneImplants = new ArrayList<>();
 
     @Path("result/rowset[1]")
     @Attribute(name = "name", required = false)
@@ -249,7 +249,7 @@ public class CharacterSheet extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = JumpClone.class, required = false, inline = true)
-    private List<JumpClone> jumpClones = new ArrayList<JumpClone>();
+    private List<JumpClone> jumpClones = new ArrayList<>();
 
     @Path("result")
     @Element(required = false)
@@ -293,7 +293,7 @@ public class CharacterSheet extends ApiResponse {
 
     @Path("result/rowset[4]")
     @ElementList(type = Skill.class, required = false, inline = true)
-    private List<Skill> skills = new ArrayList<Skill>();
+    private List<Skill> skills = new ArrayList<>();
 
     public Date getDob() {
         return dob;

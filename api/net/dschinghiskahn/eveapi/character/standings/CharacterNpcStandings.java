@@ -25,7 +25,7 @@ public class CharacterNpcStandings {
 
     @Path("rowset[2]")
     @ElementList(type = NpcCorporation.class, required = false, inline = true)
-    private List<NpcCorporation> npcCorporations = new ArrayList<NpcCorporation>();
+    private List<NpcCorporation> npcCorporations = new ArrayList<>();
 
     @Path("rowset[1]")
     @Attribute(name = "name", required = false)
@@ -41,7 +41,7 @@ public class CharacterNpcStandings {
 
     @Path("rowset[1]")
     @ElementList(type = Agent.class, required = false, inline = true)
-    private List<Agent> agents = new ArrayList<Agent>();
+    private List<Agent> agents = new ArrayList<>();
 
     @Path("rowset[3]")
     @Attribute(name = "name", required = false)
@@ -57,7 +57,7 @@ public class CharacterNpcStandings {
 
     @Path("rowset[3]")
     @ElementList(type = Faction.class, required = false, inline = true)
-    private List<Faction> factions = new ArrayList<Faction>();
+    private List<Faction> factions = new ArrayList<>();
 
     public List<NpcCorporation> getNpcCorporations() {
         return npcCorporations;

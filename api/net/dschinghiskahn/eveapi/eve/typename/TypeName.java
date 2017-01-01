@@ -27,7 +27,7 @@ public class TypeName extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Type.class, required = false, inline = true)
-    private List<Type> types = new ArrayList<Type>();
+    private List<Type> types = new ArrayList<>();
 
     public List<Type> getTypes() {
         return types;

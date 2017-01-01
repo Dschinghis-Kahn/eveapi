@@ -27,7 +27,7 @@ public class PlanetaryRoutes extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Route.class, required = false, inline = true)
-    private List<Route> routes = new ArrayList<Route>();
+    private List<Route> routes = new ArrayList<>();
 
     public List<Route> getRoutes() {
         return routes;

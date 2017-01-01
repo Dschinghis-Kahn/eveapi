@@ -27,7 +27,7 @@ public class PlanetaryLinks extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Link.class, required = false, inline = true)
-    private List<Link> links = new ArrayList<Link>();
+    private List<Link> links = new ArrayList<>();
 
     public List<Link> getLinks() {
         return links;

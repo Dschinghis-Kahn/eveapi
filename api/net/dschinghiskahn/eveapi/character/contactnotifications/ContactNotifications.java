@@ -27,7 +27,7 @@ public class ContactNotifications extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = ContactNotification.class, required = false, inline = true)
-    private List<ContactNotification> contactNotifications = new ArrayList<ContactNotification>();
+    private List<ContactNotification> contactNotifications = new ArrayList<>();
 
     public List<ContactNotification> getContactNotifications() {
         return contactNotifications;

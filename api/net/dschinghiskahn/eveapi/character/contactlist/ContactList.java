@@ -27,7 +27,7 @@ public class ContactList extends ApiResponse {
 
     @Path("result/rowset[6]")
     @ElementList(type = AllianceContactLabel.class, required = false, inline = true)
-    private List<AllianceContactLabel> allianceContactLabels = new ArrayList<AllianceContactLabel>();
+    private List<AllianceContactLabel> allianceContactLabels = new ArrayList<>();
 
     @Path("result/rowset[5]")
     @Attribute(name = "name", required = false)
@@ -43,7 +43,7 @@ public class ContactList extends ApiResponse {
 
     @Path("result/rowset[5]")
     @ElementList(type = AllianceContact.class, required = false, inline = true)
-    private List<AllianceContact> allianceContactList = new ArrayList<AllianceContact>();
+    private List<AllianceContact> allianceContactList = new ArrayList<>();
 
     @Path("result/rowset[2]")
     @Attribute(name = "name", required = false)
@@ -59,7 +59,7 @@ public class ContactList extends ApiResponse {
 
     @Path("result/rowset[2]")
     @ElementList(type = ContactLabel.class, required = false, inline = true)
-    private List<ContactLabel> contactLabels = new ArrayList<ContactLabel>();
+    private List<ContactLabel> contactLabels = new ArrayList<>();
 
     @Path("result/rowset[1]")
     @Attribute(name = "name", required = false)
@@ -75,7 +75,7 @@ public class ContactList extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Contact.class, required = false, inline = true)
-    private List<Contact> contactList = new ArrayList<Contact>();
+    private List<Contact> contactList = new ArrayList<>();
 
     @Path("result/rowset[4]")
     @Attribute(name = "name", required = false)
@@ -91,7 +91,7 @@ public class ContactList extends ApiResponse {
 
     @Path("result/rowset[4]")
     @ElementList(type = CorporateContactLabel.class, required = false, inline = true)
-    private List<CorporateContactLabel> corporateContactLabels = new ArrayList<CorporateContactLabel>();
+    private List<CorporateContactLabel> corporateContactLabels = new ArrayList<>();
 
     @Path("result/rowset[3]")
     @Attribute(name = "name", required = false)
@@ -107,7 +107,7 @@ public class ContactList extends ApiResponse {
 
     @Path("result/rowset[3]")
     @ElementList(type = CorporateContact.class, required = false, inline = true)
-    private List<CorporateContact> corporateContactList = new ArrayList<CorporateContact>();
+    private List<CorporateContact> corporateContactList = new ArrayList<>();
 
     public List<AllianceContactLabel> getAllianceContactLabels() {
         return allianceContactLabels;

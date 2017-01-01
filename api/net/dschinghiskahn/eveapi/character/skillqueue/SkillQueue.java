@@ -27,7 +27,7 @@ public class SkillQueue extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Skill.class, required = false, inline = true)
-    private List<Skill> skillqueue = new ArrayList<Skill>();
+    private List<Skill> skillqueue = new ArrayList<>();
 
     public List<Skill> getSkillqueue() {
         return skillqueue;

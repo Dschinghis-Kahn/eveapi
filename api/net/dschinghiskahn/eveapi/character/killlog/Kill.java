@@ -27,7 +27,7 @@ public class Kill {
 
     @Path("rowset[1]")
     @ElementList(type = Attacker.class, required = false, inline = true)
-    private List<Attacker> attackers = new ArrayList<Attacker>();
+    private List<Attacker> attackers = new ArrayList<>();
 
     @Path("rowset[2]")
     @Attribute(name = "name", required = false)
@@ -43,7 +43,7 @@ public class Kill {
 
     @Path("rowset[2]")
     @ElementList(type = Item.class, required = false, inline = true)
-    private List<Item> items = new ArrayList<Item>();
+    private List<Item> items = new ArrayList<>();
 
     @Attribute(name = "killID", required = false)
     private Long killId;

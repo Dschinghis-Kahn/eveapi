@@ -81,7 +81,7 @@ public class CharacterInfo extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = EmploymentHistory.class, required = false, inline = true)
-    private List<EmploymentHistory> employmentHistory = new ArrayList<EmploymentHistory>();
+    private List<EmploymentHistory> employmentHistory = new ArrayList<>();
 
     @Path("result")
     @Element(required = false)

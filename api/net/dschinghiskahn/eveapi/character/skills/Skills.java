@@ -32,7 +32,7 @@ public class Skills extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Skill.class, required = false, inline = true)
-    private List<Skill> skills = new ArrayList<Skill>();
+    private List<Skill> skills = new ArrayList<>();
 
     public Long getFreeSkillPoints() {
         return freeSkillPoints;

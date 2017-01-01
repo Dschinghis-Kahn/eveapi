@@ -27,7 +27,7 @@ public class ContractBids extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Bid.class, required = false, inline = true)
-    private List<Bid> bidList = new ArrayList<Bid>();
+    private List<Bid> bidList = new ArrayList<>();
 
     public List<Bid> getBidList() {
         return bidList;

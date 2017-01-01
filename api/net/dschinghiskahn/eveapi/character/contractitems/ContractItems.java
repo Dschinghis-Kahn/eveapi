@@ -27,7 +27,7 @@ public class ContractItems extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Item.class, required = false, inline = true)
-    private List<Item> itemList = new ArrayList<Item>();
+    private List<Item> itemList = new ArrayList<>();
 
     public List<Item> getItemList() {
         return itemList;

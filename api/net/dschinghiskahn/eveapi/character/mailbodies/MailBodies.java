@@ -27,7 +27,7 @@ public class MailBodies extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Message.class, required = false, inline = true)
-    private List<Message> messages = new ArrayList<Message>();
+    private List<Message> messages = new ArrayList<>();
 
     public List<Message> getMessages() {
         return messages;

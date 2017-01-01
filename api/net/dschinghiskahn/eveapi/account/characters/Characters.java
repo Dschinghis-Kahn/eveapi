@@ -27,7 +27,7 @@ public class Characters extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Character.class, required = false, inline = true)
-    private List<Character> characters = new ArrayList<Character>();
+    private List<Character> characters = new ArrayList<>();
 
     public List<Character> getCharacters() {
         return characters;

@@ -27,7 +27,7 @@ public class KillLog extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Kill.class, required = false, inline = true)
-    private List<Kill> kills = new ArrayList<Kill>();
+    private List<Kill> kills = new ArrayList<>();
 
     public List<Kill> getKills() {
         return kills;

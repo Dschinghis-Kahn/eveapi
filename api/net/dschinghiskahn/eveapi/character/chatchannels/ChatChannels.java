@@ -27,7 +27,7 @@ public class ChatChannels extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Channel.class, required = false, inline = true)
-    private List<Channel> channels = new ArrayList<Channel>();
+    private List<Channel> channels = new ArrayList<>();
 
     public List<Channel> getChannels() {
         return channels;

@@ -27,7 +27,7 @@ public class Research extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = ResearchItem.class, required = false, inline = true)
-    private List<ResearchItem> research = new ArrayList<ResearchItem>();
+    private List<ResearchItem> research = new ArrayList<>();
 
     public List<ResearchItem> getResearch() {
         return research;

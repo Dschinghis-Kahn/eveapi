@@ -27,7 +27,7 @@ public class CallList extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = CallGroup.class, required = false, inline = true)
-    private List<CallGroup> callGroups = new ArrayList<CallGroup>();
+    private List<CallGroup> callGroups = new ArrayList<>();
 
     @Path("result/rowset[2]")
     @Attribute(name = "name", required = false)
@@ -43,7 +43,7 @@ public class CallList extends ApiResponse {
 
     @Path("result/rowset[2]")
     @ElementList(type = Call.class, required = false, inline = true)
-    private List<Call> calls = new ArrayList<Call>();
+    private List<Call> calls = new ArrayList<>();
 
     public List<CallGroup> getCallGroups() {
         return callGroups;

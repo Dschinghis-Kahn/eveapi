@@ -27,7 +27,7 @@ public class CalendarEventAttendees extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = EventAttendee.class, required = false, inline = true)
-    private List<EventAttendee> eventAttendees = new ArrayList<EventAttendee>();
+    private List<EventAttendee> eventAttendees = new ArrayList<>();
 
     public List<EventAttendee> getEventAttendees() {
         return eventAttendees;

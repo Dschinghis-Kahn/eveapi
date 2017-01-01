@@ -27,7 +27,7 @@ public class Contracts extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Contract.class, required = false, inline = true)
-    private List<Contract> contractList = new ArrayList<Contract>();
+    private List<Contract> contractList = new ArrayList<>();
 
     public List<Contract> getContractList() {
         return contractList;

@@ -27,7 +27,7 @@ public class WalletJournal extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Transaction.class, required = false, inline = true)
-    private List<Transaction> transactions = new ArrayList<Transaction>();
+    private List<Transaction> transactions = new ArrayList<>();
 
     public List<Transaction> getTransactions() {
         return transactions;

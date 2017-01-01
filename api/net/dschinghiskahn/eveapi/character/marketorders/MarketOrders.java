@@ -27,7 +27,7 @@ public class MarketOrders extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Order.class, required = false, inline = true)
-    private List<Order> orders = new ArrayList<Order>();
+    private List<Order> orders = new ArrayList<>();
 
     public List<Order> getOrders() {
         return orders;

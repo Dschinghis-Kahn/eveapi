@@ -27,7 +27,7 @@ public class Blueprints extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = Blueprint.class, required = false, inline = true)
-    private List<Blueprint> blueprints = new ArrayList<Blueprint>();
+    private List<Blueprint> blueprints = new ArrayList<>();
 
     public List<Blueprint> getBlueprints() {
         return blueprints;

@@ -27,7 +27,7 @@ public class UpcomingCalendarEvents extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = UpcomingEvent.class, required = false, inline = true)
-    private List<UpcomingEvent> upcomingEvents = new ArrayList<UpcomingEvent>();
+    private List<UpcomingEvent> upcomingEvents = new ArrayList<>();
 
     public List<UpcomingEvent> getUpcomingEvents() {
         return upcomingEvents;

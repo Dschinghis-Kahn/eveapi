@@ -25,7 +25,7 @@ public class Asset {
 
     @Path("rowset[1]")
     @ElementList(type = Content.class, required = false, inline = true)
-    private List<Content> contents = new ArrayList<Content>();
+    private List<Content> contents = new ArrayList<>();
 
     @Attribute(required = false)
     private Long flag;

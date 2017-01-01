@@ -27,7 +27,7 @@ public class MailingLists extends ApiResponse {
 
     @Path("result/rowset[1]")
     @ElementList(type = MailingList.class, required = false, inline = true)
-    private List<MailingList> mailingLists = new ArrayList<MailingList>();
+    private List<MailingList> mailingLists = new ArrayList<>();
 
     public List<MailingList> getMailingLists() {
         return mailingLists;
